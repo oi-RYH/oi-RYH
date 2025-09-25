@@ -1,12 +1,12 @@
 name: GitHub-Profile-3D-Contrib
 
 on:
-  schedule: # 03:00 JST == 18:00 UTC
-    - cron: "0 18 * * *"
-  workflow_dispatch:
+  schedule:
+    - cron: "0 18 * * *"   # 매일 03:00 JST = 18:00 UTC
+  workflow_dispatch:        # 수동 실행도 가능하게
 
 permissions:
-  contents: write
+  contents: write           # 저장소에 푸시 권한 줌
 
 jobs:
   build:
@@ -14,15 +14,19 @@ jobs:
     name: generate-github-profile-3d-contrib
     steps:
       - uses: actions/checkout@v5
+
       - uses: yoshi389111/github-profile-3d-contrib@latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
+
       - name: Commit & Push
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add -A .
           if git commit -m "generated"; then
-            git push
+            git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
           fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
