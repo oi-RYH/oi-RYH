@@ -16,4 +16,4 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-![3D 기여도](./profile-3d-contrib/profile-green-animate.svg)
+![3D 기여도](./profile-3d-contrib/profile-night-green.svg)
