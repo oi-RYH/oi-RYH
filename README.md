@@ -1,3 +1,7 @@
+### 👋 Welcome to my GitHub!
+
+Visit my blog 👉 [oi-ryh.github.io](https://oi-ryh.github.io)
+
 [![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=oi-RYH&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0e1116)](https://github.com/anuraghazra/github-readme-stats)
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=oi-RYH&layout=compact&theme=tokyonight&hide_border=true&bg_color=0e1116)](https://github.com/anuraghazra/github-readme-stats)
 
