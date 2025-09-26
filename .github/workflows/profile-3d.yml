@@ -2,7 +2,7 @@ name: GitHub-Profile-3D-Contrib
 
 on:
   schedule:
-    - cron: "0 18 * * *"   # 매일 03:00 JST = 18:00 UTC
+    - cron: "0 15 * * *"   # 매일 00:00 JST = 15:00 UTC
   workflow_dispatch:        # 수동 실행도 가능하게
 
 permissions:
