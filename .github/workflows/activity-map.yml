@@ -1,0 +1,40 @@
+name: generate Minecraft activity map
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/activity_map.py'
+      - 'scripts/pixel_readme.py'
+      - 'scripts/requirements.txt'
+      - 'assets/fonts/neodgm.ttf'
+      - '.github/workflows/activity-map.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  activity-map:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r scripts/requirements.txt
+      - name: Build Minecraft contribution mine
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GITHUB_REPOSITORY_OWNER: ${{ github.repository_owner }}
+        run: python scripts/activity_map.py --output dist/minecraft-activity.svg
+      - name: Publish activity map
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

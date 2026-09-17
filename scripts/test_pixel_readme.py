@@ -42,7 +42,16 @@ class PixelReadmeTests(unittest.TestCase):
         result = build(text, self.root)
         self.assertIn('](https://example.com)', result)
         self.assertIn('alt="A &amp; B"', result)
+        self.assertIn('<picture><img', result)
         for path in (self.root/'assets/text').glob('*.svg'): ET.parse(path)
+
+    def test_plain_text_is_not_clickable_but_intended_links_remain_clickable(self):
+        renderer = __import__('pixel_readme').PixelText(self.root)
+        result = renderer.render('일반 글씨\n\n[블로그](https://example.com)\n\n'
+                                 '# <img src="assets/headings/workbench.svg" alt="제목">')
+        self.assertRegex(result, r'<picture><img src="assets/text/[^"]+"[^>]+alt="일반 글씨"></picture>')
+        self.assertRegex(result, r'\[<img src="assets/text/[^"]+"[^>]+alt="블로그">\]\(https://example.com\)')
+        self.assertIn('<picture><img src="assets/headings/workbench.svg" alt="제목"></picture>', result)
 
     def test_repository_description_has_exactly_two_lines_and_is_clamped(self):
         source = ('<!-- RECENT_REPOS:START -->\n'

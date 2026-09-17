@@ -40,7 +40,7 @@ class PixelText:
             x += advance
         return x * scale, ''.join(paths), scale
 
-    def image(self, text, fixed_lines=None):
+    def image(self, text, fixed_lines=None, clickable=False):
         text = unescape(text).replace('**', '').strip()
         if not text:
             return ''
@@ -83,20 +83,37 @@ class PixelText:
         path = self.root / rel
         path.parent.mkdir(exist_ok=True)
         path.write_text(svg)
-        return f'<img src="{rel}" width="{width}" alt="{escape(text, quote=True)}">'
+        image = f'<img src="{rel}" width="{width}" alt="{escape(text, quote=True)}">'
+        return image if clickable else f'<picture>{image}</picture>'
 
-    def inline(self, text, fixed_lines=None):
+    def inline(self, text, fixed_lines=None, clickable=False):
         # HTML attributes (including alt text and URLs) are kept verbatim.
         tokens = re.split(r'(<[^>]+>|\[[^\]]*\]\([^)]*\))', text)
         out = []
+        in_link = clickable
+        in_picture = False
         for token in tokens:
             if token.startswith('<'):
-                out.append(token)
+                if re.match(r'<a(?:\s|>)', token):
+                    in_link = True
+                elif token == '</a>':
+                    in_link = clickable
+                elif re.match(r'<picture(?:\s|>)', token):
+                    in_picture = True
+                elif token == '</picture>':
+                    in_picture = False
+                if (token.startswith('<img ') and 'src="assets/headings/' in token
+                        and not in_link and not in_picture):
+                    out.append(f'<picture>{token}</picture>')
+                else:
+                    out.append(token)
             elif token.startswith('[') and re.fullmatch(r'\[[^\]]*\]\([^)]*\)', token):
                 match = re.fullmatch(r'\[([^\]]*)\]\(([^)]*)\)', token)
-                out.append(f'[{self.inline(match[1], fixed_lines=fixed_lines)}]({match[2]})')
+                out.append(f'[{self.inline(match[1], fixed_lines=fixed_lines, clickable=True)}]({match[2]})')
             elif token.strip():
-                out.append((' ' if token.startswith(' ') else '') + self.image(token, fixed_lines=fixed_lines) + (' ' if token.endswith(' ') else ''))
+                out.append((' ' if token.startswith(' ') else '')
+                           + self.image(token, fixed_lines=fixed_lines, clickable=in_link)
+                           + (' ' if token.endswith(' ') else ''))
             else:
                 out.append(token)
         return ''.join(out)

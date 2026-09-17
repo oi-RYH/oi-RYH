@@ -116,10 +116,9 @@
 </details>
 
 <details>
-  <summary><strong>World activity</strong></summary>
+  <summary><img src="assets/blocks/pickaxe.svg" width="20" alt="곡괭이"> <strong>활동 월드</strong></summary>
   <br />
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/oi-RYH/oi-RYH/output/github-snake-dark.svg" />
-    <img src="https://raw.githubusercontent.com/oi-RYH/oi-RYH/output/github-snake.svg" alt="Contribution snake" />
-  </picture>
+  <a href="https://github.com/oi-RYH?tab=contributions">
+    <img src="https://raw.githubusercontent.com/oi-RYH/oi-RYH/output/minecraft-activity.svg" width="100%" alt="지난 1년의 GitHub 기여를 광석 블록과 닭 광산 수레로 표현한 활동 월드" />
+  </a>
 </details>

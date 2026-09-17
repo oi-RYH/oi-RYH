@@ -2,53 +2,53 @@
   <img src="./assets/workbench-banner.png" alt="마인크래프트 작업대 위 노트북과 분재, 안경 쓴 오리, 책상 뒤에서 고개를 내민 닭" width="100%" />
 </p>
 
-# <img src="assets/headings/workbench.svg" width="244" alt="RYH’s Workbench">
+# <picture><img src="assets/headings/workbench.svg" width="244" alt="RYH’s Workbench"></picture>
 
-<img src="assets/text/afd7f93f8ace5dcc51e0.svg" width="356" alt="곡괭이로는 디버깅이 안 돼서 맥북을 샀습니다.">
+<picture><img src="assets/text/afd7f93f8ace5dcc51e0.svg" width="356" alt="곡괭이로는 디버깅이 안 돼서 맥북을 샀습니다."></picture>
 
 <img src="assets/workbench-status.svg" width="100%" alt="RYH 접속 → 곡괭이 장착 → 디버깅 실패 → 맥북 장착" />
 
 | [<img src="assets/blocks/crafting_table.svg" width="36" alt="제작대 — 제작 중인 프로젝트">](#crafting) | [<img src="assets/blocks/chest.svg" width="36" alt="상자 — 인벤토리 열기">](#inventory) | [<img src="assets/blocks/pickaxe.svg" width="36" alt="곡괭이 — 공용 광산에서 돌 캐기">](#community-mine) | [<img src="assets/blocks/book_and_quill.svg" width="36" alt="책과 깃펜 — 작업 일지">](#field-notes) |
 | :---: | :---: | :---: | :---: |
-| <img src="assets/text/3b66dace508cfbd82edf.svg" width="60" alt="제작 중"> | <img src="assets/text/bb45d2dea52d43f3af17.svg" width="76" alt="상자 열기"> | <img src="assets/text/5492b294d99ee35e09c8.svg" width="60" alt="돌 캐기"> | <img src="assets/text/d8ed47091750e8026721.svg" width="76" alt="작업 일지"> |
+| <picture><img src="assets/text/3b66dace508cfbd82edf.svg" width="60" alt="제작 중"></picture> | <picture><img src="assets/text/bb45d2dea52d43f3af17.svg" width="76" alt="상자 열기"></picture> | <picture><img src="assets/text/5492b294d99ee35e09c8.svg" width="60" alt="돌 캐기"></picture> | <picture><img src="assets/text/d8ed47091750e8026721.svg" width="76" alt="작업 일지"></picture> |
 
 <a name="crafting"></a>
 
-## <img src="assets/blocks/crafting_table.svg" width="28" alt="제작대"> <img src="assets/headings/crafting.svg" width="220" alt="Currently crafting">
+## <img src="assets/blocks/crafting_table.svg" width="28" alt="제작대"> <picture><img src="assets/headings/crafting.svg" width="220" alt="Currently crafting"></picture>
 
 <!-- RECENT_REPOS:START -->
 <table>
   <tr>
     <td width="33%" valign="top">
       <h3><img src="assets/blocks/crafting_table.svg" width="24" alt="제작대"> <a href="https://github.com/oi-RYH/Dawn"><img src="assets/text/5f275001baa1d0c3d8bf.svg" width="36" alt="Dawn"></a></h3>
-      <p><img src="assets/text/6976af5e1c022496621d.svg" width="200" alt="저장소에서 자세한 내용을 확인하세요."></p>
+      <p><picture><img src="assets/text/6976af5e1c022496621d.svg" width="200" alt="저장소에서 자세한 내용을 확인하세요."></picture></p>
       <p><img src="https://img.shields.io/badge/JavaScript-241A12?style=for-the-badge&amp;color=241A12&amp;logo=javascript&amp;logoColor=F7DF1E" alt="JavaScript" /></p>
-      <p><sub><img src="assets/text/8555c4cf5c175c24caa1.svg" width="172" alt="업데이트 · 2026-09-17"></sub></p>
+      <p><sub><picture><img src="assets/text/8555c4cf5c175c24caa1.svg" width="172" alt="업데이트 · 2026-09-17"></picture></sub></p>
     </td>
     <td width="33%" valign="top">
       <h3><img src="assets/blocks/crafting_table.svg" width="24" alt="제작대"> <a href="https://github.com/oi-RYH/capstone_design"><img src="assets/text/94a4b80d80defc2a0364.svg" width="124" alt="capstone_design"></a></h3>
-      <p><img src="assets/text/8b07f3cbf7172f0de5e2.svg" width="200" alt="캡스턴 디자인 - 7조"></p>
+      <p><picture><img src="assets/text/8b07f3cbf7172f0de5e2.svg" width="200" alt="캡스턴 디자인 - 7조"></picture></p>
       <p><img src="https://img.shields.io/badge/%EC%96%B8%EC%96%B4%20%EC%A0%95%EB%B3%B4%20%EC%97%86%EC%9D%8C-241A12?style=for-the-badge&amp;color=241A12" alt="언어 정보 없음" /></p>
-      <p><sub><img src="assets/text/367837f2dc290a0cd373.svg" width="172" alt="업데이트 · 2026-09-16"></sub></p>
+      <p><sub><picture><img src="assets/text/367837f2dc290a0cd373.svg" width="172" alt="업데이트 · 2026-09-16"></picture></sub></p>
     </td>
     <td width="33%" valign="top">
       <h3><img src="assets/blocks/crafting_table.svg" width="24" alt="제작대"> <a href="https://github.com/oi-RYH/BrassField_plugin"><img src="assets/text/32ea30df9cfe1abb9d60.svg" width="140" alt="BrassField_plugin"></a></h3>
-      <p><img src="assets/text/6976af5e1c022496621d.svg" width="200" alt="저장소에서 자세한 내용을 확인하세요."></p>
+      <p><picture><img src="assets/text/6976af5e1c022496621d.svg" width="200" alt="저장소에서 자세한 내용을 확인하세요."></picture></p>
       <p><img src="https://img.shields.io/badge/Java-241A12?style=for-the-badge&amp;color=241A12&amp;logo=openjdk&amp;logoColor=F89820" alt="Java" /></p>
-      <p><sub><img src="assets/text/dda7ebcba2ea00bb1074.svg" width="172" alt="업데이트 · 2026-08-14"></sub></p>
+      <p><sub><picture><img src="assets/text/dda7ebcba2ea00bb1074.svg" width="172" alt="업데이트 · 2026-08-14"></picture></sub></p>
     </td>
   </tr>
 </table>
 
-<sub><img src="assets/text/851d37331e5cfe87386b.svg" width="460" alt="최근 푸시한 공개 저장소 · 최대 3개 · 매시간 갱신 · 날짜는 UTC 기준 (프로필·포크·보관된 저장소 제외)"></sub>
+<sub><picture><img src="assets/text/851d37331e5cfe87386b.svg" width="460" alt="최근 푸시한 공개 저장소 · 최대 3개 · 매시간 갱신 · 날짜는 UTC 기준 (프로필·포크·보관된 저장소 제외)"></picture></sub>
 <!-- RECENT_REPOS:END -->
 
 <a name="inventory"></a>
 
-## <img src="assets/blocks/chest.svg" width="28" alt="상자"> <img src="assets/headings/inventory.svg" width="112" alt="Inventory">
+## <img src="assets/blocks/chest.svg" width="28" alt="상자"> <picture><img src="assets/headings/inventory.svg" width="112" alt="Inventory"></picture>
 
 <details open>
-<summary><img src="assets/blocks/chest.svg" width="20" alt="상자"> <strong><img src="assets/text/ca4c80be43ece388d161.svg" width="292" alt="도구 상자 — 오늘도 일단 꺼내 봅니다"></strong></summary>
+<summary><img src="assets/blocks/chest.svg" width="20" alt="상자"> <strong><picture><img src="assets/text/ca4c80be43ece388d161.svg" width="292" alt="도구 상자 — 오늘도 일단 꺼내 봅니다"></picture></strong></summary>
 
 
 <p>
@@ -63,77 +63,77 @@
 </details>
 
 <details>
-<summary><img src="assets/blocks/bundle.svg" width="20" alt="꾸러미"> <strong><img src="assets/text/2591dd804f09c6cbbbd0.svg" width="268" alt="주머니 — 코드 말고 좋아하는 것들"></strong></summary>
+<summary><img src="assets/blocks/bundle.svg" width="20" alt="꾸러미"> <strong><picture><img src="assets/text/2591dd804f09c6cbbbd0.svg" width="268" alt="주머니 — 코드 말고 좋아하는 것들"></picture></strong></summary>
 
-<img src="assets/text/1a2ec7e632583c07bc66.svg" width="108" alt="마인크래프트!">
+<picture><img src="assets/text/1a2ec7e632583c07bc66.svg" width="108" alt="마인크래프트!"></picture>
 
 </details>
 
 <details>
-<summary><img src="assets/blocks/chicken.svg" width="20" alt="닭"> <strong><img src="assets/text/d2c629bf52bb1577fa71.svg" width="156" alt="이 닭은 팀원인가요?"></strong></summary>
+<summary><img src="assets/blocks/chicken.svg" width="20" alt="닭"> <strong><picture><img src="assets/text/d2c629bf52bb1577fa71.svg" width="156" alt="이 닭은 팀원인가요?"></picture></strong></summary>
 
-<img src="assets/text/5047c181f18351b95015.svg" width="388" alt="조만간 닭이 커밋하는 메시지가 올라올 예정입니다.">
+<picture><img src="assets/text/5047c181f18351b95015.svg" width="388" alt="조만간 닭이 커밋하는 메시지가 올라올 예정입니다."></picture>
 
 </details>
 
 <a name="community-mine"></a>
 
-## <img src="assets/blocks/pickaxe.svg" width="28" alt="곡괭이"> <img src="assets/headings/community-mine.svg" width="112" alt="공용 광산">
+## <img src="assets/blocks/pickaxe.svg" width="28" alt="곡괭이"> <picture><img src="assets/headings/community-mine.svg" width="112" alt="공용 광산"></picture>
 
-<img src="assets/text/66f2e82d6729719fb69c.svg" width="420" alt="여기까지 왔으면 돌 하나는 캐고 가세요. 맥북 수리비에 보태겠습니다.">
+<picture><img src="assets/text/66f2e82d6729719fb69c.svg" width="420" alt="여기까지 왔으면 돌 하나는 캐고 가세요. 맥북 수리비에 보태겠습니다."></picture>
 
 <a name="mine-help"></a>
 
 <!-- MINE_MODE:START -->
-<img src="assets/text/9a2a4f6b484a22a454a5.svg" width="372" alt="돌을 클릭하고 열린 이슈를 제출하면 채굴됩니다.">
+<picture><img src="assets/text/9a2a4f6b484a22a454a5.svg" width="372" alt="돌을 클릭하고 열린 이슈를 제출하면 채굴됩니다."></picture>
 <!-- MINE_MODE:END -->
 
 <!-- MINE_GRID:START -->
-| <img src="assets/text/29420b9d49fd148b2fe8.svg" width="12" alt="1"> | <img src="assets/text/b5e05c14e06b1a33df78.svg" width="12" alt="2"> | <img src="assets/text/7560efac3995df4d7b3f.svg" width="12" alt="3"> | <img src="assets/text/462603791d4fbbc73d26.svg" width="12" alt="4"> | <img src="assets/text/fef01a42c712704b3566.svg" width="12" alt="5"> | <img src="assets/text/05efcea3e35edf51adba.svg" width="12" alt="6"> |
+| <picture><img src="assets/text/29420b9d49fd148b2fe8.svg" width="12" alt="1"></picture> | <picture><img src="assets/text/b5e05c14e06b1a33df78.svg" width="12" alt="2"></picture> | <picture><img src="assets/text/7560efac3995df4d7b3f.svg" width="12" alt="3"></picture> | <picture><img src="assets/text/462603791d4fbbc73d26.svg" width="12" alt="4"></picture> | <picture><img src="assets/text/fef01a42c712704b3566.svg" width="12" alt="5"></picture> | <picture><img src="assets/text/05efcea3e35edf51adba.svg" width="12" alt="6"></picture> |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| <img src="assets/blocks/mined/stone.svg" width="44" alt="1열 1행: 채굴 완료, 돌 획득"><br><sub><img src="assets/text/619f202a31c4617ed950.svg" width="76" alt="채굴 완료"><br><img src="assets/text/ffcdade1249596effb0d.svg" width="60" alt="돌 획득"></sub> | <img src="assets/blocks/mined/redstone_ore.svg" width="44" alt="2열 1행: 채굴 완료, 레드스톤 획득"><br><sub><img src="assets/text/619f202a31c4617ed950.svg" width="76" alt="채굴 완료"><br><img src="assets/text/bf0b4c57d8d106fd352d.svg" width="108" alt="레드스톤 획득"></sub> | [<img src="assets/blocks/stone.svg" width="44" alt="3열 1행: 돌">](https://github.com/oi-RYH/oi-RYH/issues/new?title=mine%7C1%7C2%7C0&body=%EC%A0%9C%EB%AA%A9%EC%9D%84+%EA%B7%B8%EB%8C%80%EB%A1%9C+%EB%91%90%EA%B3%A0+%EC%9D%B4%EC%8A%88%EB%A5%BC+%EC%A0%9C%EC%B6%9C%ED%95%98%EB%A9%B4+%EC%9D%B4+%EB%B8%94%EB%A1%9D%EC%9D%84+%EC%B1%84%EA%B5%B4%ED%95%A9%EB%8B%88%EB%8B%A4.) | [<img src="assets/blocks/stone.svg" width="44" alt="4열 1행: 돌">](https://github.com/oi-RYH/oi-RYH/issues/new?title=mine%7C1%7C3%7C0&body=%EC%A0%9C%EB%AA%A9%EC%9D%84+%EA%B7%B8%EB%8C%80%EB%A1%9C+%EB%91%90%EA%B3%A0+%EC%9D%B4%EC%8A%88%EB%A5%BC+%EC%A0%9C%EC%B6%9C%ED%95%98%EB%A9%B4+%EC%9D%B4+%EB%B8%94%EB%A1%9D%EC%9D%84+%EC%B1%84%EA%B5%B4%ED%95%A9%EB%8B%88%EB%8B%A4.) | [<img src="assets/blocks/stone.svg" width="44" alt="5열 1행: 돌">](https://github.com/oi-RYH/oi-RYH/issues/new?title=mine%7C1%7C4%7C0&body=%EC%A0%9C%EB%AA%A9%EC%9D%84+%EA%B7%B8%EB%8C%80%EB%A1%9C+%EB%91%90%EA%B3%A0+%EC%9D%B4%EC%8A%88%EB%A5%BC+%EC%A0%9C%EC%B6%9C%ED%95%98%EB%A9%B4+%EC%9D%B4+%EB%B8%94%EB%A1%9D%EC%9D%84+%EC%B1%84%EA%B5%B4%ED%95%A9%EB%8B%88%EB%8B%A4.) | [<img src="assets/blocks/stone.svg" width="44" alt="6열 1행: 돌">](https://github.com/oi-RYH/oi-RYH/issues/new?title=mine%7C1%7C5%7C0&body=%EC%A0%9C%EB%AA%A9%EC%9D%84+%EA%B7%B8%EB%8C%80%EB%A1%9C+%EB%91%90%EA%B3%A0+%EC%9D%B4%EC%8A%88%EB%A5%BC+%EC%A0%9C%EC%B6%9C%ED%95%98%EB%A9%B4+%EC%9D%B4+%EB%B8%94%EB%A1%9D%EC%9D%84+%EC%B1%84%EA%B5%B4%ED%95%A9%EB%8B%88%EB%8B%A4.) |
+| <img src="assets/blocks/mined/stone.svg" width="44" alt="1열 1행: 채굴 완료, 돌 획득"><br><sub><picture><img src="assets/text/619f202a31c4617ed950.svg" width="76" alt="채굴 완료"></picture><br><picture><img src="assets/text/ffcdade1249596effb0d.svg" width="60" alt="돌 획득"></picture></sub> | <img src="assets/blocks/mined/redstone_ore.svg" width="44" alt="2열 1행: 채굴 완료, 레드스톤 획득"><br><sub><picture><img src="assets/text/619f202a31c4617ed950.svg" width="76" alt="채굴 완료"></picture><br><picture><img src="assets/text/bf0b4c57d8d106fd352d.svg" width="108" alt="레드스톤 획득"></picture></sub> | [<img src="assets/blocks/stone.svg" width="44" alt="3열 1행: 돌">](https://github.com/oi-RYH/oi-RYH/issues/new?title=mine%7C1%7C2%7C0&body=%EC%A0%9C%EB%AA%A9%EC%9D%84+%EA%B7%B8%EB%8C%80%EB%A1%9C+%EB%91%90%EA%B3%A0+%EC%9D%B4%EC%8A%88%EB%A5%BC+%EC%A0%9C%EC%B6%9C%ED%95%98%EB%A9%B4+%EC%9D%B4+%EB%B8%94%EB%A1%9D%EC%9D%84+%EC%B1%84%EA%B5%B4%ED%95%A9%EB%8B%88%EB%8B%A4.) | [<img src="assets/blocks/stone.svg" width="44" alt="4열 1행: 돌">](https://github.com/oi-RYH/oi-RYH/issues/new?title=mine%7C1%7C3%7C0&body=%EC%A0%9C%EB%AA%A9%EC%9D%84+%EA%B7%B8%EB%8C%80%EB%A1%9C+%EB%91%90%EA%B3%A0+%EC%9D%B4%EC%8A%88%EB%A5%BC+%EC%A0%9C%EC%B6%9C%ED%95%98%EB%A9%B4+%EC%9D%B4+%EB%B8%94%EB%A1%9D%EC%9D%84+%EC%B1%84%EA%B5%B4%ED%95%A9%EB%8B%88%EB%8B%A4.) | [<img src="assets/blocks/stone.svg" width="44" alt="5열 1행: 돌">](https://github.com/oi-RYH/oi-RYH/issues/new?title=mine%7C1%7C4%7C0&body=%EC%A0%9C%EB%AA%A9%EC%9D%84+%EA%B7%B8%EB%8C%80%EB%A1%9C+%EB%91%90%EA%B3%A0+%EC%9D%B4%EC%8A%88%EB%A5%BC+%EC%A0%9C%EC%B6%9C%ED%95%98%EB%A9%B4+%EC%9D%B4+%EB%B8%94%EB%A1%9D%EC%9D%84+%EC%B1%84%EA%B5%B4%ED%95%A9%EB%8B%88%EB%8B%A4.) | [<img src="assets/blocks/stone.svg" width="44" alt="6열 1행: 돌">](https://github.com/oi-RYH/oi-RYH/issues/new?title=mine%7C1%7C5%7C0&body=%EC%A0%9C%EB%AA%A9%EC%9D%84+%EA%B7%B8%EB%8C%80%EB%A1%9C+%EB%91%90%EA%B3%A0+%EC%9D%B4%EC%8A%88%EB%A5%BC+%EC%A0%9C%EC%B6%9C%ED%95%98%EB%A9%B4+%EC%9D%B4+%EB%B8%94%EB%A1%9D%EC%9D%84+%EC%B1%84%EA%B5%B4%ED%95%A9%EB%8B%88%EB%8B%A4.) |
 | [<img src="assets/blocks/stone.svg" width="44" alt="1열 2행: 돌">](https://github.com/oi-RYH/oi-RYH/issues/new?title=mine%7C1%7C0%7C1&body=%EC%A0%9C%EB%AA%A9%EC%9D%84+%EA%B7%B8%EB%8C%80%EB%A1%9C+%EB%91%90%EA%B3%A0+%EC%9D%B4%EC%8A%88%EB%A5%BC+%EC%A0%9C%EC%B6%9C%ED%95%98%EB%A9%B4+%EC%9D%B4+%EB%B8%94%EB%A1%9D%EC%9D%84+%EC%B1%84%EA%B5%B4%ED%95%A9%EB%8B%88%EB%8B%A4.) | [<img src="assets/blocks/stone.svg" width="44" alt="2열 2행: 돌">](https://github.com/oi-RYH/oi-RYH/issues/new?title=mine%7C1%7C1%7C1&body=%EC%A0%9C%EB%AA%A9%EC%9D%84+%EA%B7%B8%EB%8C%80%EB%A1%9C+%EB%91%90%EA%B3%A0+%EC%9D%B4%EC%8A%88%EB%A5%BC+%EC%A0%9C%EC%B6%9C%ED%95%98%EB%A9%B4+%EC%9D%B4+%EB%B8%94%EB%A1%9D%EC%9D%84+%EC%B1%84%EA%B5%B4%ED%95%A9%EB%8B%88%EB%8B%A4.) | [<img src="assets/blocks/stone.svg" width="44" alt="3열 2행: 돌">](https://github.com/oi-RYH/oi-RYH/issues/new?title=mine%7C1%7C2%7C1&body=%EC%A0%9C%EB%AA%A9%EC%9D%84+%EA%B7%B8%EB%8C%80%EB%A1%9C+%EB%91%90%EA%B3%A0+%EC%9D%B4%EC%8A%88%EB%A5%BC+%EC%A0%9C%EC%B6%9C%ED%95%98%EB%A9%B4+%EC%9D%B4+%EB%B8%94%EB%A1%9D%EC%9D%84+%EC%B1%84%EA%B5%B4%ED%95%A9%EB%8B%88%EB%8B%A4.) | [<img src="assets/blocks/stone.svg" width="44" alt="4열 2행: 돌">](https://github.com/oi-RYH/oi-RYH/issues/new?title=mine%7C1%7C3%7C1&body=%EC%A0%9C%EB%AA%A9%EC%9D%84+%EA%B7%B8%EB%8C%80%EB%A1%9C+%EB%91%90%EA%B3%A0+%EC%9D%B4%EC%8A%88%EB%A5%BC+%EC%A0%9C%EC%B6%9C%ED%95%98%EB%A9%B4+%EC%9D%B4+%EB%B8%94%EB%A1%9D%EC%9D%84+%EC%B1%84%EA%B5%B4%ED%95%A9%EB%8B%88%EB%8B%A4.) | [<img src="assets/blocks/stone.svg" width="44" alt="5열 2행: 돌">](https://github.com/oi-RYH/oi-RYH/issues/new?title=mine%7C1%7C4%7C1&body=%EC%A0%9C%EB%AA%A9%EC%9D%84+%EA%B7%B8%EB%8C%80%EB%A1%9C+%EB%91%90%EA%B3%A0+%EC%9D%B4%EC%8A%88%EB%A5%BC+%EC%A0%9C%EC%B6%9C%ED%95%98%EB%A9%B4+%EC%9D%B4+%EB%B8%94%EB%A1%9D%EC%9D%84+%EC%B1%84%EA%B5%B4%ED%95%A9%EB%8B%88%EB%8B%A4.) | [<img src="assets/blocks/stone.svg" width="44" alt="6열 2행: 돌">](https://github.com/oi-RYH/oi-RYH/issues/new?title=mine%7C1%7C5%7C1&body=%EC%A0%9C%EB%AA%A9%EC%9D%84+%EA%B7%B8%EB%8C%80%EB%A1%9C+%EB%91%90%EA%B3%A0+%EC%9D%B4%EC%8A%88%EB%A5%BC+%EC%A0%9C%EC%B6%9C%ED%95%98%EB%A9%B4+%EC%9D%B4+%EB%B8%94%EB%A1%9D%EC%9D%84+%EC%B1%84%EA%B5%B4%ED%95%A9%EB%8B%88%EB%8B%A4.) |
 | [<img src="assets/blocks/stone.svg" width="44" alt="1열 3행: 돌">](https://github.com/oi-RYH/oi-RYH/issues/new?title=mine%7C1%7C0%7C2&body=%EC%A0%9C%EB%AA%A9%EC%9D%84+%EA%B7%B8%EB%8C%80%EB%A1%9C+%EB%91%90%EA%B3%A0+%EC%9D%B4%EC%8A%88%EB%A5%BC+%EC%A0%9C%EC%B6%9C%ED%95%98%EB%A9%B4+%EC%9D%B4+%EB%B8%94%EB%A1%9D%EC%9D%84+%EC%B1%84%EA%B5%B4%ED%95%A9%EB%8B%88%EB%8B%A4.) | [<img src="assets/blocks/stone.svg" width="44" alt="2열 3행: 돌">](https://github.com/oi-RYH/oi-RYH/issues/new?title=mine%7C1%7C1%7C2&body=%EC%A0%9C%EB%AA%A9%EC%9D%84+%EA%B7%B8%EB%8C%80%EB%A1%9C+%EB%91%90%EA%B3%A0+%EC%9D%B4%EC%8A%88%EB%A5%BC+%EC%A0%9C%EC%B6%9C%ED%95%98%EB%A9%B4+%EC%9D%B4+%EB%B8%94%EB%A1%9D%EC%9D%84+%EC%B1%84%EA%B5%B4%ED%95%A9%EB%8B%88%EB%8B%A4.) | [<img src="assets/blocks/stone.svg" width="44" alt="3열 3행: 돌">](https://github.com/oi-RYH/oi-RYH/issues/new?title=mine%7C1%7C2%7C2&body=%EC%A0%9C%EB%AA%A9%EC%9D%84+%EA%B7%B8%EB%8C%80%EB%A1%9C+%EB%91%90%EA%B3%A0+%EC%9D%B4%EC%8A%88%EB%A5%BC+%EC%A0%9C%EC%B6%9C%ED%95%98%EB%A9%B4+%EC%9D%B4+%EB%B8%94%EB%A1%9D%EC%9D%84+%EC%B1%84%EA%B5%B4%ED%95%A9%EB%8B%88%EB%8B%A4.) | [<img src="assets/blocks/stone.svg" width="44" alt="4열 3행: 돌">](https://github.com/oi-RYH/oi-RYH/issues/new?title=mine%7C1%7C3%7C2&body=%EC%A0%9C%EB%AA%A9%EC%9D%84+%EA%B7%B8%EB%8C%80%EB%A1%9C+%EB%91%90%EA%B3%A0+%EC%9D%B4%EC%8A%88%EB%A5%BC+%EC%A0%9C%EC%B6%9C%ED%95%98%EB%A9%B4+%EC%9D%B4+%EB%B8%94%EB%A1%9D%EC%9D%84+%EC%B1%84%EA%B5%B4%ED%95%A9%EB%8B%88%EB%8B%A4.) | [<img src="assets/blocks/stone.svg" width="44" alt="5열 3행: 돌">](https://github.com/oi-RYH/oi-RYH/issues/new?title=mine%7C1%7C4%7C2&body=%EC%A0%9C%EB%AA%A9%EC%9D%84+%EA%B7%B8%EB%8C%80%EB%A1%9C+%EB%91%90%EA%B3%A0+%EC%9D%B4%EC%8A%88%EB%A5%BC+%EC%A0%9C%EC%B6%9C%ED%95%98%EB%A9%B4+%EC%9D%B4+%EB%B8%94%EB%A1%9D%EC%9D%84+%EC%B1%84%EA%B5%B4%ED%95%A9%EB%8B%88%EB%8B%A4.) | [<img src="assets/blocks/stone.svg" width="44" alt="6열 3행: 돌">](https://github.com/oi-RYH/oi-RYH/issues/new?title=mine%7C1%7C5%7C2&body=%EC%A0%9C%EB%AA%A9%EC%9D%84+%EA%B7%B8%EB%8C%80%EB%A1%9C+%EB%91%90%EA%B3%A0+%EC%9D%B4%EC%8A%88%EB%A5%BC+%EC%A0%9C%EC%B6%9C%ED%95%98%EB%A9%B4+%EC%9D%B4+%EB%B8%94%EB%A1%9D%EC%9D%84+%EC%B1%84%EA%B5%B4%ED%95%A9%EB%8B%88%EB%8B%A4.) |
 <!-- MINE_GRID:END -->
 
 <!-- MINE_STATS:START -->
-<img src="assets/text/e24f36b9db3a6a4934b0.svg" width="324" alt="지하 1층 · 이번 층 2/18블록 · 누적 2블록">
+<picture><img src="assets/text/e24f36b9db3a6a4934b0.svg" width="324" alt="지하 1층 · 이번 층 2/18블록 · 누적 2블록"></picture>
 
-| <img src="assets/text/8805a4bf82046cf70473.svg" width="36" alt="광부"> | <img src="assets/text/af851c22998aacc99cf7.svg" width="36" alt="블록"> | <img src="assets/text/4bca7550164ea7a427d3.svg" width="36" alt="점수"> |
+| <picture><img src="assets/text/8805a4bf82046cf70473.svg" width="36" alt="광부"></picture> | <picture><img src="assets/text/af851c22998aacc99cf7.svg" width="36" alt="블록"></picture> | <picture><img src="assets/text/4bca7550164ea7a427d3.svg" width="36" alt="점수"></picture> |
 | :--- | ---: | ---: |
-| [<img src="assets/text/d8742ddf1cd6c2119c8d.svg" width="92" alt="@songkh1201">](https://github.com/songkh1201) | <img src="assets/text/29420b9d49fd148b2fe8.svg" width="12" alt="1"> | <img src="assets/text/05efcea3e35edf51adba.svg" width="12" alt="6"> |
-| [<img src="assets/text/6b1434fb529a0d2788b2.svg" width="60" alt="@oi-RYH">](https://github.com/oi-RYH) | <img src="assets/text/29420b9d49fd148b2fe8.svg" width="12" alt="1"> | <img src="assets/text/29420b9d49fd148b2fe8.svg" width="12" alt="1"> |
+| [<img src="assets/text/d8742ddf1cd6c2119c8d.svg" width="92" alt="@songkh1201">](https://github.com/songkh1201) | <picture><img src="assets/text/29420b9d49fd148b2fe8.svg" width="12" alt="1"></picture> | <picture><img src="assets/text/05efcea3e35edf51adba.svg" width="12" alt="6"></picture> |
+| [<img src="assets/text/6b1434fb529a0d2788b2.svg" width="60" alt="@oi-RYH">](https://github.com/oi-RYH) | <picture><img src="assets/text/29420b9d49fd148b2fe8.svg" width="12" alt="1"></picture> | <picture><img src="assets/text/29420b9d49fd148b2fe8.svg" width="12" alt="1"></picture> |
 
-<img src="assets/text/3a3b6dfb1007a67e6644.svg" width="76" alt="최근 발견">
+<picture><img src="assets/text/3a3b6dfb1007a67e6644.svg" width="76" alt="최근 발견"></picture>
 
-- <img src="assets/blocks/redstone_ore.svg" width="20" alt="레드스톤"> <img src="assets/text/f140b8b4672e9f177ab9.svg" width="260" alt="@songkh1201: 레드스톤 획득! +6점">
-- <img src="assets/blocks/stone.svg" width="20" alt="돌"> <img src="assets/text/c40340427b17bf76e6eb.svg" width="180" alt="@oi-RYH: 돌 획득! +1점">
+- <img src="assets/blocks/redstone_ore.svg" width="20" alt="레드스톤"> <picture><img src="assets/text/f140b8b4672e9f177ab9.svg" width="260" alt="@songkh1201: 레드스톤 획득! +6점"></picture>
+- <img src="assets/blocks/stone.svg" width="20" alt="돌"> <picture><img src="assets/text/c40340427b17bf76e6eb.svg" width="180" alt="@oi-RYH: 돌 획득! +1점"></picture>
 <!-- MINE_STATS:END -->
 
 <details>
-<summary><img src="assets/text/746c53dcf540aeb175cd.svg" width="188" alt="채굴 방법과 드롭 테이블"></summary>
+<summary><picture><img src="assets/text/746c53dcf540aeb175cd.svg" width="188" alt="채굴 방법과 드롭 테이블"></picture></summary>
 
-<img src="assets/text/fc05ac58b90ecb52c2fe.svg" width="460" alt="운영 시작 후에는 돌 선택 → GitHub 이슈 제출 → 자동 처리 → README 새로고침 순서로 참여합니다.">
-<img src="assets/text/d19ab043d6b16b1cc77f.svg" width="428" alt="누구나 같은 광산을 공유하며, 18칸을 다 캐면 다음 층이 열립니다.">
+<picture><img src="assets/text/fc05ac58b90ecb52c2fe.svg" width="460" alt="운영 시작 후에는 돌 선택 → GitHub 이슈 제출 → 자동 처리 → README 새로고침 순서로 참여합니다."></picture>
+<picture><img src="assets/text/d19ab043d6b16b1cc77f.svg" width="428" alt="누구나 같은 광산을 공유하며, 18칸을 다 캐면 다음 층이 열립니다."></picture>
 
-| <img src="assets/text/6ab3306907be248e7810.svg" width="36" alt="발견"> | <img src="assets/text/4bca7550164ea7a427d3.svg" width="36" alt="점수"> |
+| <picture><img src="assets/text/6ab3306907be248e7810.svg" width="36" alt="발견"></picture> | <picture><img src="assets/text/4bca7550164ea7a427d3.svg" width="36" alt="점수"></picture> |
 | :--- | ---: |
-| <img src="assets/text/228e442dc74160e1b53e.svg" width="116" alt="돌 / 석탄 / 철"> | <img src="assets/text/a41430fb2fe4dabba9e2.svg" width="76" alt="1 / 2 / 4"> |
-| <img src="assets/text/c4fd297a8bf629c62086.svg" width="180" alt="레드스톤 / 청금석 / 금"> | <img src="assets/text/2cf61ed65b155d08c08d.svg" width="84" alt="6 / 8 / 12"> |
-| <img src="assets/text/4a57bd6d015bf25df9ff.svg" width="172" alt="다이아몬드 / 에메랄드"> | <img src="assets/text/c943b456d452e25ef95c.svg" width="60" alt="50 / 80"> |
+| <picture><img src="assets/text/228e442dc74160e1b53e.svg" width="116" alt="돌 / 석탄 / 철"></picture> | <picture><img src="assets/text/a41430fb2fe4dabba9e2.svg" width="76" alt="1 / 2 / 4"></picture> |
+| <picture><img src="assets/text/c4fd297a8bf629c62086.svg" width="180" alt="레드스톤 / 청금석 / 금"></picture> | <picture><img src="assets/text/2cf61ed65b155d08c08d.svg" width="84" alt="6 / 8 / 12"></picture> |
+| <picture><img src="assets/text/4a57bd6d015bf25df9ff.svg" width="172" alt="다이아몬드 / 에메랄드"></picture> | <picture><img src="assets/text/c943b456d452e25ef95c.svg" width="60" alt="50 / 80"></picture> |
 
-<img src="assets/text/a939bc8cbbc024a5b6c5.svg" width="468" alt="광물은 채굴 시 무작위로 결정됩니다. 이미 캔 칸과 지난 층의 링크는 점수를 주지 않습니다.">
+<picture><img src="assets/text/a939bc8cbbc024a5b6c5.svg" width="468" alt="광물은 채굴 시 무작위로 결정됩니다. 이미 캔 칸과 지난 층의 링크는 점수를 주지 않습니다."></picture>
 
 </details>
 
 <a name="field-notes"></a>
 
-## <img src="assets/blocks/book_and_quill.svg" width="28" alt="책과 깃펜"> <img src="assets/headings/field-notes.svg" width="112" alt="작업 일지">
+## <img src="assets/blocks/book_and_quill.svg" width="28" alt="책과 깃펜"> <picture><img src="assets/headings/field-notes.svg" width="112" alt="작업 일지"></picture>
 
-[<img src="assets/text/8fc0e0ae68c42c9e74e9.svg" width="68" alt="블로그 ↗">](https://oi-ryh.github.io) <img src="assets/text/452463119721a98aa93f.svg" width="12" alt="·"> [<img src="assets/text/aa178860dd56aaa2393c.svg" width="108" alt="전체 저장소 ↗">](https://github.com/oi-RYH?tab=repositories)
+[<img src="assets/text/8fc0e0ae68c42c9e74e9.svg" width="68" alt="블로그 ↗">](https://oi-ryh.github.io) <picture><img src="assets/text/452463119721a98aa93f.svg" width="12" alt="·"></picture> [<img src="assets/text/aa178860dd56aaa2393c.svg" width="108" alt="전체 저장소 ↗">](https://github.com/oi-RYH?tab=repositories)
 
 <details>
-  <summary><strong><img src="assets/text/bb8d97a579fcf58f9b78.svg" width="100" alt="Player stats"></strong></summary>
+  <summary><strong><picture><img src="assets/text/bb8d97a579fcf58f9b78.svg" width="100" alt="Player stats"></picture></strong></summary>
   <br />
   <p align="center">
     <img height="165" src="https://github-readme-stats.vercel.app/api?username=oi-RYH&show_icons=true&hide_border=true&bg_color=0d1117&title_color=f0b35a&text_color=e6edf3&icon_color=65a660&ring_color=f0b35a&count_private=true" alt="RYH's GitHub stats" />
@@ -142,10 +142,9 @@
 </details>
 
 <details>
-  <summary><strong><img src="assets/text/f0f39a3205999a1f5941.svg" width="116" alt="World activity"></strong></summary>
+  <summary><img src="assets/blocks/pickaxe.svg" width="20" alt="곡괭이"> <strong><picture><img src="assets/text/8fcad01c5a715b1a45ed.svg" width="76" alt="활동 월드"></picture></strong></summary>
   <br />
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/oi-RYH/oi-RYH/output/github-snake-dark.svg" />
-    <img src="https://raw.githubusercontent.com/oi-RYH/oi-RYH/output/github-snake.svg" alt="Contribution snake" />
-  </picture>
+  <a href="https://github.com/oi-RYH?tab=contributions">
+    <img src="https://raw.githubusercontent.com/oi-RYH/oi-RYH/output/minecraft-activity.svg" width="100%" alt="지난 1년의 GitHub 기여를 광석 블록과 닭 광산 수레로 표현한 활동 월드" />
+  </a>
 </details>
