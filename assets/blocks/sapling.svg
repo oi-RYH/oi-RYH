@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" shape-rendering="crispEdges" role="img" aria-label="묘목">
+<path fill="#304d21" d="M12 2h8v3h5v5h4v7h-5v4h-7v2H8v-4H3v-8h4V6h5z"/>
+<path fill="#568f32" d="M13 4h6v4h5v4h3v4h-5v3h-7v2H9v-4H5v-5h4V8h4z"/>
+<path fill="#83b74a" d="M13 4h5v3h-5zM9 9h4v4H9zm10 0h4v3h-4zM6 13h3v3H6zm10 3h5v3h-5z"/>
+<path fill="#533820" d="M14 15h4v12h4v3H9v-3h5zM10 19h4v3h-4zm8-5h4v3h-4z"/>
+<path fill="#9c723d" d="M15 16h2v11h-2zm-4 12h9v1h-9z"/></svg>

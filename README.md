@@ -14,22 +14,22 @@
 
 <a name="crafting"></a>
 
-## ⛏️ Currently crafting
+## <img src="assets/blocks/crafting_table.svg" width="28" alt="제작대"> Currently crafting
 
 <table>
   <tr>
     <td width="33%" valign="top">
-      <h3>📅 <a href="https://github.com/oi-RYH/11.03_colloquial-calendar">Say Days</a></h3>
+      <h3><img src="assets/blocks/book_and_quill.svg" width="24" alt="책과 깃펜"> <a href="https://github.com/oi-RYH/11.03_colloquial-calendar">Say Days</a></h3>
       <p>일상을 기록하는 캘린더.</p>
       <p><sub>Web · Calendar</sub></p>
     </td>
     <td width="33%" valign="top">
-      <h3>🌱 bonsai</h3>
+      <h3><img src="assets/blocks/sapling.svg" width="24" alt="묘목"> bonsai</h3>
       <p>작은 나무를 키우는 iOS 게임.</p>
       <p><sub>Swift · iOS</sub></p>
     </td>
     <td width="33%" valign="top">
-      <h3>📷 Stereo camera</h3>
+      <h3><img src="assets/blocks/observer.svg" width="24" alt="관측기"> Stereo camera</h3>
       <p>두 카메라의 시선을 맞추는 캘리브레이션 도구.</p>
       <p><sub>C++ · C#</sub></p>
     </td>
@@ -38,10 +38,10 @@
 
 <a name="inventory"></a>
 
-## 📦 Inventory
+## <img src="assets/blocks/chest.svg" width="28" alt="상자"> Inventory
 
 <details open>
-<summary><strong>도구 상자 — 오늘도 일단 꺼내 봅니다</strong></summary>
+<summary><img src="assets/blocks/chest.svg" width="20" alt="상자"> <strong>도구 상자 — 오늘도 일단 꺼내 봅니다</strong></summary>
 
 
 <p>
@@ -56,14 +56,14 @@
 </details>
 
 <details>
-<summary><strong>주머니 — 코드 말고 좋아하는 것들</strong></summary>
+<summary><img src="assets/blocks/bundle.svg" width="20" alt="꾸러미"> <strong>주머니 — 코드 말고 좋아하는 것들</strong></summary>
 
 픽셀 아트와 스프라이트 애니메이션을 좋아하고, 클래식 음악을 들으며 코딩합니다.
 
 </details>
 
 <details>
-<summary><strong>🐔 이 닭은 팀원인가요?</strong></summary>
+<summary><img src="assets/blocks/chicken.svg" width="20" alt="닭"> <strong>이 닭은 팀원인가요?</strong></summary>
 
 아직 커밋은 없지만 코드 리뷰할 때 옆에서 보고 있습니다.
 
@@ -71,7 +71,7 @@
 
 <a name="community-mine"></a>
 
-## ⛏️ 공용 광산
+## <img src="assets/blocks/pickaxe.svg" width="28" alt="곡괭이"> 공용 광산
 
 여기까지 왔으면 돌 하나는 캐고 가세요. 맥북 수리비에 보태겠습니다.
 
@@ -113,7 +113,7 @@
 
 <a name="field-notes"></a>
 
-## 📖 작업 일지
+## <img src="assets/blocks/book_and_quill.svg" width="28" alt="책과 깃펜"> 작업 일지
 
 [블로그 ↗](https://oi-ryh.github.io) · [전체 저장소 ↗](https://github.com/oi-RYH?tab=repositories)
 

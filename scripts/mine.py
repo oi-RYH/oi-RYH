@@ -86,7 +86,11 @@ def render(text, state, live=False, repo='oi-RYH/oi-RYH'):
         stats += ['', '| 광부 | 블록 | 점수 |', '| :--- | ---: | ---: |']
         for user, rec in sorted(state['miners'].items(), key=lambda item: (-item[1]['score'], item[0]))[:5]:
             stats.append(f'| [@{user}](https://github.com/{user}) | {rec["blocks"]} | {rec["score"]} |')
-        stats += ['', '**최근 발견**', ''] + ['- ' + entry for entry in reversed(state['log'])]
+        stats += ['', '**최근 발견**', '']
+        for entry in reversed(state['log']):
+            for ore, (name, emoji, _, _) in ORES.items():
+                entry = entry.replace(emoji, f'<img src="assets/blocks/{ore}.svg" width="20" alt="{name}">')
+            stats.append('- ' + entry)
     else:
         stats += ['', '아직 첫 광부가 없습니다. 오리는 곡괭이를 들 수 없거든요.']
     for name, content in [('MINE_MODE', notice), ('MINE_GRID', '\n'.join(rows)), ('MINE_STATS', '\n'.join(stats))]:

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" shape-rendering="crispEdges" role="img" aria-label="관측기">
+<path fill="#373b3d" d="M2 3h28v27H2z"/><path fill="#929795" d="M4 5h24v23H4z"/>
+<path fill="#c4c7bd" d="M4 5h24v3H4zm0 3h3v17H4z"/><path fill="#646b6b" d="M25 8h3v20H7v-3h18z"/>
+<path fill="#535959" d="M7 10h7v8H7zm11 0h7v8h-7z"/>
+<path fill="#242a2b" d="M9 12h4v5H9zm10 0h4v5h-4zM10 21h12v3H10z"/>
+<path fill="#dde0d7" d="M8 11h2v2H8zm11 0h2v2h-2z"/>
+<path fill="#7e8581" d="M14 8h4v2h-4zM7 19h3v3H7zm15 0h3v3h-3z"/></svg>
