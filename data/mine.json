@@ -2,7 +2,10 @@
   "layer": 1,
   "grid": [
     [
-      null,
+      {
+        "ore": "stone",
+        "user": "oi-RYH"
+      },
       null,
       null,
       null,
@@ -26,8 +29,19 @@
       null
     ]
   ],
-  "miners": {},
-  "totals": {},
-  "receipts": {},
-  "log": []
+  "miners": {
+    "oi-RYH": {
+      "blocks": 1,
+      "score": 1
+    }
+  },
+  "totals": {
+    "stone": 1
+  },
+  "receipts": {
+    "1": "🪨 @oi-RYH: 돌 획득! +1점"
+  },
+  "log": [
+    "🪨 @oi-RYH: 돌 획득! +1점"
+  ]
 }
