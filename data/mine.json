@@ -6,7 +6,10 @@
         "ore": "stone",
         "user": "oi-RYH"
       },
-      null,
+      {
+        "ore": "redstone_ore",
+        "user": "songkh1201"
+      },
       null,
       null,
       null,
@@ -33,15 +36,22 @@
     "oi-RYH": {
       "blocks": 1,
       "score": 1
+    },
+    "songkh1201": {
+      "blocks": 1,
+      "score": 6
     }
   },
   "totals": {
-    "stone": 1
+    "stone": 1,
+    "redstone_ore": 1
   },
   "receipts": {
-    "1": "🪨 @oi-RYH: 돌 획득! +1점"
+    "1": "🪨 @oi-RYH: 돌 획득! +1점",
+    "2": "🔴 @songkh1201: 레드스톤 획득! +6점"
   },
   "log": [
-    "🪨 @oi-RYH: 돌 획득! +1점"
+    "🪨 @oi-RYH: 돌 획득! +1점",
+    "🔴 @songkh1201: 레드스톤 획득! +6점"
   ]
 }
