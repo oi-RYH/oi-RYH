@@ -22,19 +22,19 @@
     <td width="33%" valign="top">
       <h3><img src="assets/blocks/crafting_table.svg" width="24" alt="제작대"> <a href="https://github.com/oi-RYH/Dawn"><img src="assets/text/5f275001baa1d0c3d8bf.svg" width="36" alt="Dawn"></a></h3>
       <p><img src="assets/text/514c456b7009127188e3.svg" width="196" alt="저장소에서 자세한 내용을 확인하세요."></p>
-      <p><img src="assets/blocks/chest.svg" width="16" alt="상자"> <img src="assets/text/400b58ca266f3efd77a6.svg" width="84" alt="JavaScript"></p>
+      <p><img src="https://img.shields.io/badge/JavaScript-31363F?style=flat-square&amp;logo=javascript&amp;logoColor=F7DF1E" alt="JavaScript" /></p>
       <p><sub><img src="assets/text/0a558c86a7bdbd42e4f7.svg" width="164" alt="최근 작업 2026-09-17 (UTC)"></sub></p>
     </td>
     <td width="33%" valign="top">
       <h3><img src="assets/blocks/crafting_table.svg" width="24" alt="제작대"> <a href="https://github.com/oi-RYH/capstone_design"><img src="assets/text/94a4b80d80defc2a0364.svg" width="124" alt="capstone_design"></a></h3>
       <p><img src="assets/text/553f3c58fab3c0b42411.svg" width="156" alt="캡스턴 디자인 - 7조"></p>
-      <p><img src="assets/blocks/chest.svg" width="16" alt="상자"> <img src="assets/text/b207ab8f78b55d15ad3e.svg" width="116" alt="언어 정보 없음"></p>
+      <p><img src="https://img.shields.io/badge/%EC%96%B8%EC%96%B4%20%EC%A0%95%EB%B3%B4%20%EC%97%86%EC%9D%8C-31363F?style=flat-square" alt="언어 정보 없음" /></p>
       <p><sub><img src="assets/text/d2440278c5f74c7e0632.svg" width="164" alt="최근 작업 2026-09-16 (UTC)"></sub></p>
     </td>
     <td width="33%" valign="top">
       <h3><img src="assets/blocks/crafting_table.svg" width="24" alt="제작대"> <a href="https://github.com/oi-RYH/BrassField_plugin"><img src="assets/text/32ea30df9cfe1abb9d60.svg" width="140" alt="BrassField_plugin"></a></h3>
       <p><img src="assets/text/514c456b7009127188e3.svg" width="196" alt="저장소에서 자세한 내용을 확인하세요."></p>
-      <p><img src="assets/blocks/chest.svg" width="16" alt="상자"> <img src="assets/text/b12fadd3adac1247128a.svg" width="36" alt="Java"></p>
+      <p><img src="https://img.shields.io/badge/Java-31363F?style=flat-square&amp;logo=openjdk&amp;logoColor=F89820" alt="Java" /></p>
       <p><sub><img src="assets/text/9f063ca3dad18bfff03a.svg" width="164" alt="최근 작업 2026-08-14 (UTC)"></sub></p>
     </td>
   </tr>
@@ -52,12 +52,12 @@
 
 
 <p>
-  <img src="assets/text/c190a730c35d1a0986c8.svg" width="28" alt="C++">
-  <img src="assets/text/c644bc9cc8c62d7d995e.svg" width="20" alt="C#">
-  <img src="assets/text/270f3239466014867610.svg" width="52" alt="Python">
-  <img src="assets/text/ec612cc3ccd7c1f6c413.svg" width="84" alt="TypeScript">
-  <img src="assets/text/a823288fceb3c28b0893.svg" width="44" alt="Swift">
-  <img src="assets/text/25e40f8fae03fb7c67d0.svg" width="52" alt="OpenCV">
+  <img src="https://img.shields.io/badge/C++-31363F?style=flat-square&logo=cplusplus&logoColor=7DD3FC" alt="C++" />
+  <img src="https://img.shields.io/badge/C%23-31363F?style=flat-square&logo=dotnet&logoColor=A78BFA" alt="C#" />
+  <img src="https://img.shields.io/badge/Python-31363F?style=flat-square&logo=python&logoColor=FACC15" alt="Python" />
+  <img src="https://img.shields.io/badge/TypeScript-31363F?style=flat-square&logo=typescript&logoColor=60A5FA" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Swift-31363F?style=flat-square&logo=swift&logoColor=FB923C" alt="Swift" />
+  <img src="https://img.shields.io/badge/OpenCV-31363F?style=flat-square&logo=opencv&logoColor=86EFAC" alt="OpenCV" />
 </p>
 
 </details>

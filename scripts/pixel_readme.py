@@ -82,11 +82,7 @@ class PixelText:
         out = []
         for token in tokens:
             if token.startswith('<'):
-                if 'https://img.shields.io/' in token:
-                    label = re.search(r'alt="([^"]+)"', token)
-                    out.append(self.image(label.group(1)) if label else token)
-                else:
-                    out.append(token)
+                out.append(token)
             elif token.startswith('[') and re.fullmatch(r'\[[^\]]*\]\([^)]*\)', token):
                 match = re.fullmatch(r'\[([^\]]*)\]\(([^)]*)\)', token)
                 out.append(f'[{self.inline(match[1])}]({match[2]})')

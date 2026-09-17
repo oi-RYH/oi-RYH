@@ -3,7 +3,7 @@ from html import escape
 import json
 import os
 from pathlib import Path
-from urllib.parse import quote
+from urllib.parse import quote, urlencode
 from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -33,6 +33,25 @@ def refresh(owner, root=ROOT):
     (root / 'data/recent-repos.json').write_text(json.dumps(selected, ensure_ascii=False, indent=2) + '\n')
     return selected
 
+def language_badge(language):
+    label = language or '언어 정보 없음'
+    logos = {
+        'C++': ('cplusplus', '7DD3FC'), 'C#': ('dotnet', 'A78BFA'),
+        'Python': ('python', 'FACC15'), 'TypeScript': ('typescript', '60A5FA'),
+        'JavaScript': ('javascript', 'F7DF1E'), 'Swift': ('swift', 'FB923C'),
+        'Java': ('openjdk', 'F89820'), 'C': ('c', 'A8B9CC'),
+        'Rust': ('rust', 'DEA584'), 'Go': ('go', '00ADD8'),
+        'HTML': ('html5', 'E34F26'), 'CSS': ('css', '663399'),
+        'Kotlin': ('kotlin', 'A97BFF'), 'Dart': ('dart', '54C5F8'),
+        'Shell': ('gnubash', '89E051'), 'Jupyter Notebook': ('jupyter', 'F37626'),
+    }
+    params = {'style': 'flat-square'}
+    if language in logos:
+        params['logo'], params['logoColor'] = logos[language]
+    # Shields escapes a literal hyphen by doubling it.
+    url = 'https://img.shields.io/badge/' + quote(label.replace('-', '--'), safe='') + '-31363F?' + urlencode(params)
+    return f'<img src="{escape(url, quote=True)}" alt="{escape(label, quote=True)}" />'
+
 def cards(repos, owner):
     if not repos:
         return '<p>최근 작업한 공개 저장소가 없습니다.</p>'
@@ -41,12 +60,12 @@ def cards(repos, owner):
         name = escape(repo['name'])
         url = f'https://github.com/{quote(owner, safe="")}/{quote(repo["name"], safe="")}'
         description = escape(repo['description'] or '저장소에서 자세한 내용을 확인하세요.')
-        language = escape(repo['language'] or '언어 정보 없음')
+        language = language_badge(repo['language'])
         date = escape(repo['pushed_at'][:10])
         rows += [f'    <td width="33%" valign="top">',
                  f'      <h3><img src="assets/blocks/crafting_table.svg" width="24" alt="제작대"> <a href="{url}">{name}</a></h3>',
                  f'      <p>{description}</p>',
-                 f'      <p><img src="assets/blocks/chest.svg" width="16" alt="상자"> {language}</p>',
+                 f'      <p>{language}</p>',
                  f'      <p><sub>최근 작업 {date} (UTC)</sub></p>',
                  '    </td>']
     rows += ['  </tr>', '</table>', '',
