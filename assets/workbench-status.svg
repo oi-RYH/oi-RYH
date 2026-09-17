@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="110" viewBox="0 0 840 110" role="img" aria-label="RYH joined the server. Pickaxe equipped. Debugging failed. MacBook equipped.">
+<style>
+.cursor{animation:blink 1s steps(2,end) infinite}.splash{transform-origin:710px 32px;animation:pulse 1.8s ease-in-out infinite}
+.line{opacity:0;animation:chat 12s steps(1,end) infinite}.b{animation-delay:3s}.c{animation-delay:6s}.d{animation-delay:9s}
+@keyframes chat{0%,24%{opacity:1}25%,100%{opacity:0}}@keyframes blink{to{opacity:0}}@keyframes pulse{50%{transform:rotate(-3deg) scale(1.04)}}
+@media(prefers-reduced-motion:reduce){.line,.cursor,.splash{animation:none}.line{opacity:0}.a{opacity:1}}
+</style>
+<rect x="2" y="2" width="836" height="106" rx="6" fill="#161b22" stroke="#405344" stroke-width="3"/>
+<g font-family="monospace"><text x="22" y="35" fill="#85d391" font-size="18">RYH / WORKBENCH</text><text class="splash" x="615" y="35" fill="#ffe16b" font-size="16">Also try debugging!</text>
+<g fill="#e6edf3" font-size="19"><text class="line a" x="22" y="79">&gt; RYH joined the server.</text><text class="line b" x="22" y="79">&gt; Pickaxe equipped. Ready to debug.</text><text class="line c" x="22" y="79">&gt; Error: pickaxe cannot fix this bug.</text><text class="line d" x="22" y="79">&gt; MacBook equipped. Much better.</text></g><rect class="cursor" x="805" y="63" width="10" height="19" fill="#85d391"/></g></svg>

@@ -1,0 +1,36 @@
+name: Community Mine
+on:
+  issues:
+    types: [opened, reopened]
+  push:
+    branches: [main]
+    paths: ['scripts/mine.py', '.github/workflows/mine.yml']
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+  issues: write
+concurrency:
+  group: community-mine
+  cancel-in-progress: false
+jobs:
+  mine:
+    if: github.event_name != 'issues' || startsWith(github.event.issue.title, 'mine|')
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Process open mining requests
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          python scripts/mine.py --queue

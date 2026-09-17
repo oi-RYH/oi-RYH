@@ -6,6 +6,14 @@
 
 곡괭이로는 디버깅이 안 돼서 맥북을 샀습니다.
 
+<img src="assets/workbench-status.svg" width="100%" alt="RYH 접속 → 곡괭이 장착 → 디버깅 실패 → 맥북 장착" />
+
+| [<img src="assets/blocks/iron_ore.svg" width="36" alt="프로젝트">](#crafting) | [<img src="assets/blocks/gold_ore.svg" width="36" alt="인벤토리">](#inventory) | [<img src="assets/blocks/diamond_ore.svg" width="36" alt="공용 광산">](#community-mine) | [<img src="assets/blocks/emerald_ore.svg" width="36" alt="작업 일지">](#field-notes) |
+| :---: | :---: | :---: | :---: |
+| 제작 중 | 상자 열기 | 돌 캐기 | 작업 일지 |
+
+<a name="crafting"></a>
+
 ## ⛏️ Currently crafting
 
 <table>
@@ -28,7 +36,13 @@
   </tr>
 </table>
 
+<a name="inventory"></a>
+
 ## 📦 Inventory
+
+<details open>
+<summary><strong>도구 상자 — 오늘도 일단 꺼내 봅니다</strong></summary>
+
 
 <p>
   <img src="https://img.shields.io/badge/C++-31363F?style=flat-square&logo=cplusplus&logoColor=7DD3FC" alt="C++" />
@@ -39,7 +53,65 @@
   <img src="https://img.shields.io/badge/OpenCV-31363F?style=flat-square&logo=opencv&logoColor=86EFAC" alt="OpenCV" />
 </p>
 
+</details>
+
+<details>
+<summary><strong>주머니 — 코드 말고 좋아하는 것들</strong></summary>
+
 픽셀 아트와 스프라이트 애니메이션을 좋아하고, 클래식 음악을 들으며 코딩합니다.
+
+</details>
+
+<details>
+<summary><strong>🐔 이 닭은 팀원인가요?</strong></summary>
+
+아직 커밋은 없지만 코드 리뷰할 때 옆에서 보고 있습니다.
+
+</details>
+
+<a name="community-mine"></a>
+
+## ⛏️ 공용 광산
+
+여기까지 왔으면 돌 하나는 캐고 가세요. 맥북 수리비에 보태겠습니다.
+
+<a name="mine-help"></a>
+
+<!-- MINE_MODE:START -->
+**미리보기 모드** · 광산 자동화는 기본 브랜치에 반영한 뒤 활성화됩니다. 지금은 이슈가 생성되지 않습니다.
+<!-- MINE_MODE:END -->
+
+<!-- MINE_GRID:START -->
+| 1 | 2 | 3 | 4 | 5 | 6 |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| [<img src="assets/blocks/stone.svg" width="44" alt="1열 1행: 돌">](#mine-help) | [<img src="assets/blocks/stone.svg" width="44" alt="2열 1행: 돌">](#mine-help) | [<img src="assets/blocks/stone.svg" width="44" alt="3열 1행: 돌">](#mine-help) | [<img src="assets/blocks/stone.svg" width="44" alt="4열 1행: 돌">](#mine-help) | [<img src="assets/blocks/stone.svg" width="44" alt="5열 1행: 돌">](#mine-help) | [<img src="assets/blocks/stone.svg" width="44" alt="6열 1행: 돌">](#mine-help) |
+| [<img src="assets/blocks/stone.svg" width="44" alt="1열 2행: 돌">](#mine-help) | [<img src="assets/blocks/stone.svg" width="44" alt="2열 2행: 돌">](#mine-help) | [<img src="assets/blocks/stone.svg" width="44" alt="3열 2행: 돌">](#mine-help) | [<img src="assets/blocks/stone.svg" width="44" alt="4열 2행: 돌">](#mine-help) | [<img src="assets/blocks/stone.svg" width="44" alt="5열 2행: 돌">](#mine-help) | [<img src="assets/blocks/stone.svg" width="44" alt="6열 2행: 돌">](#mine-help) |
+| [<img src="assets/blocks/stone.svg" width="44" alt="1열 3행: 돌">](#mine-help) | [<img src="assets/blocks/stone.svg" width="44" alt="2열 3행: 돌">](#mine-help) | [<img src="assets/blocks/stone.svg" width="44" alt="3열 3행: 돌">](#mine-help) | [<img src="assets/blocks/stone.svg" width="44" alt="4열 3행: 돌">](#mine-help) | [<img src="assets/blocks/stone.svg" width="44" alt="5열 3행: 돌">](#mine-help) | [<img src="assets/blocks/stone.svg" width="44" alt="6열 3행: 돌">](#mine-help) |
+<!-- MINE_GRID:END -->
+
+<!-- MINE_STATS:START -->
+**지하 1층** · 이번 층 0/18블록 · 누적 0블록
+
+아직 첫 광부가 없습니다. 오리는 곡괭이를 들 수 없거든요.
+<!-- MINE_STATS:END -->
+
+<details>
+<summary>채굴 방법과 드롭 테이블</summary>
+
+운영 시작 후에는 돌 선택 → GitHub 이슈 제출 → 자동 처리 → README 새로고침 순서로 참여합니다.
+누구나 같은 광산을 공유하며, 18칸을 다 캐면 다음 층이 열립니다.
+
+| 발견 | 점수 |
+| :--- | ---: |
+| 돌 / 석탄 / 철 | 1 / 2 / 4 |
+| 레드스톤 / 청금석 / 금 | 6 / 8 / 12 |
+| 다이아몬드 / 에메랄드 | 50 / 80 |
+
+광물은 채굴 시 무작위로 결정됩니다. 이미 캔 칸과 지난 층의 링크는 점수를 주지 않습니다.
+
+</details>
+
+<a name="field-notes"></a>
 
 ## 📖 작업 일지
 
