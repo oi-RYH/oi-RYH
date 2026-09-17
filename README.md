@@ -8,7 +8,7 @@
 
 <img src="assets/workbench-status.svg" width="100%" alt="RYH 접속 → 곡괭이 장착 → 디버깅 실패 → 맥북 장착" />
 
-| [<img src="assets/blocks/iron_ore.svg" width="36" alt="프로젝트">](#crafting) | [<img src="assets/blocks/gold_ore.svg" width="36" alt="인벤토리">](#inventory) | [<img src="assets/blocks/diamond_ore.svg" width="36" alt="공용 광산">](#community-mine) | [<img src="assets/blocks/emerald_ore.svg" width="36" alt="작업 일지">](#field-notes) |
+| [<img src="assets/blocks/crafting_table.svg" width="36" alt="제작대 — 제작 중인 프로젝트">](#crafting) | [<img src="assets/blocks/chest.svg" width="36" alt="상자 — 인벤토리 열기">](#inventory) | [<img src="assets/blocks/diamond_ore.svg" width="36" alt="공용 광산">](#community-mine) | [<img src="assets/blocks/book_and_quill.svg" width="36" alt="책과 깃펜 — 작업 일지">](#field-notes) |
 | :---: | :---: | :---: | :---: |
 | 제작 중 | 상자 열기 | 돌 캐기 | 작업 일지 |
 

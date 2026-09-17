@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" shape-rendering="crispEdges" role="img" aria-label="상자">
+<path fill="#382718" d="M3 5h26v24H3z"/>
+<path fill="#aa702d" d="M5 7h22v8H5zm0 11h22v9H5z"/>
+<path fill="#dcab50" d="M5 7h22v2H5zm0 11h2v9H5zm0 0h22v2H5z"/>
+<path fill="#885221" d="M25 9h2v6h-2zm-16 2h14v2H9zm0 12h14v2H9zm16-3h2v7h-2z"/>
+<path fill="#4b321d" d="M3 15h26v3H3zM13 13h6v10h-6z"/>
+<path fill="#e0dfcc" d="M14 14h4v7h-4z"/>
+<path fill="#929b98" d="M16 15h2v6h-2z"/>
+<path fill="#f8efcc" d="M14 14h4v2h-4z"/>
+</svg>

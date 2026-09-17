@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" shape-rendering="crispEdges" role="img" aria-label="제작대">
+<path fill="#38271e" d="M2 2h28v28H2z"/>
+<path fill="#b7834c" d="M4 4h24v9H4z"/>
+<path fill="#704a30" d="M6 5h20v2H6zm0 4h20v2H6zM10 4h2v9h-2zm10 0h2v9h-2z"/>
+<path fill="#d3a269" d="M4 4h24v1H4zM4 12h24v1H4z"/>
+<path fill="#936039" d="M4 15h24v13H4z"/>
+<path fill="#ba8954" d="M6 15h5v13H6zm15 0h5v13h-5z"/>
+<path fill="#65402a" d="M4 18h7v2H4zm17 5h7v2h-7zM12 15h8v13h-8z"/>
+<path fill="#cebba0" d="M13 17h6v2h-2v5h-2v-5h-2z"/>
+<path fill="#4c3020" d="M3 27h8v2H3zm18 0h8v2h-8z"/>
+</svg>
