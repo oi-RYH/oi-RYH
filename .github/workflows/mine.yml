@@ -4,7 +4,7 @@ on:
     types: [opened, reopened]
   push:
     branches: [main]
-    paths: ['scripts/mine.py', '.github/workflows/mine.yml']
+    paths: ['scripts/**', 'README.source.md', 'assets/fonts/**', '.github/workflows/mine.yml']
   schedule:
     - cron: '17 * * * *'
   workflow_dispatch:
@@ -26,6 +26,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+      - run: pip install -r scripts/requirements.txt
       - name: Process open mining requests
         env:
           GH_TOKEN: ${{ github.token }}

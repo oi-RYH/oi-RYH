@@ -137,13 +137,14 @@ def main():
                     break
             if len(issues) < 100 or len(pending) >= 50:
                 break
-    readme = ROOT / 'README.md'
-    rendered = render(readme.read_text(), state, live=args.queue, repo=repo)
+    from pixel_readme import build
+    source = ROOT / 'README.source.md'
+    rendered = render(source.read_text(), state, live=args.queue, repo=repo)
     path.parent.mkdir(exist_ok=True)
     path.write_text(json.dumps(state, ensure_ascii=False, indent=2) + '\n')
-    readme.write_text(rendered)
+    build(rendered, ROOT)
     if args.queue:
-        git('add', 'README.md', 'data/mine.json')
+        git('add', 'README.md', 'data/mine.json', 'assets/text')
         if git('diff', '--cached', '--name-only'):
             git('commit', '-m', 'chore: update community mine')
             # Do not announce success until the state is durably pushed.
