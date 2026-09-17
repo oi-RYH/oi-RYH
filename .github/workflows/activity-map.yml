@@ -8,6 +8,7 @@ on:
     branches: [main]
     paths:
       - 'scripts/activity_map.py'
+      - 'scripts/player_stats.py'
       - 'scripts/pixel_readme.py'
       - 'scripts/requirements.txt'
       - 'assets/fonts/neodgm.ttf'
@@ -31,6 +32,11 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           GITHUB_REPOSITORY_OWNER: ${{ github.repository_owner }}
         run: python scripts/activity_map.py --output dist/minecraft-activity.svg
+      - name: Build Minecraft player inventory
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GITHUB_REPOSITORY_OWNER: ${{ github.repository_owner }}
+        run: python scripts/player_stats.py --output dist/player-inventory.svg
       - name: Publish activity map
         uses: crazy-max/ghaction-github-pages@v4
         with:

@@ -107,12 +107,11 @@
 [블로그 ↗](https://oi-ryh.github.io) · [전체 저장소 ↗](https://github.com/oi-RYH?tab=repositories)
 
 <details>
-  <summary><strong>Player stats</strong></summary>
+  <summary><img src="assets/blocks/chest.svg" width="20" alt="상자"> <strong>플레이어 상태창</strong></summary>
   <br />
-  <p align="center">
-    <img height="165" src="https://github-readme-stats.vercel.app/api?username=oi-RYH&show_icons=true&hide_border=true&bg_color=0d1117&title_color=f0b35a&text_color=e6edf3&icon_color=65a660&ring_color=f0b35a&count_private=true" alt="RYH's GitHub stats" />
-    <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=oi-RYH&layout=compact&hide_border=true&bg_color=0d1117&title_color=f0b35a&text_color=e6edf3" alt="RYH's most used languages" />
-  </p>
+  <picture>
+    <img src="https://raw.githubusercontent.com/oi-RYH/oi-RYH/output/player-inventory.svg" width="100%" alt="공개 저장소, 별, 팔로워, 최근 1년 기여와 상위 언어를 보여주는 마인크래프트 플레이어 상태창" />
+  </picture>
 </details>
 
 <details>
