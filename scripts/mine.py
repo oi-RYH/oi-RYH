@@ -78,6 +78,10 @@ def render(text, state, live=False, repo='oi-RYH/oi-RYH'):
                 query = urlencode(dict(title=f'mine|{state["layer"]}|{x}|{y}', body='제목을 그대로 두고 이슈를 제출하면 이 블록을 채굴합니다.'))
                 link = f'https://github.com/{repo}/issues/new?{query}' if live else '#mine-help'
                 img = f'[{img}]({link})'
+            else:
+                img = (f'<img src="assets/blocks/mined/{ore}.svg" width="44" '
+                       f'alt="{x+1}열 {y+1}행: 채굴 완료, {ORES[ore][0]} 획득">'
+                       f'<br><sub>채굴 완료<br>{ORES[ore][0]} 획득</sub>')
             cells.append(img)
         rows.append('| ' + ' | '.join(cells) + ' |')
     count = sum(cell is not None for row in state['grid'] for cell in row)
