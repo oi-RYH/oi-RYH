@@ -20,8 +20,9 @@ class PlayerStatsTests(unittest.TestCase):
         self.assertIn('player Minecraft player inventory', svg)
         self.assertIn('14 public repositories, 7 stars, 9 followers, 456 contributions', svg)
         self.assertNotIn('<text', svg)
-        self.assertNotIn('href=', svg)
-        self.assertEqual(svg.count('class="slot"'), 9)
+        self.assertIn('href="data:image/png;base64,', svg)
+        self.assertEqual(svg.count('href="http'), 0)
+        self.assertEqual(svg.count('class="slot"'), 10)
         self.assertIn('prefers-reduced-motion', svg)
         self.assertIn('aria-label="안경을 쓰고 곡괭이와 맥북을 든 스티브"', svg)
 

@@ -1,5 +1,6 @@
 """Generate a self-contained Minecraft inventory from public GitHub stats."""
 import argparse
+import base64
 from html import escape
 import json
 import os
@@ -86,21 +87,17 @@ def stat_icon(kind, x, y):
             f'<path d="M{x+11} {y+7}l11 11-4 4-11-11z" fill="#8a5b35"/>')
 
 
+AVATAR_IMAGE = ROOT / 'assets' / 'player-avatar.png'
+
+
 def avatar():
-    # Steve with low-set rimless glasses, pickaxe and a silver laptop.
-    return '''<g aria-label="안경을 쓰고 곡괭이와 맥북을 든 스티브">
-  <rect x="75" y="69" width="72" height="72" fill="#9b633f"/>
-  <rect x="75" y="69" width="72" height="17" fill="#352318"/>
-  <rect x="75" y="83" width="12" height="20" fill="#352318"/>
-  <rect x="135" y="83" width="12" height="20" fill="#352318"/>
-  <rect x="87" y="102" width="23" height="15" fill="#d7e5ef" fill-opacity=".45" stroke="#e8eef2" stroke-width="2"/>
-  <rect x="116" y="102" width="23" height="15" fill="#d7e5ef" fill-opacity=".45" stroke="#e8eef2" stroke-width="2"/>
-  <rect x="110" y="107" width="6" height="2" fill="#e8eef2"/>
-  <rect x="95" y="106" width="6" height="6" fill="#2c2144"/><rect x="124" y="106" width="6" height="6" fill="#2c2144"/>
-  <rect x="75" y="141" width="72" height="46" fill="#3aada6"/>
-  <rect x="88" y="187" width="22" height="27" fill="#443b89"/><rect x="112" y="187" width="22" height="27" fill="#443b89"/>
-  <g transform="translate(42 128) rotate(-23)"><rect width="7" height="82" fill="#704729"/><path d="M-18 2h42v8H-18z" fill="#55cfc5"/></g>
-  <g class="laptop"><rect x="139" y="145" width="42" height="31" rx="2" fill="#b9bec3" stroke="#e6e9eb" stroke-width="3"/><rect x="154" y="156" width="10" height="10" fill="#6f7479"/><path d="M135 177h51v6h-51z" fill="#868b90"/></g>
+    # Cropped screenshot of Steve (glasses, pickaxe, silver laptop) framed like an inventory slot.
+    data = base64.b64encode(AVATAR_IMAGE.read_bytes()).decode('ascii')
+    return f'''<g aria-label="안경을 쓰고 곡괭이와 맥북을 든 스티브">
+  {slot(20, 60, 170, 160)}
+  <clipPath id="avatar-clip"><rect x="24" y="64" width="162" height="152"/></clipPath>
+  <image x="24" y="64" width="162" height="152" clip-path="url(#avatar-clip)"
+    preserveAspectRatio="xMidYMid slice" href="data:image/png;base64,{data}"/>
 </g>'''
 
 
