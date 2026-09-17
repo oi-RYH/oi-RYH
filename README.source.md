@@ -41,14 +41,14 @@
 <details>
 <summary><img src="assets/blocks/bundle.svg" width="20" alt="꾸러미"> <strong>주머니 — 코드 말고 좋아하는 것들</strong></summary>
 
-픽셀 아트와 스프라이트 애니메이션을 좋아하고, 클래식 음악을 들으며 코딩합니다.
+마인크래프트!
 
 </details>
 
 <details>
 <summary><img src="assets/blocks/chicken.svg" width="20" alt="닭"> <strong>이 닭은 팀원인가요?</strong></summary>
 
-아직 커밋은 없지만 코드 리뷰할 때 옆에서 보고 있습니다.
+조만간 닭이 커밋하는 메시지가 올라올 예정입니다.
 
 </details>
 
@@ -61,7 +61,7 @@
 <a name="mine-help"></a>
 
 <!-- MINE_MODE:START -->
-돌을 클릭하고 열린 이슈를 제출하면 채굴됩니다. 처리 후 이 페이지를 새로고침하세요. GitHub 로그인이 필요하며 결과 반영에는 시간이 걸릴 수 있습니다.
+돌을 클릭하고 열린 이슈를 제출하면 채굴됩니다.
 <!-- MINE_MODE:END -->
 
 <!-- MINE_GRID:START -->

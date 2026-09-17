@@ -65,14 +65,14 @@
 <details>
 <summary><img src="assets/blocks/bundle.svg" width="20" alt="꾸러미"> <strong><img src="assets/text/2591dd804f09c6cbbbd0.svg" width="268" alt="주머니 — 코드 말고 좋아하는 것들"></strong></summary>
 
-<img src="assets/text/28dd17bf71474cb0dff1.svg" width="476" alt="픽셀 아트와 스프라이트 애니메이션을 좋아하고, 클래식 음악을 들으며 코딩합니다.">
+<img src="assets/text/1a2ec7e632583c07bc66.svg" width="108" alt="마인크래프트!">
 
 </details>
 
 <details>
 <summary><img src="assets/blocks/chicken.svg" width="20" alt="닭"> <strong><img src="assets/text/d2c629bf52bb1577fa71.svg" width="156" alt="이 닭은 팀원인가요?"></strong></summary>
 
-<img src="assets/text/5888d2e00b987860d726.svg" width="444" alt="아직 커밋은 없지만 코드 리뷰할 때 옆에서 보고 있습니다.">
+<img src="assets/text/5047c181f18351b95015.svg" width="388" alt="조만간 닭이 커밋하는 메시지가 올라올 예정입니다.">
 
 </details>
 
@@ -85,7 +85,7 @@
 <a name="mine-help"></a>
 
 <!-- MINE_MODE:START -->
-<img src="assets/text/e2d7fc8e5b7a419e340b.svg" width="460" alt="돌을 클릭하고 열린 이슈를 제출하면 채굴됩니다. 처리 후 이 페이지를 새로고침하세요. GitHub 로그인이 필요하며 결과 반영에는 시간이 걸릴 수 있습니다.">
+<img src="assets/text/9a2a4f6b484a22a454a5.svg" width="372" alt="돌을 클릭하고 열린 이슈를 제출하면 채굴됩니다.">
 <!-- MINE_MODE:END -->
 
 <!-- MINE_GRID:START -->

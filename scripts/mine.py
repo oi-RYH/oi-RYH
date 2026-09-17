@@ -65,8 +65,7 @@ def replace(text, name, content):
     return re.sub(pattern, lambda _: f'<!-- {name}:START -->\n{content}\n<!-- {name}:END -->', text, flags=re.S)
 
 def render(text, state, live=False, repo='oi-RYH/oi-RYH'):
-    notice = ('돌을 클릭하고 열린 이슈를 제출하면 채굴됩니다. 처리 후 이 페이지를 새로고침하세요. '
-              'GitHub 로그인이 필요하며 결과 반영에는 시간이 걸릴 수 있습니다.' if live else
+    notice = ('돌을 클릭하고 열린 이슈를 제출하면 채굴됩니다.' if live else
               '**미리보기 모드** · 광산 자동화는 기본 브랜치에 반영한 뒤 활성화됩니다. 지금은 이슈가 생성되지 않습니다.')
     rows = ['| ' + ' | '.join(str(x + 1) for x in range(WIDTH)) + ' |', '|' + ':---:|' * WIDTH]
     for y, row in enumerate(state['grid']):
