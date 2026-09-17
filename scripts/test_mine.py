@@ -1,0 +1,51 @@
+import copy
+from pathlib import Path
+import random
+import unittest
+import mine
+
+class MineTests(unittest.TestCase):
+    def test_invalid_input_does_not_mutate(self):
+        for title in ['mine|1|0|0$(id)', 'mine|1|6|0', 'mine|1|0|3', 'mine|0|0|0', 'hello']:
+            state = mine.initial_state()
+            before = copy.deepcopy(state)
+            self.assertIsNone(mine.play(state, title, 'player', 1))
+            self.assertEqual(before, state)
+
+    def test_duplicate_issue_and_block(self):
+        state = mine.initial_state()
+        result = mine.play(state, 'mine|1|0|0', 'player', 1, random.Random(1))
+        self.assertEqual(result, mine.play(state, 'mine|1|0|0', 'player', 1))
+        mine.play(state, 'mine|1|0|0', 'other', 2)
+        self.assertEqual(state['miners']['player']['blocks'], 1)
+        self.assertNotIn('other', state['miners'])
+
+    def test_rollover_rejects_old_links(self):
+        state = mine.initial_state()
+        for y in range(mine.HEIGHT):
+            for x in range(mine.WIDTH):
+                mine.play(state, f'mine|1|{x}|{y}', 'player', 1+y*mine.WIDTH+x)
+        self.assertEqual(state['layer'], 2)
+        self.assertEqual(state['grid'], mine.new_grid())
+        mine.play(state, 'mine|1|0|0', 'late-player', 100)
+        self.assertNotIn('late-player', state['miners'])
+
+    def test_preview_live_and_markers(self):
+        text = (mine.ROOT / 'README.md').read_text()
+        state = mine.initial_state()
+        preview = mine.render(text, state)
+        self.assertNotIn('/issues/new?', preview)
+        live = mine.render(text, state, live=True)
+        self.assertEqual(live.count('/issues/new?'), mine.WIDTH*mine.HEIGHT)
+        self.assertIn('mine%7C1%7C0%7C0', live)
+        with self.assertRaises(ValueError):
+            mine.render('missing markers', state)
+
+    def test_render_idempotent(self):
+        text = (mine.ROOT / 'README.md').read_text()
+        state = mine.initial_state()
+        first = mine.render(text, state)
+        self.assertEqual(first, mine.render(first, state))
+
+if __name__ == '__main__':
+    unittest.main()
