@@ -2,7 +2,7 @@
   <img src="./assets/workbench-banner.png" alt="마인크래프트 작업대 위 노트북과 분재, 안경 쓴 오리, 책상 뒤에서 고개를 내민 닭" width="100%" />
 </p>
 
-# RYH’s Workbench
+# <img src="assets/headings/workbench.svg" width="244" alt="RYH’s Workbench">
 
 곡괭이로는 디버깅이 안 돼서 맥북을 샀습니다.
 
@@ -14,22 +14,22 @@
 
 <a name="crafting"></a>
 
-## <img src="assets/blocks/crafting_table.svg" width="28" alt="제작대"> Currently crafting
+## <img src="assets/blocks/crafting_table.svg" width="28" alt="제작대"> <img src="assets/headings/crafting.svg" width="220" alt="Currently crafting">
 
 <table>
   <tr>
     <td width="33%" valign="top">
-      <h3><img src="assets/blocks/book_and_quill.svg" width="24" alt="책과 깃펜"> <a href="https://github.com/oi-RYH/11.03_colloquial-calendar">Say Days</a></h3>
+      <h3><img src="assets/blocks/book_and_quill.svg" width="24" alt="책과 깃펜"> <a href="https://github.com/oi-RYH/11.03_colloquial-calendar"><img src="assets/headings/say-days.svg" width="84" alt="Say Days"></a></h3>
       <p>일상을 기록하는 캘린더.</p>
       <p><sub>Web · Calendar</sub></p>
     </td>
     <td width="33%" valign="top">
-      <h3><img src="assets/blocks/sapling.svg" width="24" alt="묘목"> bonsai</h3>
+      <h3><img src="assets/blocks/sapling.svg" width="24" alt="묘목"> <img src="assets/headings/bonsai.svg" width="64" alt="bonsai"></h3>
       <p>작은 나무를 키우는 iOS 게임.</p>
       <p><sub>Swift · iOS</sub></p>
     </td>
     <td width="33%" valign="top">
-      <h3><img src="assets/blocks/observer.svg" width="24" alt="관측기"> Stereo camera</h3>
+      <h3><img src="assets/blocks/observer.svg" width="24" alt="관측기"> <img src="assets/headings/stereo-camera.svg" width="134" alt="Stereo camera"></h3>
       <p>두 카메라의 시선을 맞추는 캘리브레이션 도구.</p>
       <p><sub>C++ · C#</sub></p>
     </td>
@@ -38,7 +38,7 @@
 
 <a name="inventory"></a>
 
-## <img src="assets/blocks/chest.svg" width="28" alt="상자"> Inventory
+## <img src="assets/blocks/chest.svg" width="28" alt="상자"> <img src="assets/headings/inventory.svg" width="112" alt="Inventory">
 
 <details open>
 <summary><img src="assets/blocks/chest.svg" width="20" alt="상자"> <strong>도구 상자 — 오늘도 일단 꺼내 봅니다</strong></summary>
@@ -71,7 +71,7 @@
 
 <a name="community-mine"></a>
 
-## <img src="assets/blocks/pickaxe.svg" width="28" alt="곡괭이"> 공용 광산
+## <img src="assets/blocks/pickaxe.svg" width="28" alt="곡괭이"> <img src="assets/headings/community-mine.svg" width="112" alt="공용 광산">
 
 여기까지 왔으면 돌 하나는 캐고 가세요. 맥북 수리비에 보태겠습니다.
 
@@ -119,7 +119,7 @@
 
 <a name="field-notes"></a>
 
-## <img src="assets/blocks/book_and_quill.svg" width="28" alt="책과 깃펜"> 작업 일지
+## <img src="assets/blocks/book_and_quill.svg" width="28" alt="책과 깃펜"> <img src="assets/headings/field-notes.svg" width="112" alt="작업 일지">
 
 [블로그 ↗](https://oi-ryh.github.io) · [전체 저장소 ↗](https://github.com/oi-RYH?tab=repositories)
 
