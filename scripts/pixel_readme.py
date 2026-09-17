@@ -21,6 +21,7 @@ class PixelText:
         self.cmap = self.font.getBestCmap()
         self.used = set()
         self.max_width = 480
+        self.accent = False
 
     @lru_cache(maxsize=2048)
     def glyph(self, char):
@@ -60,14 +61,15 @@ class PixelText:
         rendered = [self.paths(line) for line in lines]
         width = round(max(item[0] for item in rendered)) + 4
         height = 24 * len(lines)
-        key = sha256(f"{self.max_width}:{text}".encode()).hexdigest()[:20]
+        key = sha256((f"{self.max_width}:{text}" + (":accent" if self.accent else "")).encode()).hexdigest()[:20]
         rel = f'assets/text/{key}.svg'
         self.used.add(rel)
         groups = ''.join(f'<g transform="translate(2 {16+24*i}) scale({scale} {-scale})">{paths}</g>'
                          for i, (_, paths, scale) in enumerate(rendered))
+        light, dark = ('#285e28', '#b6e89b') if self.accent else ('#24292f', '#c9d1d9')
         svg = (f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img">'
                f'<title>{escape(text)}</title>'
-               '<style>g{fill:#24292f}@media(prefers-color-scheme:dark){g{fill:#c9d1d9}}</style>'
+               f'<style>g{{fill:{light}}}@media(prefers-color-scheme:dark){{g{{fill:{dark}}}}}</style>'
                + groups + '</svg>\n')
         path = self.root / rel
         path.parent.mkdir(exist_ok=True)
@@ -96,13 +98,8 @@ class PixelText:
 
     def render(self, source):
         lines = []
-        native = False
         for line in source.splitlines():
-            if line == '<!-- RECENT_REPOS:START -->': native = True
-            if native:
-                lines.append(line)
-                if line == '<!-- RECENT_REPOS:END -->': native = False
-                continue
+            self.accent = '<h3>' in line
             if '<td ' in line: self.max_width = 200
             if '</td>' in line: self.max_width = 480
             if not line.strip() or line.lstrip().startswith('<!--'):

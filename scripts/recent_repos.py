@@ -44,9 +44,10 @@ def cards(repos, owner):
         language = escape(repo['language'] or '언어 정보 없음')
         date = escape(repo['pushed_at'][:10])
         rows += [f'    <td width="33%" valign="top">',
-                 f'      <h3><a href="{url}">{name}</a></h3>',
+                 f'      <h3><img src="assets/blocks/crafting_table.svg" width="24" alt="제작대"> <a href="{url}">{name}</a></h3>',
                  f'      <p>{description}</p>',
-                 f'      <p><sub>{language} · 최근 푸시 {date} (UTC)</sub></p>',
+                 f'      <p><img src="assets/blocks/chest.svg" width="16" alt="상자"> {language}</p>',
+                 f'      <p><sub>최근 작업 {date} (UTC)</sub></p>',
                  '    </td>']
     rows += ['  </tr>', '</table>', '',
              '<sub>최근 푸시한 공개 저장소 · 최대 3개 · 매시간 갱신 (프로필·포크·보관된 저장소 제외)</sub>']

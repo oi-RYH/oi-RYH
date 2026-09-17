@@ -20,24 +20,27 @@
 <table>
   <tr>
     <td width="33%" valign="top">
-      <h3><a href="https://github.com/oi-RYH/Dawn">Dawn</a></h3>
-      <p>저장소에서 자세한 내용을 확인하세요.</p>
-      <p><sub>JavaScript · 최근 푸시 2026-09-17 (UTC)</sub></p>
+      <h3><img src="assets/blocks/crafting_table.svg" width="24" alt="제작대"> <a href="https://github.com/oi-RYH/Dawn"><img src="assets/text/5f275001baa1d0c3d8bf.svg" width="36" alt="Dawn"></a></h3>
+      <p><img src="assets/text/514c456b7009127188e3.svg" width="196" alt="저장소에서 자세한 내용을 확인하세요."></p>
+      <p><img src="assets/blocks/chest.svg" width="16" alt="상자"> <img src="assets/text/400b58ca266f3efd77a6.svg" width="84" alt="JavaScript"></p>
+      <p><sub><img src="assets/text/0a558c86a7bdbd42e4f7.svg" width="164" alt="최근 작업 2026-09-17 (UTC)"></sub></p>
     </td>
     <td width="33%" valign="top">
-      <h3><a href="https://github.com/oi-RYH/capstone_design">capstone_design</a></h3>
-      <p>캡스턴 디자인 - 7조</p>
-      <p><sub>언어 정보 없음 · 최근 푸시 2026-09-16 (UTC)</sub></p>
+      <h3><img src="assets/blocks/crafting_table.svg" width="24" alt="제작대"> <a href="https://github.com/oi-RYH/capstone_design"><img src="assets/text/94a4b80d80defc2a0364.svg" width="124" alt="capstone_design"></a></h3>
+      <p><img src="assets/text/553f3c58fab3c0b42411.svg" width="156" alt="캡스턴 디자인 - 7조"></p>
+      <p><img src="assets/blocks/chest.svg" width="16" alt="상자"> <img src="assets/text/b207ab8f78b55d15ad3e.svg" width="116" alt="언어 정보 없음"></p>
+      <p><sub><img src="assets/text/d2440278c5f74c7e0632.svg" width="164" alt="최근 작업 2026-09-16 (UTC)"></sub></p>
     </td>
     <td width="33%" valign="top">
-      <h3><a href="https://github.com/oi-RYH/BrassField_plugin">BrassField_plugin</a></h3>
-      <p>저장소에서 자세한 내용을 확인하세요.</p>
-      <p><sub>Java · 최근 푸시 2026-08-14 (UTC)</sub></p>
+      <h3><img src="assets/blocks/crafting_table.svg" width="24" alt="제작대"> <a href="https://github.com/oi-RYH/BrassField_plugin"><img src="assets/text/32ea30df9cfe1abb9d60.svg" width="140" alt="BrassField_plugin"></a></h3>
+      <p><img src="assets/text/514c456b7009127188e3.svg" width="196" alt="저장소에서 자세한 내용을 확인하세요."></p>
+      <p><img src="assets/blocks/chest.svg" width="16" alt="상자"> <img src="assets/text/b12fadd3adac1247128a.svg" width="36" alt="Java"></p>
+      <p><sub><img src="assets/text/9f063ca3dad18bfff03a.svg" width="164" alt="최근 작업 2026-08-14 (UTC)"></sub></p>
     </td>
   </tr>
 </table>
 
-<sub>최근 푸시한 공개 저장소 · 최대 3개 · 매시간 갱신 (프로필·포크·보관된 저장소 제외)</sub>
+<sub><img src="assets/text/7195b003b07d3272687e.svg" width="388" alt="최근 푸시한 공개 저장소 · 최대 3개 · 매시간 갱신 (프로필·포크·보관된 저장소 제외)"></sub>
 <!-- RECENT_REPOS:END -->
 
 <a name="inventory"></a>
