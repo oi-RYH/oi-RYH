@@ -44,4 +44,23 @@ class PixelReadmeTests(unittest.TestCase):
         self.assertIn('alt="A &amp; B"', result)
         for path in (self.root/'assets/text').glob('*.svg'): ET.parse(path)
 
+    def test_repository_description_has_exactly_two_lines_and_is_clamped(self):
+        source = ('<!-- RECENT_REPOS:START -->\n'
+                  '<table><tr><td width="33%" valign="top">\n'
+                  '<p data-repo-description>한 줄 설명</p>\n'
+                  '<p data-repo-description>아주 긴 저장소 설명을 여러 번 반복해서 두 줄보다 훨씬 길게 만듭니다. '
+                  '아주 긴 저장소 설명을 여러 번 반복합니다.</p>\n'
+                  '</td></tr></table>\n'
+                  '<!-- RECENT_REPOS:END -->')
+        # This test bypasses repository population while exercising the marker.
+        renderer = __import__('pixel_readme').PixelText(self.root)
+        result = renderer.render(source)
+        assets = re.findall(r'src="(assets/text/[^\"]+)"', result)
+        self.assertEqual(len(assets), 2)
+        for asset in assets:
+            svg = (self.root / asset).read_text()
+            self.assertIn('height="48"', svg)
+        self.assertEqual((self.root / assets[0]).read_text().count('<g transform="translate('), 1)
+        self.assertEqual((self.root / assets[1]).read_text().count('<g transform="translate('), 2)
+
 if __name__ == '__main__': unittest.main()

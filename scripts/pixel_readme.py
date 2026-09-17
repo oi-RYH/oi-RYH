@@ -40,7 +40,7 @@ class PixelText:
             x += advance
         return x * scale, ''.join(paths), scale
 
-    def image(self, text):
+    def image(self, text, fixed_lines=None):
         text = unescape(text).replace('**', '').strip()
         if not text:
             return ''
@@ -58,10 +58,19 @@ class PixelText:
                         line = ''
                 line += char
         if line.strip(): lines.append(line.rstrip())
+        if fixed_lines and len(lines) > fixed_lines:
+            lines = lines[:fixed_lines]
+            ellipsis = '…'
+            while lines[-1] and self.paths(lines[-1] + ellipsis)[0] > self.max_width:
+                lines[-1] = lines[-1][:-1].rstrip()
+            lines[-1] += ellipsis
         rendered = [self.paths(line) for line in lines]
-        width = round(max(item[0] for item in rendered)) + 4
-        height = 24 * len(lines)
-        key = sha256((f"{self.max_width}:{text}" + (":accent" if self.accent else "")).encode()).hexdigest()[:20]
+        width = self.max_width if fixed_lines else round(max(item[0] for item in rendered)) + 4
+        height = 24 * (fixed_lines or len(lines))
+        key_source = f"{self.max_width}:{text}" + (":accent" if self.accent else "")
+        if fixed_lines:
+            key_source += f":lines={fixed_lines}"
+        key = sha256(key_source.encode()).hexdigest()[:20]
         rel = f'assets/text/{key}.svg'
         self.used.add(rel)
         groups = ''.join(f'<g transform="translate(2 {16+24*i}) scale({scale} {-scale})">{paths}</g>'
@@ -76,7 +85,7 @@ class PixelText:
         path.write_text(svg)
         return f'<img src="{rel}" width="{width}" alt="{escape(text, quote=True)}">'
 
-    def inline(self, text):
+    def inline(self, text, fixed_lines=None):
         # HTML attributes (including alt text and URLs) are kept verbatim.
         tokens = re.split(r'(<[^>]+>|\[[^\]]*\]\([^)]*\))', text)
         out = []
@@ -85,9 +94,9 @@ class PixelText:
                 out.append(token)
             elif token.startswith('[') and re.fullmatch(r'\[[^\]]*\]\([^)]*\)', token):
                 match = re.fullmatch(r'\[([^\]]*)\]\(([^)]*)\)', token)
-                out.append(f'[{self.inline(match[1])}]({match[2]})')
+                out.append(f'[{self.inline(match[1], fixed_lines=fixed_lines)}]({match[2]})')
             elif token.strip():
-                out.append((' ' if token.startswith(' ') else '') + self.image(token) + (' ' if token.endswith(' ') else ''))
+                out.append((' ' if token.startswith(' ') else '') + self.image(token, fixed_lines=fixed_lines) + (' ' if token.endswith(' ') else ''))
             else:
                 out.append(token)
         return ''.join(out)
@@ -98,6 +107,10 @@ class PixelText:
             self.accent = '<h3>' in line
             if '<td ' in line: self.max_width = 200
             if '</td>' in line: self.max_width = 480
+            description = re.fullmatch(r'(\s*)<p data-repo-description>(.*)</p>', line)
+            if description:
+                lines.append(f'{description.group(1)}<p>{self.inline(description.group(2), fixed_lines=2)}</p>')
+                continue
             if not line.strip() or line.lstrip().startswith('<!--'):
                 lines.append(line)
             elif re.fullmatch(r'[|:\-\s]+', line):

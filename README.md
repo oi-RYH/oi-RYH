@@ -21,26 +21,26 @@
   <tr>
     <td width="33%" valign="top">
       <h3><img src="assets/blocks/crafting_table.svg" width="24" alt="제작대"> <a href="https://github.com/oi-RYH/Dawn"><img src="assets/text/5f275001baa1d0c3d8bf.svg" width="36" alt="Dawn"></a></h3>
-      <p><img src="assets/text/514c456b7009127188e3.svg" width="196" alt="저장소에서 자세한 내용을 확인하세요."></p>
-      <p><img src="https://img.shields.io/badge/JavaScript-31363F?style=flat-square&amp;logo=javascript&amp;logoColor=F7DF1E" alt="JavaScript" /></p>
-      <p><sub><img src="assets/text/0a558c86a7bdbd42e4f7.svg" width="164" alt="최근 작업 2026-09-17 (UTC)"></sub></p>
+      <p><img src="assets/text/6976af5e1c022496621d.svg" width="200" alt="저장소에서 자세한 내용을 확인하세요."></p>
+      <p><img src="https://img.shields.io/badge/JavaScript-241A12?style=for-the-badge&amp;color=241A12&amp;logo=javascript&amp;logoColor=F7DF1E" alt="JavaScript" /></p>
+      <p><sub><img src="assets/text/8555c4cf5c175c24caa1.svg" width="172" alt="업데이트 · 2026-09-17"></sub></p>
     </td>
     <td width="33%" valign="top">
       <h3><img src="assets/blocks/crafting_table.svg" width="24" alt="제작대"> <a href="https://github.com/oi-RYH/capstone_design"><img src="assets/text/94a4b80d80defc2a0364.svg" width="124" alt="capstone_design"></a></h3>
-      <p><img src="assets/text/553f3c58fab3c0b42411.svg" width="156" alt="캡스턴 디자인 - 7조"></p>
-      <p><img src="https://img.shields.io/badge/%EC%96%B8%EC%96%B4%20%EC%A0%95%EB%B3%B4%20%EC%97%86%EC%9D%8C-31363F?style=flat-square" alt="언어 정보 없음" /></p>
-      <p><sub><img src="assets/text/d2440278c5f74c7e0632.svg" width="164" alt="최근 작업 2026-09-16 (UTC)"></sub></p>
+      <p><img src="assets/text/8b07f3cbf7172f0de5e2.svg" width="200" alt="캡스턴 디자인 - 7조"></p>
+      <p><img src="https://img.shields.io/badge/%EC%96%B8%EC%96%B4%20%EC%A0%95%EB%B3%B4%20%EC%97%86%EC%9D%8C-241A12?style=for-the-badge&amp;color=241A12" alt="언어 정보 없음" /></p>
+      <p><sub><img src="assets/text/367837f2dc290a0cd373.svg" width="172" alt="업데이트 · 2026-09-16"></sub></p>
     </td>
     <td width="33%" valign="top">
       <h3><img src="assets/blocks/crafting_table.svg" width="24" alt="제작대"> <a href="https://github.com/oi-RYH/BrassField_plugin"><img src="assets/text/32ea30df9cfe1abb9d60.svg" width="140" alt="BrassField_plugin"></a></h3>
-      <p><img src="assets/text/514c456b7009127188e3.svg" width="196" alt="저장소에서 자세한 내용을 확인하세요."></p>
-      <p><img src="https://img.shields.io/badge/Java-31363F?style=flat-square&amp;logo=openjdk&amp;logoColor=F89820" alt="Java" /></p>
-      <p><sub><img src="assets/text/9f063ca3dad18bfff03a.svg" width="164" alt="최근 작업 2026-08-14 (UTC)"></sub></p>
+      <p><img src="assets/text/6976af5e1c022496621d.svg" width="200" alt="저장소에서 자세한 내용을 확인하세요."></p>
+      <p><img src="https://img.shields.io/badge/Java-241A12?style=for-the-badge&amp;color=241A12&amp;logo=openjdk&amp;logoColor=F89820" alt="Java" /></p>
+      <p><sub><img src="assets/text/dda7ebcba2ea00bb1074.svg" width="172" alt="업데이트 · 2026-08-14"></sub></p>
     </td>
   </tr>
 </table>
 
-<sub><img src="assets/text/7195b003b07d3272687e.svg" width="388" alt="최근 푸시한 공개 저장소 · 최대 3개 · 매시간 갱신 (프로필·포크·보관된 저장소 제외)"></sub>
+<sub><img src="assets/text/851d37331e5cfe87386b.svg" width="460" alt="최근 푸시한 공개 저장소 · 최대 3개 · 매시간 갱신 · 날짜는 UTC 기준 (프로필·포크·보관된 저장소 제외)"></sub>
 <!-- RECENT_REPOS:END -->
 
 <a name="inventory"></a>

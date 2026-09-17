@@ -45,11 +45,13 @@ def language_badge(language):
         'Kotlin': ('kotlin', 'A97BFF'), 'Dart': ('dart', '54C5F8'),
         'Shell': ('gnubash', '89E051'), 'Jupyter Notebook': ('jupyter', 'F37626'),
     }
-    params = {'style': 'flat-square'}
+    # Keep the familiar language logo, but put it on an angular inventory-slot
+    # badge using the dirt/workbench palette from the rest of the profile.
+    params = {'style': 'for-the-badge', 'color': '241A12'}
     if language in logos:
         params['logo'], params['logoColor'] = logos[language]
     # Shields escapes a literal hyphen by doubling it.
-    url = 'https://img.shields.io/badge/' + quote(label.replace('-', '--'), safe='') + '-31363F?' + urlencode(params)
+    url = 'https://img.shields.io/badge/' + quote(label.replace('-', '--'), safe='') + '-241A12?' + urlencode(params)
     return f'<img src="{escape(url, quote=True)}" alt="{escape(label, quote=True)}" />'
 
 def cards(repos, owner):
@@ -64,12 +66,12 @@ def cards(repos, owner):
         date = escape(repo['pushed_at'][:10])
         rows += [f'    <td width="33%" valign="top">',
                  f'      <h3><img src="assets/blocks/crafting_table.svg" width="24" alt="제작대"> <a href="{url}">{name}</a></h3>',
-                 f'      <p>{description}</p>',
+                 f'      <p data-repo-description>{description}</p>',
                  f'      <p>{language}</p>',
-                 f'      <p><sub>최근 작업 {date} (UTC)</sub></p>',
+                 f'      <p><sub>업데이트 · {date}</sub></p>',
                  '    </td>']
     rows += ['  </tr>', '</table>', '',
-             '<sub>최근 푸시한 공개 저장소 · 최대 3개 · 매시간 갱신 (프로필·포크·보관된 저장소 제외)</sub>']
+             '<sub>최근 푸시한 공개 저장소 · 최대 3개 · 매시간 갱신 · 날짜는 UTC 기준 (프로필·포크·보관된 저장소 제외)</sub>']
     return '\n'.join(rows)
 
 def populate(source, root=ROOT):
