@@ -1,23 +1,23 @@
 <p align="center">
-  <img src="./assets/game-profile-hero.png" alt="RYH's voxel-game profile: Steve holding a MacBook beside an inventory containing a calendar, bonsai, and stereo camera" width="100%" />
+  <img src="./assets/game-profile-hero-funny.png" alt="RYH's voxel-game profile: wide-angle Steve in rimless glasses holding a MacBook beside an inventory containing a calendar, bonsai, and stereo camera" width="100%" />
 </p>
 
 <h1 align="center">RYH's inventory</h1>
 
 <p align="center">
-  작은 도구와 느긋한 게임을 만듭니다.<br />
-  Building small tools, playful interfaces, and experiments with pixels, sound, and light.
+  안경은 조금 내려 쓰고, 코드는 꽤 진지하게 만듭니다.<br />
+  Running a very serious developer profile from inside a game.
 </p>
 
 <p align="center">
-  <a href="https://oi-ryh.github.io">Field notes</a>
+  <a href="https://oi-ryh.github.io">Blog (out of game)</a>
   ·
   <a href="https://github.com/oi-RYH?tab=repositories">All repositories</a>
 </p>
 
 ---
 
-## Currently crafting
+## Active quests
 
 | Slot | Project | What it is | Main tools |
 | :---: | --- | --- | --- |
@@ -37,7 +37,7 @@
 </p>
 
 <details>
-  <summary><strong>Player stats</strong></summary>
+  <summary><strong>Player stats (not a flex)</strong></summary>
   <br />
   <p align="center">
     <img height="165" src="https://github-readme-stats.vercel.app/api?username=oi-RYH&show_icons=true&hide_border=true&bg_color=0d1117&title_color=f0b35a&text_color=e6edf3&icon_color=65a660&ring_color=f0b35a&count_private=true" alt="RYH's GitHub stats" />
@@ -55,5 +55,5 @@
 </details>
 
 <p align="center">
-  <sub>build small · play slowly</sub>
+  <sub>still debugging the grass block</sub>
 </p>
