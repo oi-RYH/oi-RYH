@@ -106,18 +106,12 @@
 
 [블로그 ↗](https://oi-ryh.github.io) · [전체 저장소 ↗](https://github.com/oi-RYH?tab=repositories)
 
-<details>
-  <summary><img src="assets/blocks/chest.svg" width="20" alt="상자"> <strong>플레이어 상태창</strong></summary>
-  <br />
-  <picture>
-    <img src="https://raw.githubusercontent.com/oi-RYH/oi-RYH/output/player-inventory.svg" width="100%" alt="공개 저장소, 별, 팔로워, 최근 1년 기여와 상위 언어를 보여주는 마인크래프트 플레이어 상태창" />
-  </picture>
-</details>
+<p><img src="assets/blocks/chest.svg" width="20" alt="상자"> <strong>플레이어 상태창</strong></p>
+<picture>
+  <img src="https://raw.githubusercontent.com/oi-RYH/oi-RYH/output/player-inventory.svg" width="100%" alt="공개 저장소, 별, 팔로워, 최근 1년 기여와 상위 언어를 보여주는 마인크래프트 플레이어 상태창" />
+</picture>
 
-<details>
-  <summary><img src="assets/blocks/pickaxe.svg" width="20" alt="곡괭이"> <strong>활동 월드</strong></summary>
-  <br />
-  <a href="https://github.com/oi-RYH?tab=contributions">
-    <img src="https://raw.githubusercontent.com/oi-RYH/oi-RYH/output/minecraft-activity.svg" width="100%" alt="지난 1년의 GitHub 기여를 광석 블록과 닭 광산 수레로 표현한 활동 월드" />
-  </a>
-</details>
+<p><img src="assets/blocks/pickaxe.svg" width="20" alt="곡괭이"> <strong>활동 월드</strong></p>
+<a href="https://github.com/oi-RYH?tab=contributions">
+  <img src="https://raw.githubusercontent.com/oi-RYH/oi-RYH/output/minecraft-activity.svg" width="100%" alt="지난 1년의 GitHub 기여를 광석 블록과 닭 광산 수레로 표현한 활동 월드" />
+</a>

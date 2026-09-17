@@ -87,7 +87,7 @@ def stat_icon(kind, x, y):
             f'<path d="M{x+11} {y+7}l11 11-4 4-11-11z" fill="#8a5b35"/>')
 
 
-AVATAR_IMAGE = ROOT / 'assets' / 'player-avatar.png'
+AVATAR_IMAGE = ROOT / 'assets' / 'player-avatar.jpg'
 
 
 def avatar():
@@ -97,7 +97,7 @@ def avatar():
   {slot(20, 60, 170, 160)}
   <clipPath id="avatar-clip"><rect x="24" y="64" width="162" height="152"/></clipPath>
   <image x="24" y="64" width="162" height="152" clip-path="url(#avatar-clip)"
-    preserveAspectRatio="xMidYMid slice" href="data:image/png;base64,{data}"/>
+    preserveAspectRatio="xMidYMid slice" href="data:image/jpeg;base64,{data}"/>
 </g>'''
 
 
