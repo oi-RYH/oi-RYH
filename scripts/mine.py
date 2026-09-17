@@ -137,6 +137,15 @@ def main():
                     break
             if len(issues) < 100 or len(pending) >= 50:
                 break
+    if args.queue:
+        from recent_repos import refresh
+        try:
+            refresh(repo.split('/')[0], ROOT)
+        except Exception as error:
+            # A temporary API failure must not block mining or clear the cards.
+            if not (ROOT / 'data/recent-repos.json').exists():
+                raise
+            print(f'Recent repositories refresh failed; keeping last snapshot: {type(error).__name__}')
     from pixel_readme import build
     source = ROOT / 'README.source.md'
     rendered = render(source.read_text(), state, live=args.queue, repo=repo)
@@ -144,7 +153,7 @@ def main():
     path.write_text(json.dumps(state, ensure_ascii=False, indent=2) + '\n')
     build(rendered, ROOT)
     if args.queue:
-        git('add', 'README.md', 'data/mine.json', 'assets/text')
+        git('add', 'README.md', 'data/mine.json', 'assets/text', 'data/recent-repos.json')
         if git('diff', '--cached', '--name-only'):
             git('commit', '-m', 'chore: update community mine')
             # Do not announce success until the state is durably pushed.

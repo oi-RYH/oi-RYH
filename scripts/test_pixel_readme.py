@@ -15,6 +15,8 @@ class PixelReadmeTests(unittest.TestCase):
         self.root = Path(self.temp.name)
         (self.root / 'assets/fonts').mkdir(parents=True)
         shutil.copy(ROOT / 'assets/fonts/neodgm.ttf', self.root / 'assets/fonts/neodgm.ttf')
+        (self.root / 'data').mkdir()
+        shutil.copy(ROOT / 'data/recent-repos.json', self.root / 'data/recent-repos.json')
 
     def test_live_mine_survives_pixel_conversion_and_score_update(self):
         source = (ROOT / 'README.source.md').read_text()

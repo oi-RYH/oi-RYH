@@ -96,7 +96,13 @@ class PixelText:
 
     def render(self, source):
         lines = []
+        native = False
         for line in source.splitlines():
+            if line == '<!-- RECENT_REPOS:START -->': native = True
+            if native:
+                lines.append(line)
+                if line == '<!-- RECENT_REPOS:END -->': native = False
+                continue
             if '<td ' in line: self.max_width = 200
             if '</td>' in line: self.max_width = 480
             if not line.strip() or line.lstrip().startswith('<!--'):
@@ -119,6 +125,9 @@ class PixelText:
 
 
 def build(source, root=ROOT):
+    from recent_repos import populate
+    if '<!-- RECENT_REPOS:START -->' in source:
+        source = populate(source, root)
     renderer = PixelText(root)
     result = renderer.render(source)
     (root / 'README.md').write_text(result)

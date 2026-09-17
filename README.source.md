@@ -16,25 +16,8 @@
 
 ## <img src="assets/blocks/crafting_table.svg" width="28" alt="제작대"> <img src="assets/headings/crafting.svg" width="220" alt="Currently crafting">
 
-<table>
-  <tr>
-    <td width="33%" valign="top">
-      <h3><img src="assets/blocks/book_and_quill.svg" width="24" alt="책과 깃펜"> <a href="https://github.com/oi-RYH/11.03_colloquial-calendar"><img src="assets/headings/say-days.svg" width="84" alt="Say Days"></a></h3>
-      <p>일상을 기록하는 캘린더.</p>
-      <p><sub>Web · Calendar</sub></p>
-    </td>
-    <td width="33%" valign="top">
-      <h3><img src="assets/blocks/sapling.svg" width="24" alt="묘목"> <img src="assets/headings/bonsai.svg" width="64" alt="bonsai"></h3>
-      <p>작은 나무를 키우는 iOS 게임.</p>
-      <p><sub>Swift · iOS</sub></p>
-    </td>
-    <td width="33%" valign="top">
-      <h3><img src="assets/blocks/observer.svg" width="24" alt="관측기"> <img src="assets/headings/stereo-camera.svg" width="134" alt="Stereo camera"></h3>
-      <p>두 카메라의 시선을 맞추는 캘리브레이션 도구.</p>
-      <p><sub>C++ · C#</sub></p>
-    </td>
-  </tr>
-</table>
+<!-- RECENT_REPOS:START -->
+<!-- RECENT_REPOS:END -->
 
 <a name="inventory"></a>
 

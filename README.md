@@ -16,25 +16,29 @@
 
 ## <img src="assets/blocks/crafting_table.svg" width="28" alt="제작대"> <img src="assets/headings/crafting.svg" width="220" alt="Currently crafting">
 
+<!-- RECENT_REPOS:START -->
 <table>
   <tr>
     <td width="33%" valign="top">
-      <h3><img src="assets/blocks/book_and_quill.svg" width="24" alt="책과 깃펜"> <a href="https://github.com/oi-RYH/11.03_colloquial-calendar"><img src="assets/headings/say-days.svg" width="84" alt="Say Days"></a></h3>
-      <p><img src="assets/text/e7022963adc78b62367f.svg" width="188" alt="일상을 기록하는 캘린더."></p>
-      <p><sub><img src="assets/text/46c11b44605657a82949.svg" width="116" alt="Web · Calendar"></sub></p>
+      <h3><a href="https://github.com/oi-RYH/Dawn">Dawn</a></h3>
+      <p>저장소에서 자세한 내용을 확인하세요.</p>
+      <p><sub>JavaScript · 최근 푸시 2026-09-17 (UTC)</sub></p>
     </td>
     <td width="33%" valign="top">
-      <h3><img src="assets/blocks/sapling.svg" width="24" alt="묘목"> <img src="assets/headings/bonsai.svg" width="64" alt="bonsai"></h3>
-      <p><img src="assets/text/adf3b06b9b05aa28a47b.svg" width="180" alt="작은 나무를 키우는 iOS 게임."></p>
-      <p><sub><img src="assets/text/23eb365341faf80603e9.svg" width="92" alt="Swift · iOS"></sub></p>
+      <h3><a href="https://github.com/oi-RYH/capstone_design">capstone_design</a></h3>
+      <p>캡스턴 디자인 - 7조</p>
+      <p><sub>언어 정보 없음 · 최근 푸시 2026-09-16 (UTC)</sub></p>
     </td>
     <td width="33%" valign="top">
-      <h3><img src="assets/blocks/observer.svg" width="24" alt="관측기"> <img src="assets/headings/stereo-camera.svg" width="134" alt="Stereo camera"></h3>
-      <p><img src="assets/text/fe2efecd63103042ee77.svg" width="204" alt="두 카메라의 시선을 맞추는 캘리브레이션 도구."></p>
-      <p><sub><img src="assets/text/ee8acf5242a8ff2edc71.svg" width="68" alt="C++ · C#"></sub></p>
+      <h3><a href="https://github.com/oi-RYH/BrassField_plugin">BrassField_plugin</a></h3>
+      <p>저장소에서 자세한 내용을 확인하세요.</p>
+      <p><sub>Java · 최근 푸시 2026-08-14 (UTC)</sub></p>
     </td>
   </tr>
 </table>
+
+<sub>최근 푸시한 공개 저장소 · 최대 3개 · 매시간 갱신 (프로필·포크·보관된 저장소 제외)</sub>
+<!-- RECENT_REPOS:END -->
 
 <a name="inventory"></a>
 
