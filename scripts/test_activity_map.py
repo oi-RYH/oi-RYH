@@ -17,7 +17,7 @@ class ActivityMapTests(unittest.TestCase):
     def test_levels_are_bounded(self):
         self.assertEqual(contribution_level(0, 20), 0)
         self.assertEqual(contribution_level(1, 20), 1)
-        self.assertEqual(contribution_level(999, 20), 4)
+        self.assertEqual(contribution_level(999, 20), 5)
 
     def test_svg_is_self_contained_accessible_and_animated(self):
         svg = render(self.calendar(), 'player')
@@ -25,7 +25,10 @@ class ActivityMapTests(unittest.TestCase):
         self.assertIn("player&#x27;s Minecraft contribution mine: 42 contributions", svg)
         self.assertEqual(svg.count('class="day level-'), 21)
         self.assertNotIn('<text', svg)
-        self.assertNotIn('href=', svg)
+        self.assertNotIn('href="http', svg)
+        self.assertIn('href="data:image/png;base64,', svg)
+        for name in ('stone', 'iron-ore', 'gold-ore', 'diamond-block', 'emerald-block'):
+            self.assertIn(name, svg)
         self.assertIn('@keyframes ride', svg)
         self.assertIn('prefers-reduced-motion', svg)
         self.assertIn('id="cart"', svg)
