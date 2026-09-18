@@ -213,7 +213,7 @@ def write_reference_mine(root=ROOT):
     palette.putpalette([channel for color in palette_colors for channel in color])
     indexed = [frame.quantize(palette=palette, dither=Image.Dither.NONE) for frame in frames]
     indexed[0].save(
-        output / 'mine-shift.gif',
+        output / 'mine-shift-side.gif',
         save_all=True,
         append_images=indexed[1:],
         duration=110,
