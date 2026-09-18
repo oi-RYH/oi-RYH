@@ -32,7 +32,7 @@
       <g transform="translate(34 57)"><g class="pickaxe" transform="rotate(-38)">
         <animateTransform attributeName="transform" type="rotate" dur=".9s" repeatCount="indefinite" values="-38;18;-38"/>
         <path d="M1 4L34-34" stroke="#8d5d32" stroke-width="7"/>
-        <path d="M10-46h48v8h-6v7h-7v-7H23v7h-7v-7h-6z" fill="#4dc9cd"/>
+        <path d="M6-46h56v9H6zM6-37h9v9H6zm47 0h9v9h-9z" fill="#4dc9cd"/>
       </g></g>
     </g>
     <g class="left-profile" transform="translate(43 0) scale(-1 1)" opacity="0">
@@ -44,7 +44,7 @@
       <g transform="translate(34 57)"><g class="pickaxe" transform="rotate(-38)">
         <animateTransform attributeName="transform" type="rotate" dur=".9s" repeatCount="indefinite" values="-38;18;-38"/>
         <path d="M1 4L34-34" stroke="#8d5d32" stroke-width="7"/>
-        <path d="M10-46h48v8h-6v7h-7v-7H23v7h-7v-7h-6z" fill="#4dc9cd"/>
+        <path d="M6-46h56v9H6zM6-37h9v9H6zm47 0h9v9h-9z" fill="#4dc9cd"/>
       </g>
     </g>
     </g>
