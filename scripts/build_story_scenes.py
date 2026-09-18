@@ -41,25 +41,25 @@ def write_quest_board(repos, root=ROOT):
     font = PixelText(root)
     for index, repo in enumerate(repos[:3]):
         name = repo['name']
-        while name and font.paths(name, 12)[0] > 136:
+        while name and font.paths(name, 16)[0] > 178:
             name = name[:-1]
         if name != repo['name']:
             name += '…'
         card = [
-            # 160:254 closely follows a portrait credit card's 1:1.586 ratio.
-            '<rect x="80" y="33" width="160" height="254" class="paper"/>',
-            '<rect x="151" y="24" width="18" height="18" class="pin"/>',
-            paths(font, name, 92, 72, 12, '#302113'),
+            # 210:333 closely follows a portrait credit card's 1:1.586 ratio.
+            '<rect x="55" y="28" width="210" height="333" class="paper"/>',
+            '<rect x="149" y="18" width="22" height="20" class="pin"/>',
+            paths(font, name, 71, 72, 16, '#302113'),
         ]
         description = repo.get('description') or '저장소에서 자세한 내용을 확인하세요.'
-        for row, line in enumerate(wrap(description, font, 136, 10)):
-            card.append(paths(font, line, 92, 111 + row * 19, 10, '#5a452d'))
+        for row, line in enumerate(wrap(description, font, 178, 15)):
+            card.append(paths(font, line, 71, 126 + row * 27, 15, '#5a452d'))
         language = repo.get('language') or '언어 정보 없음'
-        card.append(paths(font, f'◆ {language}', 92, 227, 9, '#285e28'))
-        card.append(paths(font, f'업데이트 · {repo["pushed_at"][:10]}', 92, 258, 7, '#7a6142'))
+        card.append(paths(font, f'◆ {language}', 71, 288, 14, '#285e28'))
+        card.append(paths(font, f'업데이트 · {repo["pushed_at"][:10]}', 71, 329, 11, '#7a6142'))
 
-        outer_left = '<path d="M10 14v292" stroke="#76502e" stroke-width="8"/>' if index == 0 else ''
-        outer_right = '<path d="M310 14v292" stroke="#76502e" stroke-width="8"/>' if index == len(repos[:3]) - 1 else ''
+        outer_left = '<path d="M10 14v362" stroke="#76502e" stroke-width="8"/>' if index == 0 else ''
+        outer_right = '<path d="M310 14v362" stroke="#76502e" stroke-width="8"/>' if index == len(repos[:3]) - 1 else ''
         decorations = (
             '<path d="M34 22v68m0-42L19 59m15 8l17 14" stroke="#557733" stroke-width="6"/>'
             '<rect x="24" y="86" width="20" height="28" fill="#6b4126"/><path d="M27 89h14l-4 19h-7z" fill="#f0a93a"/>'
@@ -70,13 +70,13 @@ def write_quest_board(repos, root=ROOT):
             '<rect x="264" y="59" width="31" height="31" fill="#2d1c12" stroke="#8b6339" stroke-width="5"/>'
             '<path d="M273 68h13v13h-13z" fill="#5abf67"/><path d="M268 270h25v9h-25zm4-10h17v10h-17z" fill="#b9483f"/>'
         )
-        svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320" role="img" aria-labelledby="title desc" shape-rendering="crispEdges">
+        svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="320" height="390" viewBox="0 0 320 390" role="img" aria-labelledby="title desc" shape-rendering="crispEdges">
   <title id="title">{name} 퀘스트 의뢰서</title><desc id="desc">클릭하면 {name} 저장소로 이동합니다.</desc>
   <style>.paper{{fill:#d9c79b;stroke:#76502e;stroke-width:5}}.pin{{fill:#d9a441;animation:pin 2.4s steps(2,end) infinite}}@keyframes pin{{50%{{transform:translateY(2px)}}}}@media(prefers-reduced-motion:reduce){{.pin{{animation:none}}}}</style>
-  <rect width="320" height="320" fill="#4f321f"/>
-  <path d="M0 15h320M0 305h320" stroke="#76502e" stroke-width="8"/>
-  <path d="M0 26h320M0 294h320" stroke="#2e1c13" stroke-width="5" stroke-dasharray="46 8"/>
-  <path d="M0 107h320M0 213h320" stroke="#3d2719" stroke-width="3" opacity=".7"/>
+  <rect width="320" height="390" fill="#4f321f"/>
+  <path d="M0 15h320M0 375h320" stroke="#76502e" stroke-width="8"/>
+  <path d="M0 26h320M0 364h320" stroke="#2e1c13" stroke-width="5" stroke-dasharray="46 8"/>
+  <path d="M0 130h320M0 260h320" stroke="#3d2719" stroke-width="3" opacity=".7"/>
   {outer_left}{outer_right}{decorations}{''.join(card)}
 </svg>\n'''
         (output / f'quest-board-{index + 1}.svg').write_text(svg)
