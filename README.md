@@ -17,23 +17,9 @@
 ## <img src="assets/blocks/crafting_table.svg" width="28" alt="제작대"> <picture><img src="assets/headings/crafting.svg" width="220" alt="Currently crafting"></picture>
 
 <!-- RECENT_REPOS:START -->
-<img src="assets/scenes/quest-board.svg" width="100%" alt="최근 푸시한 공개 저장소 3개가 붙은 퀘스트 게시판" />
+<p align="center"><a href="https://github.com/oi-RYH/Dawn"><img src="assets/scenes/quest-board-1.svg" width="32%" alt="Dawn 저장소 퀘스트 게시판"></a><a href="https://github.com/oi-RYH/capstone_design"><img src="assets/scenes/quest-board-2.svg" width="32%" alt="capstone_design 저장소 퀘스트 게시판"></a><a href="https://github.com/oi-RYH/BrassField_plugin"><img src="assets/scenes/quest-board-3.svg" width="32%" alt="BrassField_plugin 저장소 퀘스트 게시판"></a></p>
 
-<table>
-  <tr>
-    <td width="33%" align="center">
-      <a href="https://github.com/oi-RYH/Dawn"><img src="assets/blocks/crafting_table.svg" width="20" alt="제작대"> <img src="assets/text/9d7f23d93930a6b3edb5.svg" width="36" alt="Dawn"></a>
-    </td>
-    <td width="33%" align="center">
-      <a href="https://github.com/oi-RYH/capstone_design"><img src="assets/blocks/crafting_table.svg" width="20" alt="제작대"> <img src="assets/text/00efc3f64b74871bd690.svg" width="124" alt="capstone_design"></a>
-    </td>
-    <td width="33%" align="center">
-      <a href="https://github.com/oi-RYH/BrassField_plugin"><img src="assets/blocks/crafting_table.svg" width="20" alt="제작대"> <img src="assets/text/3776c3948730c5702799.svg" width="140" alt="BrassField_plugin"></a>
-    </td>
-  </tr>
-</table>
-
-<sub><picture><img src="assets/text/851d37331e5cfe87386b.svg" width="460" alt="최근 푸시한 공개 저장소 · 최대 3개 · 매시간 갱신 · 날짜는 UTC 기준 (프로필·포크·보관된 저장소 제외)"></picture></sub>
+<sub>최근 푸시한 공개 저장소 · 최대 3개 · 매시간 갱신 · 날짜는 UTC 기준 (프로필·포크·보관된 저장소 제외)</sub>
 <!-- RECENT_REPOS:END -->
 
 <img src="assets/scenes/quest-break.jpg" width="100%" alt="상자와 횃불이 놓인 마인크래프트풍 지하 창고" />

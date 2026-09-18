@@ -35,36 +35,53 @@ def paths(font, text, x, y, size, fill):
 
 
 def write_quest_board(repos, root=ROOT):
-    """Put the live repository data onto a small, flat pixel notice board."""
+    """Build three portrait, individually clickable quest boards."""
     output = root / 'assets/scenes'
     output.mkdir(parents=True, exist_ok=True)
     font = PixelText(root)
-    cards = []
     for index, repo in enumerate(repos[:3]):
-        x = 40 + index * 305
         name = repo['name']
-        while name and font.paths(name, 17)[0] > 245:
+        while name and font.paths(name, 13)[0] > 211:
             name = name[:-1]
         if name != repo['name']:
             name += '…'
-        cards.append(f'<g><rect x="{x}" y="34" width="270" height="192" class="paper"/><rect x="{x+126}" y="27" width="18" height="18" class="pin"/></g>')
-        cards.append(paths(font, name, x + 18, 72, 17, '#302113'))
+        card = [
+            # The old 270 x 192 sheet is reduced to exactly 90% on each axis.
+            '<rect x="28" y="50" width="243" height="173" class="paper"/>',
+            '<rect x="141" y="41" width="18" height="18" class="pin"/>',
+            paths(font, name, 43, 87, 13, '#302113'),
+        ]
         description = repo.get('description') or '저장소에서 자세한 내용을 확인하세요.'
-        for row, line in enumerate(wrap(description, font, 232, 13)):
-            cards.append(paths(font, line, x + 18, 116 + row * 23, 13, '#5a452d'))
+        for row, line in enumerate(wrap(description, font, 211, 11)):
+            card.append(paths(font, line, 43, 126 + row * 21, 11, '#5a452d'))
         language = repo.get('language') or '언어 정보 없음'
-        cards.append(paths(font, f'◆ {language}', x + 18, 178, 12, '#285e28'))
-        cards.append(paths(font, f'업데이트 · {repo["pushed_at"][:10]}', x + 18, 208, 10, '#7a6142'))
-    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="960" height="258" viewBox="0 0 960 258" role="img" aria-labelledby="title desc" shape-rendering="crispEdges">
-  <title id="title">현재 퀘스트 게시판</title><desc id="desc">최근 푸시한 공개 저장소 세 개가 픽셀 의뢰서로 붙어 있습니다.</desc>
+        card.append(paths(font, f'◆ {language}', 43, 185, 10, '#285e28'))
+        card.append(paths(font, f'업데이트 · {repo["pushed_at"][:10]}', 43, 208, 8, '#7a6142'))
+
+        decorations = (
+            '<path d="M43 251v102m0-72l-18 14m18 8l20 16" stroke="#557733" stroke-width="7"/>'
+            '<rect x="31" y="348" width="24" height="34" fill="#6b4126"/><path d="M35 351h16l-4 24h-8z" fill="#f0a93a"/>'
+            '<rect x="169" y="285" width="77" height="55" fill="#d9c79b"/>'
+            '<rect x="202" y="279" width="11" height="12" fill="#d9a441"/>'
+            '<path d="M181 300h48m-48 13h39m-39 13h45" stroke="#806440" stroke-width="4"/>'
+            if index == 0 else
+            '<path d="M150 244v38" stroke="#8b6339" stroke-width="6"/><path d="M136 273h28l-5 30h-18z" fill="#58c9c4"/>'
+            '<path d="M150 305l-13 22 13 22 13-22z" fill="#d9a441"/><circle cx="150" cy="327" r="6" fill="#5cc6d0"/>'
+            '<rect x="49" y="365" width="14" height="14" fill="#d9a441"/><rect x="237" y="365" width="14" height="14" fill="#d9a441"/>'
+            if index == 1 else
+            '<rect x="47" y="270" width="64" height="64" fill="#2d1c12" stroke="#8b6339" stroke-width="6"/>'
+            '<path d="M62 285h34v34H62z" fill="#5abf67"/><path d="M184 360h42v13h-42zm7-15h28v15h-28z" fill="#b9483f"/>'
+            '<path d="M203 345v-31m0 8l-16-13m16 7l17-15" stroke="#557733" stroke-width="6"/>'
+        )
+        svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="300" height="440" viewBox="0 0 300 440" role="img" aria-labelledby="title desc" shape-rendering="crispEdges">
+  <title id="title">{name} 퀘스트 의뢰서</title><desc id="desc">클릭하면 {name} 저장소로 이동합니다.</desc>
   <style>.paper{{fill:#d9c79b;stroke:#76502e;stroke-width:5}}.pin{{fill:#d9a441;animation:pin 2.4s steps(2,end) infinite}}@keyframes pin{{50%{{transform:translateY(2px)}}}}@media(prefers-reduced-motion:reduce){{.pin{{animation:none}}}}</style>
-  <rect width="960" height="258" rx="5" fill="#111820"/>
-  <path d="M0 218h960v40H0z" fill="#0a0f14"/>
-  <rect x="14" y="12" width="932" height="230" fill="#4f321f" stroke="#76502e" stroke-width="7"/>
-  <path d="M24 23h912M24 232h912" stroke="#2e1c13" stroke-width="7" stroke-dasharray="55 9"/>
-  {''.join(cards)}
+  <rect x="5" y="5" width="290" height="430" rx="4" fill="#4f321f" stroke="#76502e" stroke-width="10"/>
+  <path d="M13 18h274M13 427h274" stroke="#2e1c13" stroke-width="5" stroke-dasharray="46 8"/>
+  <path d="M10 112h280M10 231h280M10 351h280" stroke="#3d2719" stroke-width="3" opacity=".7"/>
+  {decorations}{''.join(card)}
 </svg>\n'''
-    (output / 'quest-board.svg').write_text(svg)
+        (output / f'quest-board-{index + 1}.svg').write_text(svg)
 
 
 def write_mine_shift(root=ROOT):

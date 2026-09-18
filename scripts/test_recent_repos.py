@@ -17,13 +17,13 @@ class RecentReposTests(unittest.TestCase):
         self.assertNotIn('<script>', html)
         self.assertNotIn('alert(1)', html)
         self.assertIn('https://github.com/owner/demo', html)
-        self.assertIn('assets/scenes/quest-board.svg', html)
+        self.assertIn('assets/scenes/quest-board-1.svg', html)
 
-    def test_cards_link_each_repository_below_the_single_board(self):
+    def test_each_board_panel_links_its_repository(self):
         html = cards([dict(name='demo', description='short', language='JavaScript',
                            pushed_at='2026-09-17T00:00:00Z')], 'owner')
-        self.assertEqual(html.count('assets/scenes/quest-board.svg'), 1)
+        self.assertEqual(html.count('assets/scenes/quest-board-1.svg'), 1)
         self.assertIn('https://github.com/owner/demo', html)
-        self.assertIn(' demo</a>', html)
+        self.assertIn('demo 저장소 퀘스트 게시판', html)
 
 if __name__ == '__main__': unittest.main()

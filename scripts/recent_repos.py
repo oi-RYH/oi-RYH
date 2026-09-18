@@ -57,15 +57,13 @@ def language_badge(language):
 def cards(repos, owner):
     if not repos:
         return '<p>최근 작업한 공개 저장소가 없습니다.</p>'
-    rows = ['<img src="assets/scenes/quest-board.svg" width="100%" alt="최근 푸시한 공개 저장소 3개가 붙은 퀘스트 게시판" />', '', '<table>', '  <tr>']
-    for repo in repos:
+    panels = []
+    for index, repo in enumerate(repos):
         name = escape(repo['name'])
         url = f'https://github.com/{quote(owner, safe="")}/{quote(repo["name"], safe="")}'
-        rows += [f'    <td width="33%" align="center">',
-                 f'      <a href="{url}"><img src="assets/blocks/crafting_table.svg" width="20" alt="제작대"> {name}</a>',
-                 '    </td>']
-    rows += ['  </tr>', '</table>', '',
-             '<sub>최근 푸시한 공개 저장소 · 최대 3개 · 매시간 갱신 · 날짜는 UTC 기준 (프로필·포크·보관된 저장소 제외)</sub>']
+        panels.append(f'<a href="{url}"><img src="assets/scenes/quest-board-{index + 1}.svg" width="32%" alt="{name} 저장소 퀘스트 게시판"></a>')
+    rows = ['<p align="center">' + ''.join(panels) + '</p>', '',
+            '<sub>최근 푸시한 공개 저장소 · 최대 3개 · 매시간 갱신 · 날짜는 UTC 기준 (프로필·포크·보관된 저장소 제외)</sub>']
     return '\n'.join(rows)
 
 def populate(source, root=ROOT):
