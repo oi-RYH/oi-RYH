@@ -19,8 +19,6 @@
 <!-- RECENT_REPOS:START -->
 <!-- RECENT_REPOS:END -->
 
-<img src="assets/scenes/storage-room.svg" width="100%" alt="스티브와 닭이 열린 상자가 있는 입체적인 창고로 들어가는 장면" />
-
 <a name="inventory"></a>
 
 ## <img src="assets/blocks/chest.svg" width="28" alt="상자"> <img src="assets/headings/inventory.svg" width="112" alt="Inventory">
@@ -53,8 +51,6 @@
 조만간 닭이 커밋하는 메시지가 올라올 예정입니다.
 
 </details>
-
-<img src="assets/scenes/mine-descent.svg" width="100%" alt="스티브와 닭 광산 수레가 횃불이 켜진 갱도를 내려가는 장면" />
 
 <a name="community-mine"></a>
 
@@ -104,7 +100,7 @@
 
 </details>
 
-<img src="assets/scenes/records-room.svg" width="100%" alt="스티브와 닭이 활동 기록을 정리하는 지하 기록실" />
+<img src="assets/scenes/mine-shift.svg" width="100%" alt="단순한 스티브가 작업 지점 사이를 빠르게 이동하며 곡괭이질하고 닭은 광산을 돌아다니는 2D 픽셀 장면" />
 
 <a name="field-notes"></a>
 
