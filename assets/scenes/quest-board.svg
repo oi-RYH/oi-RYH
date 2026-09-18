@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 118" role="img" aria-labelledby="title desc" shape-rendering="crispEdges">
+  <title id="title">현재 퀘스트 게시판</title><desc id="desc">나무 게시판에 세 장의 프로젝트 의뢰서가 걸려 있습니다.</desc>
+  <style>
+    .paper{fill:#d9c79b;stroke:#775431;stroke-width:4}.line{fill:#7d6848}.pin{fill:#d9a441;animation:pin 2.8s steps(2,end) infinite}.glow{fill:#f2c94c;animation:glow 2.2s steps(2,end) infinite}
+    @keyframes pin{50%{transform:translateY(1px)}}@keyframes glow{50%{opacity:.35}}
+    @media(prefers-reduced-motion:reduce){.pin,.glow{animation:none}}
+  </style>
+  <rect width="960" height="118" rx="6" fill="#111820"/>
+  <path d="M0 102h960v16H0z" fill="#171f27"/><path d="M0 108h960v10H0z" fill="#0b1016"/>
+  <rect x="18" y="12" width="924" height="92" rx="4" fill="#4f321f" stroke="#76502e" stroke-width="5"/>
+  <path d="M28 24h904M28 94h904" stroke="#2e1c13" stroke-width="5" stroke-dasharray="50 8"/>
+  <g transform="translate(55 23)"><rect class="paper" width="245" height="66"/><rect class="pin" x="116" y="-5" width="13" height="13"/><path class="line" d="M22 18h110v7H22zm0 17h188v6H22zm0 14h154v6H22z"/><rect class="glow" x="210" y="14" width="13" height="13"/></g>
+  <g transform="translate(357 23)"><rect class="paper" width="245" height="66"/><rect class="pin" x="116" y="-5" width="13" height="13" style="animation-delay:.5s"/><path class="line" d="M22 18h132v7H22zm0 17h178v6H22zm0 14h122v6H22z"/><path d="M207 13h18v18h-18z" fill="#79a85b"/><path d="M211 9h10v26h-10z" fill="#436932"/></g>
+  <g transform="translate(659 23)"><rect class="paper" width="245" height="66"/><rect class="pin" x="116" y="-5" width="13" height="13" style="animation-delay:1s"/><path class="line" d="M22 18h94v7H22zm0 17h183v6H22zm0 14h166v6H22z"/><path d="M207 13h18v18h-18z" fill="#64798c"/><circle cx="216" cy="22" r="5" fill="#19232c"/></g>
+</svg>

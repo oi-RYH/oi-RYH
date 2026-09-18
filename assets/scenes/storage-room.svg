@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 190" role="img" aria-labelledby="title desc" shape-rendering="crispEdges">
+  <title id="title">창고로 들어가는 스티브와 닭</title><desc id="desc">입체적인 돌벽과 나무 바닥 사이에서 스티브가 맥북을 들고 열린 상자를 바라보고, 닭이 상자 뒤에서 고개를 내밉니다.</desc>
+  <defs><linearGradient id="wall" x2="0" y2="1"><stop stop-color="#17212b"/><stop offset="1" stop-color="#0d131a"/></linearGradient><radialGradient id="warm"><stop stop-color="#f6c85b" stop-opacity=".55"/><stop offset="1" stop-color="#f6c85b" stop-opacity="0"/></radialGradient></defs>
+  <style>
+    .flame{animation:flame 1.2s steps(2,end) infinite;transform-origin:center}.chicken{animation:bob 2.1s steps(2,end) infinite}.shine{animation:shine 2.5s steps(2,end) infinite}
+    @keyframes flame{50%{transform:scale(.8,1.15);opacity:.8}}@keyframes bob{50%{transform:translateY(-3px)}}@keyframes shine{50%{opacity:.3}}
+    @media(prefers-reduced-motion:reduce){.flame,.chicken,.shine{animation:none}}
+  </style>
+  <rect width="960" height="190" rx="6" fill="url(#wall)"/>
+  <path d="M0 0h960v18H0zM0 42h960v5H0zM0 82h960v5H0z" fill="#222f3a" opacity=".65"/>
+  <path d="M0 120h960v70H0z" fill="#39271b"/><path d="M0 120h960v8H0z" fill="#674326"/><path d="M0 151h960v5H0z" fill="#241811"/><path d="M120 120v70m180-70v70m180-70v70m180-70v70m180-70v70" stroke="#21160f" stroke-width="6"/>
+  <ellipse cx="480" cy="123" rx="210" ry="105" fill="url(#warm)"/>
+  <g transform="translate(78 42)"><rect x="13" y="0" width="9" height="42" fill="#704427"/><rect class="flame" x="9" y="-6" width="17" height="20" fill="#f6b73c"/><rect class="flame" x="14" y="-2" width="8" height="12" fill="#fff09a"/></g>
+  <g transform="translate(835 42)"><rect x="13" y="0" width="9" height="42" fill="#704427"/><rect class="flame" x="9" y="-6" width="17" height="20" fill="#f6b73c"/><rect class="flame" x="14" y="-2" width="8" height="12" fill="#fff09a"/></g>
+  <g transform="translate(397 78)"><path d="M0 38h166v65H0z" fill="#6f4325" stroke="#2a1a12" stroke-width="6"/><path d="M10 35h146L136 5H30z" fill="#8a572e" stroke="#2a1a12" stroke-width="6"/><rect x="73" y="54" width="20" height="19" fill="#d8b45b"/><path class="shine" d="M24 18h118v8H24z" fill="#ffe08a"/></g>
+  <g transform="translate(248 56)"><rect x="18" y="0" width="46" height="44" fill="#8c5c44"/><rect x="12" y="42" width="58" height="50" fill="#22a9aa"/><rect x="15" y="13" width="13" height="7" fill="#e8e8e8"/><rect x="51" y="13" width="13" height="7" fill="#e8e8e8"/><path d="M12 27h58" stroke="#c8d1d8" stroke-width="3"/><rect x="4" y="52" width="13" height="48" fill="#8c5c44"/><rect x="65" y="52" width="13" height="48" fill="#8c5c44"/><rect x="19" y="90" width="21" height="39" fill="#40328e"/><rect x="47" y="90" width="21" height="39" fill="#40328e"/><path d="M64 61h42v34H64z" fill="#bfc5c9" stroke="#60666a" stroke-width="4"/><path d="M82 72h7v11h-7z" fill="#696f74"/></g>
+  <g class="chicken" transform="translate(555 63)"><rect x="9" y="0" width="35" height="34" fill="#f0ead7"/><rect x="3" y="12" width="12" height="22" fill="#f0ead7"/><rect x="37" y="7" width="13" height="9" fill="#e4a429"/><rect x="17" y="9" width="5" height="5" fill="#20252a"/><rect x="25" y="9" width="5" height="5" fill="#20252a"/><rect x="19" y="31" width="9" height="11" fill="#c73c32"/></g>
+  <path d="M0 172l90-27 84 18 105-29 106 25 118-31 120 30 112-24 115 31 110-19v44H0z" fill="#111820" opacity=".85"/>
+</svg>

@@ -16,6 +16,8 @@
 
 ## <img src="assets/blocks/crafting_table.svg" width="28" alt="제작대"> <picture><img src="assets/headings/crafting.svg" width="220" alt="Currently crafting"></picture>
 
+<img src="assets/scenes/quest-board.svg" width="100%" alt="세 개의 프로젝트 의뢰서가 붙은 나무 퀘스트 게시판" />
+
 <!-- RECENT_REPOS:START -->
 <table>
   <tr>
@@ -42,6 +44,8 @@
 
 <sub><picture><img src="assets/text/851d37331e5cfe87386b.svg" width="460" alt="최근 푸시한 공개 저장소 · 최대 3개 · 매시간 갱신 · 날짜는 UTC 기준 (프로필·포크·보관된 저장소 제외)"></picture></sub>
 <!-- RECENT_REPOS:END -->
+
+<img src="assets/scenes/storage-room.svg" width="100%" alt="스티브와 닭이 열린 상자가 있는 입체적인 창고로 들어가는 장면" />
 
 <a name="inventory"></a>
 
@@ -75,6 +79,8 @@
 <picture><img src="assets/text/5047c181f18351b95015.svg" width="388" alt="조만간 닭이 커밋하는 메시지가 올라올 예정입니다."></picture>
 
 </details>
+
+<img src="assets/scenes/mine-descent.svg" width="100%" alt="스티브와 닭 광산 수레가 횃불이 켜진 갱도를 내려가는 장면" />
 
 <a name="community-mine"></a>
 
@@ -128,11 +134,14 @@
 
 </details>
 
+<img src="assets/scenes/records-room.svg" width="100%" alt="스티브와 닭이 활동 기록을 정리하는 지하 기록실" />
+
 <a name="field-notes"></a>
 
 ## <img src="assets/blocks/book_and_quill.svg" width="28" alt="책과 깃펜"> <picture><img src="assets/headings/field-notes.svg" width="112" alt="작업 일지"></picture>
 
-[<img src="assets/text/3d15675ba2aab1976f21.svg" width="52" alt="블로그">](https://oi-ryh.github.io) <picture><img src="assets/text/452463119721a98aa93f.svg" width="12" alt="·"></picture> [<img src="assets/text/3560cb85b4f3713fbbfc.svg" width="92" alt="전체 저장소">](https://github.com/oi-RYH?tab=repositories)
+| [<img src="assets/blocks/book_and_quill.svg" width="42" alt="책과 깃펜"><br><img src="assets/text/3d15675ba2aab1976f21.svg" width="52" alt="블로그">](https://oi-ryh.github.io) | [<img src="assets/blocks/chest.svg" width="42" alt="상자"><br><img src="assets/text/3560cb85b4f3713fbbfc.svg" width="92" alt="전체 저장소">](https://github.com/oi-RYH?tab=repositories) |
+| :---: | :---: |
 
 <p><img src="assets/blocks/chest.svg" width="20" alt="상자"> <strong><picture><img src="assets/text/7b8be114652abbbe6023.svg" width="124" alt="플레이어 상태창"></picture></strong></p>
 <picture>
