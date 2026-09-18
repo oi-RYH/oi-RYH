@@ -79,7 +79,7 @@ def write_quest_board(repos, root=ROOT):
   <path d="M0 130h320M0 260h320" stroke="#3d2719" stroke-width="3" opacity=".7"/>
   {outer_left}{outer_right}{decorations}{''.join(card)}
 </svg>\n'''
-        (output / f'quest-board-{index + 1}.svg').write_text(svg)
+        (output / f'quest-board-readable-{index + 1}.svg').write_text(svg)
 
 
 def write_mine_shift(root=ROOT):
