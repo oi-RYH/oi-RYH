@@ -85,7 +85,7 @@
 <a name="mine-help"></a>
 
 <!-- MINE_MODE:START -->
-<picture><img src="assets/text/9a2a4f6b484a22a454a5.svg" width="372" alt="돌을 클릭하고 열린 이슈를 제출하면 채굴됩니다."></picture>
+<picture><img src="assets/text/651cb2cf7460a98c8660.svg" width="428" alt="돌을 클릭하고 열린 이슈를 제출하면 채굴됩니다. GitHub 계정당 UTC 기준 하루 1회 채굴할 수 있습니다."></picture>
 <!-- MINE_MODE:END -->
 
 <!-- MINE_GRID:START -->

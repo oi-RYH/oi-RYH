@@ -1,5 +1,6 @@
 """Community mine: validated inputs, persistent receipts, no shell interpolation."""
 import argparse
+from datetime import datetime, timezone
 import json
 import os
 from pathlib import Path
@@ -27,17 +28,21 @@ def new_grid():
     return [[None for _ in range(WIDTH)] for _ in range(HEIGHT)]
 
 def initial_state():
-    return dict(layer=1, grid=new_grid(), miners={}, totals={}, receipts={}, log=[])
+    return dict(layer=1, grid=new_grid(), miners={}, totals={}, receipts={}, daily_claims={}, log=[])
 
-def play(state, title, user, issue_id, rng=random):
+def play(state, title, user, issue_id, rng=random, played_on=None):
     key = str(issue_id)
     if key in state['receipts']:
         return state['receipts'][key]
     match = re.fullmatch(r'mine\|([1-9][0-9]{0,5})\|([0-5])\|([0-2])', title)
     if not match or not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9-]{0,38}', user):
         return None
+    played_on = played_on or datetime.now(timezone.utc).date().isoformat()
+    daily_claims = state.setdefault('daily_claims', {})
     layer, x, y = map(int, match.groups())
-    if layer != state['layer']:
+    if user in daily_claims.get(played_on, []):
+        result = '오늘은 이미 채굴했습니다. UTC 자정 이후 다시 도전해주세요.'
+    elif layer != state['layer']:
         result = '이미 지나간 층입니다. 최신 README에서 블록을 다시 골라주세요.'
     elif state['grid'][y][x] is not None:
         result = '이미 누군가 캔 블록입니다. 다른 블록을 골라주세요.'
@@ -49,6 +54,7 @@ def play(state, title, user, issue_id, rng=random):
         miner['blocks'] += 1
         miner['score'] += points
         state['totals'][ore] = state['totals'].get(ore, 0) + 1
+        daily_claims.setdefault(played_on, []).append(user)
         result = f'{emoji} @{user}: {name} 획득! +{points}점'
         state['log'] = (state['log'] + [result])[-5:]
         if all(cell is not None for row in state['grid'] for cell in row):
@@ -65,7 +71,7 @@ def replace(text, name, content):
     return re.sub(pattern, lambda _: f'<!-- {name}:START -->\n{content}\n<!-- {name}:END -->', text, flags=re.S)
 
 def render(text, state, live=False, repo='oi-RYH/oi-RYH'):
-    notice = ('돌을 클릭하고 열린 이슈를 제출하면 채굴됩니다.' if live else
+    notice = ('돌을 클릭하고 열린 이슈를 제출하면 채굴됩니다. GitHub 계정당 UTC 기준 하루 1회 채굴할 수 있습니다.' if live else
               '**미리보기 모드** · 광산 자동화는 기본 브랜치에 반영한 뒤 활성화됩니다. 지금은 이슈가 생성되지 않습니다.')
     rows = ['| ' + ' | '.join(str(x + 1) for x in range(WIDTH)) + ' |', '|' + ':---:|' * WIDTH]
     for y, row in enumerate(state['grid']):
@@ -129,7 +135,8 @@ def main():
             for issue in issues:
                 if 'pull_request' in issue or issue['user']['type'] != 'User':
                     continue
-                result = play(state, issue['title'], issue['user']['login'], issue['number'])
+                played_on = str(issue.get('created_at', ''))[:10] or None
+                result = play(state, issue['title'], issue['user']['login'], issue['number'], played_on=played_on)
                 if result is not None:
                     pending.append((issue['number'], result))
                 if len(pending) >= 50:

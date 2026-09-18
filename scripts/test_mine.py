@@ -20,11 +20,31 @@ class MineTests(unittest.TestCase):
         self.assertEqual(state['miners']['player']['blocks'], 1)
         self.assertNotIn('other', state['miners'])
 
+    def test_one_successful_mine_per_user_per_utc_day(self):
+        state = mine.initial_state()
+        first = mine.play(state, 'mine|1|0|0', 'player', 1, random.Random(1), '2026-09-18')
+        blocked = mine.play(state, 'mine|1|1|0', 'player', 2, random.Random(1), '2026-09-18')
+        self.assertIn('획득', first)
+        self.assertEqual(blocked, '오늘은 이미 채굴했습니다. UTC 자정 이후 다시 도전해주세요.')
+        self.assertIsNone(state['grid'][0][1])
+        next_day = mine.play(state, 'mine|1|1|0', 'player', 3, random.Random(1), '2026-09-19')
+        self.assertIn('획득', next_day)
+        self.assertEqual(state['miners']['player']['blocks'], 2)
+
+    def test_failed_attempt_does_not_consume_daily_mine(self):
+        state = mine.initial_state()
+        mine.play(state, 'mine|1|0|0', 'first', 1, random.Random(1), '2026-09-18')
+        failed = mine.play(state, 'mine|1|0|0', 'second', 2, random.Random(1), '2026-09-18')
+        success = mine.play(state, 'mine|1|1|0', 'second', 3, random.Random(1), '2026-09-18')
+        self.assertIn('이미 누군가', failed)
+        self.assertIn('획득', success)
+
     def test_rollover_rejects_old_links(self):
         state = mine.initial_state()
         for y in range(mine.HEIGHT):
             for x in range(mine.WIDTH):
-                mine.play(state, f'mine|1|{x}|{y}', 'player', 1+y*mine.WIDTH+x)
+                index = 1 + y * mine.WIDTH + x
+                mine.play(state, f'mine|1|{x}|{y}', f'player-{index}', index)
         self.assertEqual(state['layer'], 2)
         self.assertEqual(state['grid'], mine.new_grid())
         mine.play(state, 'mine|1|0|0', 'late-player', 100)
