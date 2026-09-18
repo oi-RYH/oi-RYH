@@ -12,6 +12,8 @@ on:
       - 'scripts/pixel_readme.py'
       - 'scripts/requirements.txt'
       - 'assets/fonts/neodgm.ttf'
+      - 'assets/icons/**'
+      - 'assets/languages/**'
       - '.github/workflows/activity-map.yml'
 
 permissions:

@@ -40,6 +40,7 @@ class PlayerStatsTests(unittest.TestCase):
         }
         svg = render(stats)
         self.assertIn('data-icon="diamond-pickaxe"', svg)
+        self.assertIn('href="data:image/png;base64,', svg)
         for language in stats['languages']:
             self.assertIn(f'data-language-icon="{language}"', svg)
             self.assertIn(f'aria-label="{language} logo"', svg)
