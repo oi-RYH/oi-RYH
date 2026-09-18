@@ -41,7 +41,7 @@ def write_quest_board(repos, root=ROOT):
     font = PixelText(root)
     for index, repo in enumerate(repos[:3]):
         name = repo['name']
-        while name and font.paths(name, 16)[0] > 178:
+        while name and font.paths(name, 19)[0] > 178:
             name = name[:-1]
         if name != repo['name']:
             name += '…'
@@ -49,14 +49,14 @@ def write_quest_board(repos, root=ROOT):
             # 210:333 closely follows a portrait credit card's 1:1.586 ratio.
             '<rect x="55" y="28" width="210" height="333" class="paper"/>',
             '<rect x="149" y="18" width="22" height="20" class="pin"/>',
-            paths(font, name, 71, 72, 16, '#302113'),
+            paths(font, name, 71, 74, 19, '#302113'),
         ]
         description = repo.get('description') or '저장소에서 자세한 내용을 확인하세요.'
-        for row, line in enumerate(wrap(description, font, 178, 15)):
-            card.append(paths(font, line, 71, 126 + row * 27, 15, '#5a452d'))
+        for row, line in enumerate(wrap(description, font, 178, 18)):
+            card.append(paths(font, line, 71, 130 + row * 31, 18, '#5a452d'))
         language = repo.get('language') or '언어 정보 없음'
-        card.append(paths(font, f'◆ {language}', 71, 288, 14, '#285e28'))
-        card.append(paths(font, f'업데이트 · {repo["pushed_at"][:10]}', 71, 329, 11, '#7a6142'))
+        card.append(paths(font, f'◆ {language}', 71, 288, 17, '#285e28'))
+        card.append(paths(font, f'업데이트 · {repo["pushed_at"][:10]}', 71, 329, 13, '#7a6142'))
 
         outer_left = '<path d="M10 14v362" stroke="#76502e" stroke-width="8"/>' if index == 0 else ''
         outer_right = '<path d="M310 14v362" stroke="#76502e" stroke-width="8"/>' if index == len(repos[:3]) - 1 else ''
@@ -79,7 +79,7 @@ def write_quest_board(repos, root=ROOT):
   <path d="M0 130h320M0 260h320" stroke="#3d2719" stroke-width="3" opacity=".7"/>
   {outer_left}{outer_right}{decorations}{''.join(card)}
 </svg>\n'''
-        (output / f'quest-board-readable-{index + 1}.svg').write_text(svg)
+        (output / f'quest-board-large-{index + 1}.svg').write_text(svg)
 
 
 def write_mine_shift(root=ROOT):

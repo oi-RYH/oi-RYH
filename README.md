@@ -17,7 +17,7 @@
 ## <img src="assets/blocks/crafting_table.svg" width="28" alt="제작대"> <picture><img src="assets/headings/crafting.svg" width="220" alt="Currently crafting"></picture>
 
 <!-- RECENT_REPOS:START -->
-<p align="center"><a href="https://github.com/oi-RYH/Dawn"><img src="assets/scenes/quest-board-readable-1.svg" width="33%" alt="Dawn 저장소 퀘스트 종이"></a><a href="https://github.com/oi-RYH/capstone_design"><img src="assets/scenes/quest-board-readable-2.svg" width="33%" alt="capstone_design 저장소 퀘스트 종이"></a><a href="https://github.com/oi-RYH/BrassField_plugin"><img src="assets/scenes/quest-board-readable-3.svg" width="33%" alt="BrassField_plugin 저장소 퀘스트 종이"></a></p>
+<p align="center"><a href="https://github.com/oi-RYH/Dawn"><img src="assets/scenes/quest-board-large-1.svg" width="33%" alt="Dawn 저장소 퀘스트 종이"></a><a href="https://github.com/oi-RYH/capstone_design"><img src="assets/scenes/quest-board-large-2.svg" width="33%" alt="capstone_design 저장소 퀘스트 종이"></a><a href="https://github.com/oi-RYH/BrassField_plugin"><img src="assets/scenes/quest-board-large-3.svg" width="33%" alt="BrassField_plugin 저장소 퀘스트 종이"></a></p>
 
 <sub>최근 푸시한 공개 저장소 · 최대 3개 · 매시간 갱신 · 날짜는 UTC 기준 (프로필·포크·보관된 저장소 제외)</sub>
 <!-- RECENT_REPOS:END -->
