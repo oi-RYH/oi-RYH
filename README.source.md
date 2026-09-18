@@ -16,18 +16,8 @@
 
 ## <img src="assets/blocks/crafting_table.svg" width="28" alt="제작대"> <img src="assets/headings/crafting.svg" width="220" alt="Currently crafting">
 
-<p align="center"><strong>현재 SVG 게시판</strong></p>
-
 <!-- RECENT_REPOS:START -->
 <!-- RECENT_REPOS:END -->
-
-<p align="center"><strong>Python 픽셀 재현안</strong></p>
-
-<img src="assets/scenes/quest-board-python-reference.png" width="100%" alt="Python과 Pillow로 직접 그린 석재 홀의 마인크래프트 퀘스트 게시판" />
-
-<p align="center"><strong>첨부 원본 레퍼런스</strong></p>
-
-<img src="assets/scenes/quest-board-reference-original.png" width="100%" alt="랜턴과 세 장의 양피지가 있는 고품질 마인크래프트 게시판 레퍼런스" />
 
 <img src="assets/scenes/quest-break.jpg" width="100%" alt="상자와 횃불이 놓인 마인크래프트풍 지하 창고" />
 

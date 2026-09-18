@@ -35,52 +35,9 @@ def paths(font, text, x, y, size, fill):
 
 
 def write_quest_board(repos, root=ROOT):
-    """Build one seamless board from three individually clickable slices."""
-    output = root / 'assets/scenes'
-    output.mkdir(parents=True, exist_ok=True)
-    font = PixelText(root)
-    for index, repo in enumerate(repos[:3]):
-        name = repo['name']
-        while name and font.paths(name, 19)[0] > 178:
-            name = name[:-1]
-        if name != repo['name']:
-            name += '…'
-        card = [
-            # 210:333 closely follows a portrait credit card's 1:1.586 ratio.
-            '<rect x="55" y="28" width="210" height="333" class="paper"/>',
-            '<rect x="149" y="18" width="22" height="20" class="pin"/>',
-            paths(font, name, 71, 74, 19, '#302113'),
-        ]
-        description = repo.get('description') or '저장소에서 자세한 내용을 확인하세요.'
-        for row, line in enumerate(wrap(description, font, 178, 18)):
-            card.append(paths(font, line, 71, 130 + row * 31, 18, '#5a452d'))
-        language = repo.get('language') or '언어 정보 없음'
-        card.append(paths(font, f'◆ {language}', 71, 288, 17, '#285e28'))
-        card.append(paths(font, f'업데이트 · {repo["pushed_at"][:10]}', 71, 329, 13, '#7a6142'))
-
-        outer_left = '<path d="M10 14v362" stroke="#76502e" stroke-width="8"/>' if index == 0 else ''
-        outer_right = '<path d="M310 14v362" stroke="#76502e" stroke-width="8"/>' if index == len(repos[:3]) - 1 else ''
-        decorations = (
-            '<path d="M34 22v68m0-42L19 59m15 8l17 14" stroke="#557733" stroke-width="6"/>'
-            '<rect x="24" y="86" width="20" height="28" fill="#6b4126"/><path d="M27 89h14l-4 19h-7z" fill="#f0a93a"/>'
-            if index == 0 else
-            '<path d="M38 204v27" stroke="#8b6339" stroke-width="5"/><path d="M28 226h20l-4 23H32z" fill="#58c9c4"/>'
-            '<path d="M38 251l-10 16 10 16 10-16z" fill="#d9a441"/><circle cx="38" cy="267" r="5" fill="#5cc6d0"/>'
-            if index == 1 else
-            '<rect x="264" y="59" width="31" height="31" fill="#2d1c12" stroke="#8b6339" stroke-width="5"/>'
-            '<path d="M273 68h13v13h-13z" fill="#5abf67"/><path d="M268 270h25v9h-25zm4-10h17v10h-17z" fill="#b9483f"/>'
-        )
-        svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="320" height="390" viewBox="0 0 320 390" role="img" aria-labelledby="title desc" shape-rendering="crispEdges">
-  <title id="title">{name} 퀘스트 의뢰서</title><desc id="desc">클릭하면 {name} 저장소로 이동합니다.</desc>
-  <style>.paper{{fill:#d9c79b;stroke:#76502e;stroke-width:5}}.pin{{fill:#d9a441;animation:pin 2.4s steps(2,end) infinite}}@keyframes pin{{50%{{transform:translateY(2px)}}}}@media(prefers-reduced-motion:reduce){{.pin{{animation:none}}}}</style>
-  <rect width="320" height="390" fill="#4f321f"/>
-  <path d="M0 15h320M0 375h320" stroke="#76502e" stroke-width="8"/>
-  <path d="M0 26h320M0 364h320" stroke="#2e1c13" stroke-width="5" stroke-dasharray="46 8"/>
-  <path d="M0 130h320M0 260h320" stroke="#3d2719" stroke-width="3" opacity=".7"/>
-  {outer_left}{outer_right}{decorations}{''.join(card)}
-</svg>\n'''
-        (output / f'quest-board-large-{index + 1}.svg').write_text(svg)
-
+    """Compatibility wrapper for the Pillow-rendered quest board."""
+    from quest_board import write_quest_board as render_quest_board
+    return render_quest_board(repos, root)
 
 def write_mine_shift(root=ROOT):
     """Build a side-view abandoned mineshaft with chunky profile sprites."""
