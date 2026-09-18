@@ -138,115 +138,42 @@ def write_mine_shift(root=ROOT):
 
 
 def write_reference_mine(root=ROOT):
-    """Build the lush side-view pixel cave from the approved visual reference."""
+    """Layer the animated mining shift over the approved deep-cave artwork."""
     output = root / 'assets/scenes'
     output.mkdir(parents=True, exist_ok=True)
+    svg = '''<svg xmlns="http://www.w3.org/2000/svg" width="960" height="349" viewBox="0 0 960 349" role="img" aria-labelledby="title desc" shape-rendering="crispEdges">
+  <title id="title">깊은 동굴의 채굴 교대</title><desc id="desc">전개도에서 접어 만든 듯한 작은 스티브가 깊은 동굴의 작업 지점을 오가며 곡괭이질하고 닭은 물가를 돌아다닙니다.</desc>
+  <image href="concepts/cave-background.png" width="960" height="349" preserveAspectRatio="xMidYMid slice"/>
 
-    def tile(x, y, kind='stone'):
-        colors = {
-            'stone': ('#4d5054', '#62656a', '#393c40'),
-            'moss': ('#52672d', '#718c36', '#34451f'),
-            'deep': ('#34363b', '#45484d', '#25272b'),
-        }
-        base, light, dark = colors[kind]
-        return (f'<g><rect x="{x}" y="{y}" width="31" height="31" fill="{base}"/>'
-                f'<path d="M{x+3} {y+4}h11v4H{x+7}v5H{x+3}zm{x+17} {y+19}h10v5H{x+22}v4H{x+17}z" fill="{light}" opacity=".62"/>'
-                f'<path d="M{x+1} {y+27}h18v3H{x+1}zm{x+25} {y+8}h5v14h-5z" fill="{dark}"/></g>')
-
-    ceiling = []
-    for row in range(3):
-        for col in range(7, 30):
-            kind = 'moss' if (col + row) % 6 in (0, 1) else ('deep' if col > 15 else 'stone')
-            ceiling.append(tile(col * 32, row * 32, kind))
-    ground_heights = [8,8,8,7,7,8,7,6,7,7,8,8,7,7,7,7,7,7,6,6,7,7]
-    ground = []
-    for col, top in enumerate(ground_heights):
-        for row in range(top, 11):
-            kind = 'moss' if row == top and col < 12 else ('deep' if col > 13 else 'stone')
-            ground.append(tile(col * 32, row * 32, kind))
-
-    def vine(x, y, blocks, berries=False):
-        parts = [f'<path d="M{x} {y}v{blocks*25}" stroke="#37551f" stroke-width="6"/>']
-        for index in range(blocks):
-            yy = y + index * 25
-            side = -1 if index % 2 else 1
-            parts.append(f'<path d="M{x} {yy+5}l{side*13} 9-9 8-8-7 11-12z" fill="#6e9734"/>')
-            if berries and index % 2:
-                parts.append(f'<rect x="{x+side*12-3}" y="{yy+12}" width="7" height="7" fill="#f2a735"/><rect x="{x+side*10-1}" y="{yy+13}" width="3" height="3" fill="#ffd75e"/>')
-        return ''.join(parts)
-
-    vines = ''.join([
-        vine(275, 52, 5, True), vine(355, 73, 4), vine(505, 82, 5, True),
-        vine(647, 64, 5), vine(758, 76, 4, True), vine(865, 50, 6, True),
-    ])
-    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="960" height="352" viewBox="0 0 960 352" role="img" aria-labelledby="title desc" shape-rendering="crispEdges">
-  <title id="title">초록 동굴 채굴 교대</title><desc id="desc">측면 모습의 작은 스티브가 이끼 낀 동굴의 작업 지점을 오가며 곡괭이질하고 닭은 물가를 돌아다닙니다.</desc>
-  <defs><pattern id="dither" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="2" height="2" fill="#d9edc7" opacity=".55"/></pattern></defs>
-  <rect width="960" height="352" fill="#19221c"/>
-  <path d="M0 0h230v48h46v68h-42v42H118v40H0z" fill="#8fc5e8"/>
-  <path d="M0 35h92v18h55v22h82v39h-65v29H80v38H0z" fill="#dce9ca"/>
-  <path d="M0 88h255v135H0z" fill="url(#dither)"/>
-  <path d="M198 0h34l230 248H342z" fill="#d9e7b0" opacity=".18"/>
-  <path d="M255 38h32l240 268h-72z" fill="#c9db8a" opacity=".16"/>
-  <g>{''.join(ceiling)}</g>
-  <path d="M242 0v40h-34v28h50v36h33V72h38V42h34V0z" fill="#52672d"/>
-  {vines}
-
-  <g>{''.join(ground)}</g>
-  <g><rect x="176" y="194" width="31" height="31" fill="#52672d"/><path d="M182 214h20v6h-20z" fill="#718c36"/></g>
-  <g><rect x="239" y="161" width="31" height="63" fill="#4d5054"/><path d="M245 168h17v6h-8v9h-9z" fill="#62656a"/></g>
-  <path d="M126 222v-35h7v35m-17-24h27" stroke="#638e31" stroke-width="6"/>
-  <path d="M226 161v-34h7v34m-17-23h27" stroke="#6e9734" stroke-width="6"/>
-  <path d="M620 225v-38h7v38m-18-25h29" stroke="#6e9734" stroke-width="6"/>
-  <g fill="#e06a9e"><rect x="266" y="226" width="19" height="19"/><rect x="254" y="214" width="19" height="19"/><rect x="278" y="214" width="19" height="19"/><rect x="266" y="202" width="19" height="19"/><rect x="271" y="219" width="9" height="9" fill="#ffd36a"/></g>
-
-  <path d="M704 244h256v108H704z" fill="#455f72"/>
-  <path d="M704 244h256v7H704z" fill="#87b7c6"/>
-  <path d="M704 267h256v7H704zM704 301h256v6H704z" fill="#5b7888" opacity=".55"/>
-  <g fill="#b07783"><rect x="777" y="287" width="28" height="12"/><rect x="769" y="280" width="12" height="10"/><rect x="804" y="284" width="8" height="7"/><rect x="785" y="281" width="4" height="4" fill="#20272d"/></g>
-  <g fill="#c58c52"><rect x="862" y="318" width="30" height="10"/><path d="M852 323l11-8v16zM891 318l10-7v20l-10-6z"/><rect x="870" y="315" width="4" height="4" fill="#20272d"/></g>
-
-  <g fill="#555a5d" stroke="#777c80" stroke-width="3"><rect x="337" y="231" width="42" height="42"/><rect x="505" y="231" width="42" height="42"/><rect x="650" y="209" width="42" height="42"/></g>
-  <g fill="#d9aa32"><rect x="344" y="238" width="9" height="9"/><rect x="363" y="256" width="8" height="8"/></g>
-  <g fill="#4dc8c4"><rect x="512" y="252" width="10" height="10"/><rect x="530" y="236" width="8" height="8"/></g>
-  <g fill="#57bd68"><rect x="657" y="216" width="9" height="9"/><rect x="676" y="234" width="8" height="8"/></g>
-
-  <g class="steve" transform="translate(278 188)">
-    <animateTransform attributeName="transform" type="translate" dur="13s" repeatCount="indefinite" calcMode="linear" keyTimes="0;.22;.25;.48;.51;.74;.78;1" values="278 188;278 188;446 188;446 188;591 166;591 166;278 188;278 188"/>
-    <g class="right-profile">
-      <animate attributeName="opacity" dur="13s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;.74;.78;1" values="1;0;1;1"/>
-      <rect x="4" width="44" height="39" fill="#8b5a36"/><rect x="42" y="9" width="9" height="25" fill="#a96f45"/>
-      <rect x="12" y="13" width="31" height="26" fill="#d69a70"/><rect x="43" y="22" width="8" height="8" fill="#d69a70"/>
-      <rect x="35" y="18" width="7" height="6" fill="#eef2df"/><rect x="39" y="20" width="3" height="3" fill="#26312e"/>
-      <path d="M32 15h13v12H32" fill="none" stroke="#cdd5d1" stroke-width="2"/>
-      <rect x="8" y="39" width="40" height="27" fill="#35aeb0"/><rect x="12" y="66" width="32" height="22" fill="#4e419f"/><rect x="26" y="76" width="5" height="12" fill="#18211d"/>
-      <g transform="translate(44 53)"><g class="pickaxe" transform="rotate(-38)">
-        <animateTransform attributeName="transform" type="rotate" dur=".92s" repeatCount="indefinite" values="-38;20;-38"/>
-        <path d="M1 4L31-31" stroke="#8d5d32" stroke-width="6"/>
-        <path d="M5-43h52v8H5zM5-35h8v8H5zm44 0h8v8h-8z" fill="#52ced0"/>
+  <g class="steve" transform="translate(120 178)">
+    <animateTransform attributeName="transform" type="translate" dur="13s" repeatCount="indefinite" calcMode="linear" keyTimes="0;.22;.245;.47;.495;.72;.76;1" values="120 178;120 178;356 180;356 180;558 168;558 168;120 178;120 178"/>
+    <g class="right-facing">
+      <animate attributeName="opacity" dur="13s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;.72;.76;1" values="1;0;1;1"/>
+      <image href="characters/steve-three-quarter.png" width="94" height="96" preserveAspectRatio="xMidYMid meet"/>
+      <g transform="translate(75 59)"><g class="pickaxe" transform="rotate(-38)">
+        <animateTransform attributeName="transform" type="rotate" dur=".9s" repeatCount="indefinite" values="-38;22;-38"/>
+        <path d="M2 5L34-34" stroke="#8b5b31" stroke-width="7"/>
+        <path d="M7-47h56v9H7zM7-38h9v9H7zm47 0h9v9h-9z" fill="#50cdd0"/>
       </g></g>
     </g>
-    <g class="left-profile" transform="translate(51 0) scale(-1 1)" opacity="0">
-      <animate attributeName="opacity" dur="13s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;.74;.78;1" values="0;1;0;0"/>
-      <rect x="4" width="44" height="39" fill="#8b5a36"/><rect x="42" y="9" width="9" height="25" fill="#a96f45"/>
-      <rect x="12" y="13" width="31" height="26" fill="#d69a70"/><rect x="43" y="22" width="8" height="8" fill="#d69a70"/>
-      <rect x="35" y="18" width="7" height="6" fill="#eef2df"/><rect x="39" y="20" width="3" height="3" fill="#26312e"/>
-      <path d="M32 15h13v12H32" fill="none" stroke="#cdd5d1" stroke-width="2"/>
-      <rect x="8" y="39" width="40" height="27" fill="#35aeb0"/><rect x="12" y="66" width="32" height="22" fill="#4e419f"/><rect x="26" y="76" width="5" height="12" fill="#18211d"/>
-      <g transform="translate(44 53)"><g class="pickaxe" transform="rotate(-38)">
-        <animateTransform attributeName="transform" type="rotate" dur=".92s" repeatCount="indefinite" values="-38;20;-38"/>
-        <path d="M1 4L31-31" stroke="#8d5d32" stroke-width="6"/>
-        <path d="M5-43h52v8H5zM5-35h8v8H5zm44 0h8v8h-8z" fill="#52ced0"/>
+    <g class="left-facing" transform="translate(94 0) scale(-1 1)" opacity="0">
+      <animate attributeName="opacity" dur="13s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;.72;.76;1" values="0;1;0;0"/>
+      <image href="characters/steve-three-quarter.png" width="94" height="96" preserveAspectRatio="xMidYMid meet"/>
+      <g transform="translate(75 59)"><g class="pickaxe" transform="rotate(-38)">
+        <animateTransform attributeName="transform" type="rotate" dur=".9s" repeatCount="indefinite" values="-38;22;-38"/>
+        <path d="M2 5L34-34" stroke="#8b5b31" stroke-width="7"/>
+        <path d="M7-47h56v9H7zM7-38h9v9H7zm47 0h9v9h-9z" fill="#50cdd0"/>
       </g></g>
     </g>
+    <g class="chips" fill="#9ccf47"><rect x="101" y="65" width="5" height="5"/><rect x="110" y="75" width="4" height="4"/><rect x="103" y="84" width="3" height="3"/><animate attributeName="opacity" dur=".9s" repeatCount="indefinite" values="0;1;0"/></g>
   </g>
 
-  <g class="chicken" transform="translate(570 229)">
-    <animateTransform attributeName="transform" type="translate" dur="16s" repeatCount="indefinite" values="570 229;665 207;530 229;690 207;570 229"/>
-    <rect width="34" height="25" fill="#eee9dc"/><rect x="19" y="-15" width="22" height="22" fill="#f7f2e7"/><rect x="41" y="-7" width="8" height="6" fill="#e8b334"/>
-    <rect x="25" y="-9" width="4" height="4" fill="#232a28"/><rect x="23" y="7" width="7" height="8" fill="#c94b43"/><path d="M8 25v11m18-11v11" stroke="#d9a02f" stroke-width="4"/>
+  <g class="chicken" transform="translate(706 242)">
+    <animateTransform attributeName="transform" type="translate" dur="16s" repeatCount="indefinite" values="706 242;818 245;740 242;875 245;706 242"/>
+    <rect width="30" height="22" fill="#eee9dc"/><rect x="17" y="-14" width="20" height="20" fill="#f7f2e7"/><rect x="37" y="-6" width="8" height="6" fill="#e8b334"/>
+    <rect x="23" y="-8" width="4" height="4" fill="#232a28"/><rect x="21" y="6" width="7" height="7" fill="#c94b43"/><path d="M7 22v10m16-10v10" stroke="#d9a02f" stroke-width="4"/>
   </g>
-  <style>@media(prefers-reduced-motion:reduce){{animateTransform{{display:none}}}}</style>
+  <style>image{image-rendering:pixelated}.steve{filter:drop-shadow(0 3px 1px #0008)}@media(prefers-reduced-motion:reduce){animateTransform,animate{display:none}}</style>
 </svg>\n'''
     (output / 'mine-shift.svg').write_text(svg)
 

@@ -123,7 +123,7 @@
 
 </details>
 
-<img src="assets/scenes/mine-shift.svg" width="100%" alt="단순한 스티브가 작업 지점 사이를 빠르게 이동하며 곡괭이질하고 닭은 광산을 돌아다니는 2D 픽셀 장면" />
+<img src="assets/scenes/mine-shift.svg" width="100%" alt="전개도에서 접은 듯한 작은 스티브가 깊은 픽셀 동굴의 작업 지점을 오가며 곡괭이질하고 닭은 물가를 돌아다니는 장면" />
 
 <a name="field-notes"></a>
 
