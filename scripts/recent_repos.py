@@ -62,7 +62,7 @@ def cards(repos, owner):
     for index, repo in enumerate(repos):
         name = escape(repo['name'])
         url = f'https://github.com/{quote(owner, safe="")}/{quote(repo["name"], safe="")}'
-        panels.append(f'<a href="{url}"><img src="assets/scenes/quest-board-python-lg-{index + 1}.png" width="{widths[index]}%" alt="{name} 저장소 퀘스트 종이"></a>')
+        panels.append(f'<a href="{url}"><img src="assets/scenes/quest-board-python-xl-{index + 1}.png" width="{widths[index]}%" alt="{name} 저장소 퀘스트 종이"></a>')
     rows = ['<p align="center">' + ''.join(panels) + '</p>', '',
             '<sub>최근 푸시한 공개 저장소 · 최대 3개 · 매시간 갱신 · 날짜는 UTC 기준 (프로필·포크·보관된 저장소 제외)</sub>']
     return '\n'.join(rows)
