@@ -152,7 +152,7 @@ def write_reference_mine(root=ROOT):
     sprite = sprite.crop(sprite.getbbox()).resize((70, 84), Image.Resampling.NEAREST)
     sprite_left = sprite.transpose(Image.Transpose.FLIP_LEFT_RIGHT)
     pickaxe = Image.open(output / 'characters/diamond-pickaxe.png').convert('RGBA')
-    pickaxe = pickaxe.crop(pickaxe.getbbox()).resize((62, 62), Image.Resampling.NEAREST)
+    pickaxe = pickaxe.crop(pickaxe.getbbox()).resize((44, 44), Image.Resampling.NEAREST)
     stops = ((132, 180), (360, 180), (556, 166))
 
     def lerp(start, end, amount):
@@ -175,10 +175,14 @@ def write_reference_mine(root=ROOT):
 
     def place_pickaxe(frame_image, x, y, frame):
         swing = (math.sin(frame * math.pi / 4) + 1) / 2
-        tool = pickaxe.rotate(-18 + swing * 42, resample=Image.Resampling.NEAREST, expand=True)
-        tool_x = x + 28 + (62 - tool.width) // 2
-        tool_y = y - 2 + (62 - tool.height) // 2
-        frame_image.alpha_composite(tool, (tool_x, tool_y))
+        canvas_size = 112
+        pivot = (canvas_size // 2, canvas_size // 2)
+        handle_end = (2, 42)
+        tool = Image.new('RGBA', (canvas_size, canvas_size))
+        tool.alpha_composite(pickaxe, (pivot[0] - handle_end[0], pivot[1] - handle_end[1]))
+        tool = tool.rotate(-20 + swing * 44, resample=Image.Resampling.NEAREST, center=pivot)
+        hand = (x + 38, y + 56)
+        frame_image.alpha_composite(tool, (hand[0] - pivot[0], hand[1] - pivot[1]))
 
     frames = []
     for frame_number in range(80):
@@ -189,7 +193,24 @@ def write_reference_mine(root=ROOT):
             place_pickaxe(frame, x, y, frame_number)
         frames.append(frame.convert('RGB'))
 
-    palette = frames[0].quantize(colors=224, method=Image.Quantize.MEDIANCUT)
+    def colors_for(image, count):
+        rgba = image.convert('RGBA')
+        pixels = [pixel[:3] for pixel in rgba.getdata() if pixel[3] > 127]
+        sample = Image.new('RGB', (len(pixels), 1))
+        sample.putdata(pixels)
+        reduced = sample.quantize(colors=count, method=Image.Quantize.MEDIANCUT)
+        source_palette = reduced.getpalette()
+        ranked = sorted(reduced.getcolors(), reverse=True)
+        return [tuple(source_palette[index * 3:index * 3 + 3]) for _, index in ranked]
+
+    reserved = colors_for(background, 176) + colors_for(sprite, 56) + colors_for(pickaxe, 24)
+    palette_colors = []
+    for color in reserved:
+        if color not in palette_colors:
+            palette_colors.append(color)
+    palette_colors = (palette_colors + [(0, 0, 0)] * 256)[:256]
+    palette = Image.new('P', (1, 1))
+    palette.putpalette([channel for color in palette_colors for channel in color])
     indexed = [frame.quantize(palette=palette, dither=Image.Dither.NONE) for frame in frames]
     indexed[0].save(
         output / 'mine-shift.gif',
