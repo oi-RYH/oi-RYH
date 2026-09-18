@@ -93,9 +93,10 @@ def write_quest_board(repos, root=ROOT):
 
     # Fonts and wrapping.
     font_path = str(root / 'assets/fonts/neodgm.ttf')
-    font_name = ImageFont.truetype(font_path, 15)
-    font_desc = ImageFont.truetype(font_path, 12)
-    font_meta = ImageFont.truetype(font_path, 10)
+    font_name = ImageFont.truetype(font_path, 17)
+    font_name_compact = ImageFont.truetype(font_path, 16)
+    font_desc = ImageFont.truetype(font_path, 14)
+    font_meta = ImageFont.truetype(font_path, 12)
 
     def wrap_text(text, font, max_width, max_lines=2):
         words = text.split(); lines=[]; line=''
@@ -131,11 +132,12 @@ def write_quest_board(repos, root=ROOT):
             d.rectangle((rx+2,ry+3,rx+13,ry+14), fill='#2c2525')
             d.rectangle((rx,ry,rx+11,ry+11), fill='#51454a', outline='#211b1e', width=2)
             d.rectangle((rx+2,ry+2,rx+5,ry+5), fill='#75666b')
-        tx=x+18
-        d.text((tx,y+31), repo['name'], font=font_name, fill='#3a2417', stroke_width=1, stroke_fill='#9f7847')
+        tx=x+12
+        name_font = font_name if d.textbbox((0, 0), repo['name'], font=font_name)[2] <= w-24 else font_name_compact
+        d.text((tx,y+31), repo['name'], font=name_font, fill='#3a2417', stroke_width=1, stroke_fill='#9f7847')
         desc=repo.get('description') or '저장소에서 자세한 내용을 확인하세요.'
-        for row,line in enumerate(wrap_text(desc,font_desc,w-36)):
-            d.text((tx,y+67+row*20),line,font=font_desc,fill='#5b3b24')
+        for row,line in enumerate(wrap_text(desc,font_desc,w-24)):
+            d.text((tx,y+67+row*23),line,font=font_desc,fill='#5b3b24')
         lang=repo.get('language') or '언어 정보 없음'
         d.text((tx,y+154),f'◆ {lang}',font=font_desc,fill='#315b2f')
         d.text((tx,y+188),f'업데이트 · {repo["pushed_at"][:10]}',font=font_meta,fill='#72583a')
@@ -153,9 +155,9 @@ def write_quest_board(repos, root=ROOT):
     img=Image.alpha_composite(img.convert('RGBA'),vig).convert('RGB')
     output = root / 'assets/scenes'
     output.mkdir(parents=True, exist_ok=True)
-    img.save(output / 'quest-board-python.png', quality=95)
+    img.save(output / 'quest-board-python-lg.png', quality=95)
     for index, (left, right) in enumerate(((0, 384), (384, 576), (576, 960)), 1):
-        img.crop((left, 0, right, H)).save(output / f'quest-board-python-{index}.png', quality=95)
+        img.crop((left, 0, right, H)).save(output / f'quest-board-python-lg-{index}.png', quality=95)
 
 
 def main():
