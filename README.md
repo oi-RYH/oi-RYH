@@ -21,7 +21,7 @@
   <tr>
     <td width="33%" valign="top">
       <h3><img src="assets/blocks/crafting_table.svg" width="24" alt="제작대"> <a href="https://github.com/oi-RYH/Dawn"><img src="assets/text/5f275001baa1d0c3d8bf.svg" width="36" alt="Dawn"></a></h3>
-      <p><picture><img src="assets/text/6976af5e1c022496621d.svg" width="200" alt="저장소에서 자세한 내용을 확인하세요."></picture></p>
+      <p><picture><img src="assets/text/5ab31bc06ec0d21c280e.svg" width="200" alt="Smooth visual transitions for your MacBook lid."></picture></p>
       <p><img src="https://img.shields.io/badge/JavaScript-241A12?style=for-the-badge&amp;color=241A12&amp;logo=javascript&amp;logoColor=F7DF1E" alt="JavaScript" /></p>
       <p><sub><picture><img src="assets/text/8555c4cf5c175c24caa1.svg" width="172" alt="업데이트 · 2026-09-17"></picture></sub></p>
     </td>
