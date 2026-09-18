@@ -104,7 +104,7 @@
 
 ## <img src="assets/blocks/book_and_quill.svg" width="28" alt="책과 깃펜"> <img src="assets/headings/field-notes.svg" width="112" alt="작업 일지">
 
-[블로그 ↗](https://oi-ryh.github.io) · [전체 저장소 ↗](https://github.com/oi-RYH?tab=repositories)
+[블로그](https://oi-ryh.github.io) · [전체 저장소](https://github.com/oi-RYH?tab=repositories)
 
 <p><img src="assets/blocks/chest.svg" width="20" alt="상자"> <strong>플레이어 상태창</strong></p>
 <picture>

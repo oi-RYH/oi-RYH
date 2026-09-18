@@ -130,7 +130,7 @@
 
 ## <img src="assets/blocks/book_and_quill.svg" width="28" alt="책과 깃펜"> <picture><img src="assets/headings/field-notes.svg" width="112" alt="작업 일지"></picture>
 
-[<img src="assets/text/8fc0e0ae68c42c9e74e9.svg" width="68" alt="블로그 ↗">](https://oi-ryh.github.io) <picture><img src="assets/text/452463119721a98aa93f.svg" width="12" alt="·"></picture> [<img src="assets/text/aa178860dd56aaa2393c.svg" width="108" alt="전체 저장소 ↗">](https://github.com/oi-RYH?tab=repositories)
+[<img src="assets/text/3d15675ba2aab1976f21.svg" width="52" alt="블로그">](https://oi-ryh.github.io) <picture><img src="assets/text/452463119721a98aa93f.svg" width="12" alt="·"></picture> [<img src="assets/text/3560cb85b4f3713fbbfc.svg" width="92" alt="전체 저장소">](https://github.com/oi-RYH?tab=repositories)
 
 <p><img src="assets/blocks/chest.svg" width="20" alt="상자"> <strong><picture><img src="assets/text/7b8be114652abbbe6023.svg" width="124" alt="플레이어 상태창"></picture></strong></p>
 <picture>
