@@ -2,7 +2,7 @@
 import json
 import math
 
-from PIL import Image, ImageDraw
+from PIL import Image
 
 from pixel_readme import PixelText, ROOT
 
@@ -148,9 +148,11 @@ def write_reference_mine(root=ROOT):
     background = Image.open(output / 'concepts/cave-background.png').convert('RGB').resize(
         size, Image.Resampling.NEAREST
     )
-    sprite = Image.open(output / 'characters/steve-three-quarter.png').convert('RGBA')
-    sprite = sprite.crop(sprite.getbbox()).resize((84, 88), Image.Resampling.NEAREST)
+    sprite = Image.open(output / 'characters/steve-side.png').convert('RGBA')
+    sprite = sprite.crop(sprite.getbbox()).resize((70, 84), Image.Resampling.NEAREST)
     sprite_left = sprite.transpose(Image.Transpose.FLIP_LEFT_RIGHT)
+    pickaxe = Image.open(output / 'characters/diamond-pickaxe.png').convert('RGBA')
+    pickaxe = pickaxe.crop(pickaxe.getbbox()).resize((62, 62), Image.Resampling.NEAREST)
     stops = ((132, 180), (360, 180), (556, 166))
 
     def lerp(start, end, amount):
@@ -171,62 +173,20 @@ def write_reference_mine(root=ROOT):
             return lerp(stops[2], stops[0], (frame - 62) / 4), False, False
         return stops[0], True, True
 
-    def draw_pickaxe(draw, x, y, facing_right, frame):
+    def place_pickaxe(frame_image, x, y, frame):
         swing = (math.sin(frame * math.pi / 4) + 1) / 2
-        angle = math.radians(-58 + swing * 62)
-        if not facing_right:
-            angle = math.pi - angle
-        pivot = (x + (76 if facing_right else 8), y + 59)
-        tip = (pivot[0] + math.cos(angle) * 49, pivot[1] + math.sin(angle) * 49)
-        draw.line((pivot, tip), fill='#7d4d29', width=7)
-        perpendicular = angle + math.pi / 2
-        head_a = (tip[0] + math.cos(perpendicular) * 25, tip[1] + math.sin(perpendicular) * 25)
-        head_b = (tip[0] - math.cos(perpendicular) * 25, tip[1] - math.sin(perpendicular) * 25)
-        draw.line((head_a, head_b), fill='#4fc8cb', width=9)
-        for hx, hy in (head_a, head_b):
-            draw.rectangle((hx - 4, hy - 4, hx + 4, hy + 4), fill='#4fc8cb')
-        if swing > .82:
-            direction = 1 if facing_right else -1
-            for dx, dy, side in ((8, 4, 0), (15, 12, 1), (7, 19, 2)):
-                cx = pivot[0] + direction * (48 + dx)
-                cy = pivot[1] + dy
-                draw.rectangle((cx, cy, cx + 4 - side, cy + 4 - side), fill='#a9d957')
-
-    def draw_chicken(draw, frame):
-        travel = frame if frame < 40 else 80 - frame
-        x = 708 + round(travel * 3.5)
-        y = 236 - (3 if frame % 8 in (2, 3) else 0)
-        facing_right = frame < 40
-        if facing_right:
-            draw.rectangle((x, y, x + 25, y + 17), fill='#eee9dc')
-            draw.rectangle((x + 15, y - 12, x + 31, y + 4), fill='#f7f2e7')
-            draw.rectangle((x + 31, y - 5, x + 37, y), fill='#e8b334')
-            draw.rectangle((x + 21, y - 7, x + 24, y - 4), fill='#232a28')
-            draw.rectangle((x + 18, y + 4, x + 23, y + 10), fill='#c94b43')
-        else:
-            draw.rectangle((x, y, x + 25, y + 17), fill='#eee9dc')
-            draw.rectangle((x - 6, y - 12, x + 10, y + 4), fill='#f7f2e7')
-            draw.rectangle((x - 12, y - 5, x - 6, y), fill='#e8b334')
-            draw.rectangle((x + 1, y - 7, x + 4, y - 4), fill='#232a28')
-            draw.rectangle((x + 2, y + 4, x + 7, y + 10), fill='#c94b43')
-        draw.line((x + 7, y + 17, x + 7, y + 25), fill='#d9a02f', width=3)
-        draw.line((x + 19, y + 17, x + 19, y + 25), fill='#d9a02f', width=3)
+        tool = pickaxe.rotate(-18 + swing * 42, resample=Image.Resampling.NEAREST, expand=True)
+        tool_x = x + 28 + (62 - tool.width) // 2
+        tool_y = y - 2 + (62 - tool.height) // 2
+        frame_image.alpha_composite(tool, (tool_x, tool_y))
 
     frames = []
     for frame_number in range(80):
         frame = background.convert('RGBA')
-        draw = ImageDraw.Draw(frame)
         (x, y), facing_right, mining = pose(frame_number)
-        if not mining:
-            direction = -1 if facing_right else 1
-            for offset, alpha in ((18, 100), (31, 70), (44, 40)):
-                streak_x = x + direction * offset
-                draw.line((streak_x, y + 35, streak_x + direction * 28, y + 35), fill=(130, 209, 194, alpha), width=3)
-        draw.ellipse((x + 12, y + 80, x + 77, y + 91), fill=(0, 0, 0, 105))
         frame.alpha_composite(sprite if facing_right else sprite_left, (x, y))
         if mining:
-            draw_pickaxe(draw, x, y, facing_right, frame_number)
-        draw_chicken(draw, frame_number)
+            place_pickaxe(frame, x, y, frame_number)
         frames.append(frame.convert('RGB'))
 
     palette = frames[0].quantize(colors=224, method=Image.Quantize.MEDIANCUT)
