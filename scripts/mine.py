@@ -160,8 +160,8 @@ def main():
     build(rendered, ROOT)
     if args.queue:
         git('add', 'README.md', 'data/mine.json', 'assets/text', 'data/recent-repos.json',
-            'assets/scenes/quest-board-python-xl.png', 'assets/scenes/quest-board-python-xl-1.png',
-            'assets/scenes/quest-board-python-xl-2.png', 'assets/scenes/quest-board-python-xl-3.png')
+            'assets/scenes/quest-board-python-crisp.png', 'assets/scenes/quest-board-python-crisp-1.png',
+            'assets/scenes/quest-board-python-crisp-2.png', 'assets/scenes/quest-board-python-crisp-3.png')
         if git('diff', '--cached', '--name-only'):
             git('commit', '-m', 'chore: update community mine')
             # Do not announce success until the state is durably pushed.

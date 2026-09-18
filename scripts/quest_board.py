@@ -93,9 +93,9 @@ def write_quest_board(repos, root=ROOT):
 
     # Fonts and wrapping.
     font_path = str(root / 'assets/fonts/neodgm.ttf')
-    font_name = ImageFont.truetype(font_path, 19)
-    font_desc = ImageFont.truetype(font_path, 15)
-    font_meta = ImageFont.truetype(font_path, 13)
+    font_name = ImageFont.truetype(font_path, 17)
+    font_desc = ImageFont.truetype(font_path, 14)
+    font_meta = ImageFont.truetype(font_path, 12)
     # NeoDGM is a pixel font. Disabling grayscale antialiasing keeps its
     # one-pixel stems crisp after GitHub scales the three image slices.
     text_draw = ImageDraw.Draw(img)
@@ -137,7 +137,7 @@ def write_quest_board(repos, root=ROOT):
             d.rectangle((rx+2,ry+2,rx+5,ry+5), fill='#75666b')
         tx=x+12
         name_font = font_name
-        for size in range(19, 14, -1):
+        for size in range(17, 14, -1):
             candidate = ImageFont.truetype(font_path, size)
             if text_draw.textbbox((0, 0), repo['name'], font=candidate)[2] <= w-24:
                 name_font = candidate
@@ -145,7 +145,7 @@ def write_quest_board(repos, root=ROOT):
         text_draw.text((tx,y+31), repo['name'], font=name_font, fill='#2b190f')
         desc=repo.get('description') or '저장소에서 자세한 내용을 확인하세요.'
         for row,line in enumerate(wrap_text(desc,font_desc,w-24)):
-            text_draw.text((tx,y+67+row*24),line,font=font_desc,fill='#432b1b')
+            text_draw.text((tx,y+67+row*23),line,font=font_desc,fill='#432b1b')
         lang=repo.get('language') or '언어 정보 없음'
         text_draw.text((tx,y+154),f'◆ {lang}',font=font_desc,fill='#214d25')
         text_draw.text((tx,y+188),f'업데이트 · {repo["pushed_at"][:10]}',font=font_meta,fill='#513923')
@@ -163,9 +163,9 @@ def write_quest_board(repos, root=ROOT):
     img=Image.alpha_composite(img.convert('RGBA'),vig).convert('RGB')
     output = root / 'assets/scenes'
     output.mkdir(parents=True, exist_ok=True)
-    img.save(output / 'quest-board-python-xl.png', optimize=True)
+    img.save(output / 'quest-board-python-crisp.png', optimize=True)
     for index, (left, right) in enumerate(((0, 384), (384, 576), (576, 960)), 1):
-        img.crop((left, 0, right, H)).save(output / f'quest-board-python-xl-{index}.png', optimize=True)
+        img.crop((left, 0, right, H)).save(output / f'quest-board-python-crisp-{index}.png', optimize=True)
 
 
 def main():
