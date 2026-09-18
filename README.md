@@ -16,11 +16,21 @@
 
 ## <img src="assets/blocks/crafting_table.svg" width="28" alt="제작대"> <picture><img src="assets/headings/crafting.svg" width="220" alt="Currently crafting"></picture>
 
+<p align="center"><strong>현재 SVG 게시판</strong></p>
+
 <!-- RECENT_REPOS:START -->
 <p align="center"><a href="https://github.com/oi-RYH/Dawn"><img src="assets/scenes/quest-board-large-1.svg" width="33%" alt="Dawn 저장소 퀘스트 종이"></a><a href="https://github.com/oi-RYH/capstone_design"><img src="assets/scenes/quest-board-large-2.svg" width="33%" alt="capstone_design 저장소 퀘스트 종이"></a><a href="https://github.com/oi-RYH/BrassField_plugin"><img src="assets/scenes/quest-board-large-3.svg" width="33%" alt="BrassField_plugin 저장소 퀘스트 종이"></a></p>
 
 <sub>최근 푸시한 공개 저장소 · 최대 3개 · 매시간 갱신 · 날짜는 UTC 기준 (프로필·포크·보관된 저장소 제외)</sub>
 <!-- RECENT_REPOS:END -->
+
+<p align="center"><strong>Python 픽셀 재현안</strong></p>
+
+<img src="assets/scenes/quest-board-python-reference.png" width="100%" alt="Python과 Pillow로 직접 그린 석재 홀의 마인크래프트 퀘스트 게시판" />
+
+<p align="center"><strong>첨부 원본 레퍼런스</strong></p>
+
+<img src="assets/scenes/quest-board-reference-original.png" width="100%" alt="랜턴과 세 장의 양피지가 있는 고품질 마인크래프트 게시판 레퍼런스" />
 
 <img src="assets/scenes/quest-break.jpg" width="100%" alt="상자와 횃불이 놓인 마인크래프트풍 지하 창고" />
 
