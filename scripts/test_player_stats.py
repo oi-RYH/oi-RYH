@@ -30,7 +30,20 @@ class PlayerStatsTests(unittest.TestCase):
         stats = self.stats()
         stats['languages'] = {}
         svg = render(stats)
-        self.assertEqual(svg.count('class="item"'), 0)
+        self.assertNotIn('data-language-icon=', svg)
+
+    def test_pickaxe_and_language_slots_use_recognizable_icons(self):
+        stats = self.stats()
+        stats['languages'] = {
+            'Swift': 25, 'JavaScript': 25, 'CSS': 22,
+            'Kotlin': 16, 'TypeScript': 4,
+        }
+        svg = render(stats)
+        self.assertIn('data-icon="diamond-pickaxe"', svg)
+        for language in stats['languages']:
+            self.assertIn(f'data-language-icon="{language}"', svg)
+            self.assertIn(f'aria-label="{language} logo"', svg)
+        self.assertEqual(svg.count('data-language-icon='), 5)
 
     @patch('player_stats.fetch_calendar')
     @patch('player_stats.api')
