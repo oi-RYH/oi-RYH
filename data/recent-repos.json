@@ -13,7 +13,7 @@
   },
   {
     "name": "BrassField_plugin",
-    "description": "",
+    "description": "마인크래프트 서버 플러그인 개발",
     "language": "Java",
     "pushed_at": "2026-08-14T14:48:02Z"
   }
