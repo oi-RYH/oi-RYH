@@ -24,6 +24,6 @@ class RecentReposTests(unittest.TestCase):
                            pushed_at='2026-09-17T00:00:00Z')], 'owner')
         self.assertEqual(html.count('assets/scenes/quest-board-1.svg'), 1)
         self.assertIn('https://github.com/owner/demo', html)
-        self.assertIn('demo 저장소 퀘스트 게시판', html)
+        self.assertIn('demo 저장소 퀘스트 종이', html)
 
 if __name__ == '__main__': unittest.main()
