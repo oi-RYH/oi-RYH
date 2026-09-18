@@ -16,28 +16,19 @@
 
 ## <img src="assets/blocks/crafting_table.svg" width="28" alt="제작대"> <picture><img src="assets/headings/crafting.svg" width="220" alt="Currently crafting"></picture>
 
-<img src="assets/scenes/quest-board.svg" width="100%" alt="세 개의 프로젝트 의뢰서가 붙은 나무 퀘스트 게시판" />
-
 <!-- RECENT_REPOS:START -->
+<img src="assets/scenes/quest-board.svg" width="100%" alt="최근 푸시한 공개 저장소 3개가 붙은 퀘스트 게시판" />
+
 <table>
   <tr>
-    <td width="33%" valign="top">
-      <h3><img src="assets/blocks/crafting_table.svg" width="24" alt="제작대"> <a href="https://github.com/oi-RYH/Dawn"><img src="assets/text/5f275001baa1d0c3d8bf.svg" width="36" alt="Dawn"></a></h3>
-      <p><picture><img src="assets/text/5ab31bc06ec0d21c280e.svg" width="200" alt="Smooth visual transitions for your MacBook lid."></picture></p>
-      <p><img src="https://img.shields.io/badge/JavaScript-241A12?style=for-the-badge&amp;color=241A12&amp;logo=javascript&amp;logoColor=F7DF1E" alt="JavaScript" /></p>
-      <p><sub><picture><img src="assets/text/8555c4cf5c175c24caa1.svg" width="172" alt="업데이트 · 2026-09-17"></picture></sub></p>
+    <td width="33%" align="center">
+      <a href="https://github.com/oi-RYH/Dawn"><img src="assets/blocks/crafting_table.svg" width="20" alt="제작대"> <img src="assets/text/9d7f23d93930a6b3edb5.svg" width="36" alt="Dawn"></a>
     </td>
-    <td width="33%" valign="top">
-      <h3><img src="assets/blocks/crafting_table.svg" width="24" alt="제작대"> <a href="https://github.com/oi-RYH/capstone_design"><img src="assets/text/94a4b80d80defc2a0364.svg" width="124" alt="capstone_design"></a></h3>
-      <p><picture><img src="assets/text/8b07f3cbf7172f0de5e2.svg" width="200" alt="캡스턴 디자인 - 7조"></picture></p>
-      <p><img src="https://img.shields.io/badge/%EC%96%B8%EC%96%B4%20%EC%A0%95%EB%B3%B4%20%EC%97%86%EC%9D%8C-241A12?style=for-the-badge&amp;color=241A12" alt="언어 정보 없음" /></p>
-      <p><sub><picture><img src="assets/text/367837f2dc290a0cd373.svg" width="172" alt="업데이트 · 2026-09-16"></picture></sub></p>
+    <td width="33%" align="center">
+      <a href="https://github.com/oi-RYH/capstone_design"><img src="assets/blocks/crafting_table.svg" width="20" alt="제작대"> <img src="assets/text/00efc3f64b74871bd690.svg" width="124" alt="capstone_design"></a>
     </td>
-    <td width="33%" valign="top">
-      <h3><img src="assets/blocks/crafting_table.svg" width="24" alt="제작대"> <a href="https://github.com/oi-RYH/BrassField_plugin"><img src="assets/text/32ea30df9cfe1abb9d60.svg" width="140" alt="BrassField_plugin"></a></h3>
-      <p><picture><img src="assets/text/6976af5e1c022496621d.svg" width="200" alt="저장소에서 자세한 내용을 확인하세요."></picture></p>
-      <p><img src="https://img.shields.io/badge/Java-241A12?style=for-the-badge&amp;color=241A12&amp;logo=openjdk&amp;logoColor=F89820" alt="Java" /></p>
-      <p><sub><picture><img src="assets/text/dda7ebcba2ea00bb1074.svg" width="172" alt="업데이트 · 2026-08-14"></picture></sub></p>
+    <td width="33%" align="center">
+      <a href="https://github.com/oi-RYH/BrassField_plugin"><img src="assets/blocks/crafting_table.svg" width="20" alt="제작대"> <img src="assets/text/3776c3948730c5702799.svg" width="140" alt="BrassField_plugin"></a>
     </td>
   </tr>
 </table>

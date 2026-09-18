@@ -57,18 +57,12 @@ def language_badge(language):
 def cards(repos, owner):
     if not repos:
         return '<p>최근 작업한 공개 저장소가 없습니다.</p>'
-    rows = ['<table>', '  <tr>']
+    rows = ['<img src="assets/scenes/quest-board.svg" width="100%" alt="최근 푸시한 공개 저장소 3개가 붙은 퀘스트 게시판" />', '', '<table>', '  <tr>']
     for repo in repos:
         name = escape(repo['name'])
         url = f'https://github.com/{quote(owner, safe="")}/{quote(repo["name"], safe="")}'
-        description = escape(repo['description'] or '저장소에서 자세한 내용을 확인하세요.')
-        language = language_badge(repo['language'])
-        date = escape(repo['pushed_at'][:10])
-        rows += [f'    <td width="33%" valign="top">',
-                 f'      <h3><img src="assets/blocks/crafting_table.svg" width="24" alt="제작대"> <a href="{url}">{name}</a></h3>',
-                 f'      <p data-repo-description>{description}</p>',
-                 f'      <p>{language}</p>',
-                 f'      <p><sub>업데이트 · {date}</sub></p>',
+        rows += [f'    <td width="33%" align="center">',
+                 f'      <a href="{url}"><img src="assets/blocks/crafting_table.svg" width="20" alt="제작대"> {name}</a>',
                  '    </td>']
     rows += ['  </tr>', '</table>', '',
              '<sub>최근 푸시한 공개 저장소 · 최대 3개 · 매시간 갱신 · 날짜는 UTC 기준 (프로필·포크·보관된 저장소 제외)</sub>']
@@ -76,6 +70,8 @@ def cards(repos, owner):
 
 def populate(source, root=ROOT):
     from mine import replace
+    from build_story_scenes import write_quest_board
     owner = os.environ.get('GITHUB_REPOSITORY', 'oi-RYH/oi-RYH').split('/')[0]
     repos = json.loads((root / 'data/recent-repos.json').read_text())
+    write_quest_board(repos, root)
     return replace(source, 'RECENT_REPOS', cards(repos, owner))

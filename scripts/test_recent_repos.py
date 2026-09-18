@@ -15,17 +15,15 @@ class RecentReposTests(unittest.TestCase):
         html = cards([dict(name='demo', description='<script>alert(1)</script>',
                            language=None, pushed_at='2026-09-17T00:00:00Z')], 'owner')
         self.assertNotIn('<script>', html)
-        self.assertIn('&lt;script&gt;', html)
+        self.assertNotIn('alert(1)', html)
         self.assertIn('https://github.com/owner/demo', html)
-        self.assertIn('언어 정보 없음', html)
+        self.assertIn('assets/scenes/quest-board.svg', html)
 
-    def test_cards_have_fixed_description_hook_and_minecraft_badge(self):
+    def test_cards_link_each_repository_below_the_single_board(self):
         html = cards([dict(name='demo', description='short', language='JavaScript',
                            pushed_at='2026-09-17T00:00:00Z')], 'owner')
-        self.assertIn('<p data-repo-description>short</p>', html)
-        self.assertIn('style=for-the-badge', html)
-        self.assertIn('logo=javascript', html)
-        self.assertIn('241A12', html)
-        self.assertIn('업데이트 · 2026-09-17', html)
+        self.assertEqual(html.count('assets/scenes/quest-board.svg'), 1)
+        self.assertIn('https://github.com/owner/demo', html)
+        self.assertIn(' demo</a>', html)
 
 if __name__ == '__main__': unittest.main()

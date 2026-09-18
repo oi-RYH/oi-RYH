@@ -16,8 +16,6 @@
 
 ## <img src="assets/blocks/crafting_table.svg" width="28" alt="제작대"> <img src="assets/headings/crafting.svg" width="220" alt="Currently crafting">
 
-<img src="assets/scenes/quest-board.svg" width="100%" alt="세 개의 프로젝트 의뢰서가 붙은 나무 퀘스트 게시판" />
-
 <!-- RECENT_REPOS:START -->
 <!-- RECENT_REPOS:END -->
 
