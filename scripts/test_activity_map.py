@@ -26,7 +26,7 @@ class ActivityMapTests(unittest.TestCase):
         self.assertEqual(svg.count('class="day level-'), 21)
         self.assertNotIn('<text', svg)
         self.assertNotIn('href="http', svg)
-        self.assertIn('href="data:image/png;base64,', svg)
+        self.assertNotIn('href=', svg)
         for name in ('stone', 'iron-ore', 'gold-ore', 'diamond-block', 'emerald-block'):
             self.assertIn(name, svg)
         self.assertIn('@keyframes ride', svg)

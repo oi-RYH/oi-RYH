@@ -1,8 +1,6 @@
 """Generate a self-contained Minecraft activity map from GitHub contributions."""
 import argparse
-import base64
 from datetime import date
-from functools import lru_cache
 from html import escape
 import json
 import os
@@ -16,11 +14,11 @@ WIDTH, HEIGHT = 960, 252
 GRID_X, GRID_Y, STEP, BLOCK = 43, 55, 16, 12
 
 ACTIVITY_BLOCKS = {
-    1: ('stone', ROOT / 'assets' / 'activity' / 'stone.png'),
-    2: ('iron-ore', ROOT / 'assets' / 'activity' / 'iron-ore.png'),
-    3: ('gold-ore', ROOT / 'assets' / 'activity' / 'gold-ore.png'),
-    4: ('diamond-block', ROOT / 'assets' / 'activity' / 'diamond-block.png'),
-    5: ('emerald-block', ROOT / 'assets' / 'activity' / 'emerald-block.png'),
+    1: 'stone',
+    2: 'iron-ore',
+    3: 'gold-ore',
+    4: 'diamond-block',
+    5: 'emerald-block',
 }
 
 QUERY = """
@@ -63,12 +61,6 @@ def contribution_level(count, maximum):
     return min(5, 1 + ((count - 1) * 5 // max(1, maximum)))
 
 
-@lru_cache(maxsize=5)
-def block_texture_href(level):
-    data = base64.b64encode(ACTIVITY_BLOCKS[level][1].read_bytes()).decode('ascii')
-    return f'data:image/png;base64,{data}'
-
-
 def outlined(font, text, x, y, size, css_class):
     _, paths, scale = font.paths(text, size)
     return (f'<g class="{css_class}" transform="translate({x} {y}) '
@@ -80,15 +72,25 @@ def block(day, week_index, maximum, sparkle=False):
     level = contribution_level(count, maximum)
     x = GRID_X + week_index * STEP
     y = GRID_Y + int(day.get('weekday', 0)) * STEP
-    block_name = ACTIVITY_BLOCKS.get(level, ('empty', None))[0]
+    block_name = ACTIVITY_BLOCKS.get(level, 'empty')
     parts = [f'<g class="day level-{level}" data-block="{block_name}" '
              f'data-date="{escape(str(day.get("date", "")))}" data-count="{count}">',
              f'<rect x="{x}" y="{y}" width="{BLOCK}" height="{BLOCK}" rx="1"/>',
              f'<path class="edge" d="M{x} {y+BLOCK}V{y}H{x+BLOCK}"/>']
-    if level:
-        parts.append(f'<image class="block-texture" href="{block_texture_href(level)}" '
-                     f'x="{x}" y="{y}" width="{BLOCK}" height="{BLOCK}" '
-                     f'preserveAspectRatio="none"/>')
+    if level in (2, 3):
+        ore = '#d89b65' if level == 2 else '#f2c94c'
+        parts += [f'<rect class="ore" x="{x+3}" y="{y+3}" width="3" height="3" fill="{ore}"/>',
+                  f'<rect class="ore" x="{x+8}" y="{y+7}" width="2" height="3" fill="{ore}"/>']
+        if level == 3:
+            parts.append(f'<rect class="ore" x="{x+4}" y="{y+9}" width="2" height="2" fill="{ore}"/>')
+    elif level == 4:
+        parts += [f'<rect class="gem-shadow" x="{x+3}" y="{y+3}" width="7" height="7"/>',
+                  f'<rect class="gem-light" x="{x+3}" y="{y+3}" width="4" height="3"/>',
+                  f'<rect class="gem-core" x="{x+6}" y="{y+6}" width="3" height="3"/>']
+    elif level == 5:
+        parts += [f'<rect class="emerald-shadow" x="{x+2}" y="{y+2}" width="8" height="8"/>',
+                  f'<rect class="emerald-mid" x="{x+4}" y="{y+4}" width="5" height="5"/>',
+                  f'<rect class="gem-light" x="{x+4}" y="{y+3}" width="4" height="2"/>']
     if sparkle:
         parts.append(f'<rect class="spark" x="{x+8}" y="{y+1}" width="2" height="2" fill="#fff7b2"/>')
     parts.append('</g>')
@@ -137,8 +139,13 @@ def render(calendar, login='oi-RYH'):
   .frame{{fill:#0d1117;stroke:#405344;stroke-width:4}} .corner{{fill:#6b4c2e}}
   .label{{fill:#b6e89b}} .muted{{fill:#96a29c}}
   .day rect:first-child{{fill:#18212b}} .day .edge{{fill:none;stroke:#283440;stroke-width:2}}
-  .block-texture{{image-rendering:pixelated;image-rendering:crisp-edges}}
-  .level-1 .edge,.level-2 .edge,.level-3 .edge,.level-4 .edge,.level-5 .edge{{stroke:#101820}}
+  .level-1 rect:first-child{{fill:#343a40}} .level-1 .edge{{stroke:#525a61}}
+  .level-2 rect:first-child{{fill:#4b4a46}} .level-2 .edge{{stroke:#68665f}}
+  .level-3 rect:first-child{{fill:#51482f}} .level-3 .edge{{stroke:#75683e}}
+  .level-4 rect:first-child{{fill:#226c75}} .level-4 .edge{{stroke:#43b9bc}}
+  .level-5 rect:first-child{{fill:#1d6535}} .level-5 .edge{{stroke:#3aaa5c}}
+  .gem-shadow{{fill:#1b8991}} .gem-light{{fill:#8bf6e8}} .gem-core{{fill:#32d8c9}}
+  .emerald-shadow{{fill:#168942}} .emerald-mid{{fill:#28c55c}}
   .rail{{fill:#8f969d}} .sleeper{{fill:#6e4628}} .xp-frame{{fill:#08110d;stroke:#3a7d44;stroke-width:2}}
   .spark{{animation:twinkle 1.8s steps(2,end) infinite}} .spark:nth-of-type(2n){{animation-delay:.7s}}
   @keyframes twinkle{{50%{{opacity:.15}}}}

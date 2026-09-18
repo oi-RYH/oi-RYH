@@ -14,7 +14,6 @@ on:
       - 'assets/fonts/neodgm.ttf'
       - 'assets/icons/**'
       - 'assets/languages/**'
-      - 'assets/activity/**'
       - '.github/workflows/activity-map.yml'
 
 permissions:
