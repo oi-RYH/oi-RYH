@@ -1,4 +1,5 @@
 """Build the deliberately low-fi interactive scenes used by the README."""
+import base64
 import json
 
 from pixel_readme import PixelText, ROOT
@@ -141,15 +142,18 @@ def write_reference_mine(root=ROOT):
     """Layer the animated mining shift over the approved deep-cave artwork."""
     output = root / 'assets/scenes'
     output.mkdir(parents=True, exist_ok=True)
-    svg = '''<svg xmlns="http://www.w3.org/2000/svg" width="960" height="349" viewBox="0 0 960 349" role="img" aria-labelledby="title desc" shape-rendering="crispEdges">
+    background = base64.b64encode((output / 'concepts/cave-background.png').read_bytes()).decode('ascii')
+    steve = base64.b64encode((output / 'characters/steve-three-quarter.png').read_bytes()).decode('ascii')
+    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="960" height="349" viewBox="0 0 960 349" role="img" aria-labelledby="title desc" shape-rendering="crispEdges">
   <title id="title">깊은 동굴의 채굴 교대</title><desc id="desc">전개도에서 접어 만든 듯한 작은 스티브가 깊은 동굴의 작업 지점을 오가며 곡괭이질하고 닭은 물가를 돌아다닙니다.</desc>
-  <image href="concepts/cave-background.png" width="960" height="349" preserveAspectRatio="xMidYMid slice"/>
+  <defs><image id="steve-sprite" href="data:image/png;base64,{steve}" width="94" height="96" preserveAspectRatio="xMidYMid meet"/></defs>
+  <image href="data:image/png;base64,{background}" width="960" height="349" preserveAspectRatio="xMidYMid slice"/>
 
   <g class="steve" transform="translate(120 178)">
     <animateTransform attributeName="transform" type="translate" dur="13s" repeatCount="indefinite" calcMode="linear" keyTimes="0;.22;.245;.47;.495;.72;.76;1" values="120 178;120 178;356 180;356 180;558 168;558 168;120 178;120 178"/>
     <g class="right-facing">
       <animate attributeName="opacity" dur="13s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;.72;.76;1" values="1;0;1;1"/>
-      <image href="characters/steve-three-quarter.png" width="94" height="96" preserveAspectRatio="xMidYMid meet"/>
+      <use href="#steve-sprite"/>
       <g transform="translate(75 59)"><g class="pickaxe" transform="rotate(-38)">
         <animateTransform attributeName="transform" type="rotate" dur=".9s" repeatCount="indefinite" values="-38;22;-38"/>
         <path d="M2 5L34-34" stroke="#8b5b31" stroke-width="7"/>
@@ -158,7 +162,7 @@ def write_reference_mine(root=ROOT):
     </g>
     <g class="left-facing" transform="translate(94 0) scale(-1 1)" opacity="0">
       <animate attributeName="opacity" dur="13s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;.72;.76;1" values="0;1;0;0"/>
-      <image href="characters/steve-three-quarter.png" width="94" height="96" preserveAspectRatio="xMidYMid meet"/>
+      <use href="#steve-sprite"/>
       <g transform="translate(75 59)"><g class="pickaxe" transform="rotate(-38)">
         <animateTransform attributeName="transform" type="rotate" dur=".9s" repeatCount="indefinite" values="-38;22;-38"/>
         <path d="M2 5L34-34" stroke="#8b5b31" stroke-width="7"/>
@@ -173,7 +177,7 @@ def write_reference_mine(root=ROOT):
     <rect width="30" height="22" fill="#eee9dc"/><rect x="17" y="-14" width="20" height="20" fill="#f7f2e7"/><rect x="37" y="-6" width="8" height="6" fill="#e8b334"/>
     <rect x="23" y="-8" width="4" height="4" fill="#232a28"/><rect x="21" y="6" width="7" height="7" fill="#c94b43"/><path d="M7 22v10m16-10v10" stroke="#d9a02f" stroke-width="4"/>
   </g>
-  <style>image{image-rendering:pixelated}.steve{filter:drop-shadow(0 3px 1px #0008)}@media(prefers-reduced-motion:reduce){animateTransform,animate{display:none}}</style>
+  <style>image{{image-rendering:pixelated}}.steve{{filter:drop-shadow(0 3px 1px #0008)}}@media(prefers-reduced-motion:reduce){{animateTransform,animate{{display:none}}}}</style>
 </svg>\n'''
     (output / 'mine-shift.svg').write_text(svg)
 
