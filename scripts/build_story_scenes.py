@@ -65,48 +65,69 @@ def write_quest_board(repos, root=ROOT):
 
 
 def write_mine_shift(root=ROOT):
-    """Build a short side-view mining loop with intentionally chunky sprites."""
+    """Build a side-view abandoned mineshaft with chunky profile sprites."""
     output = root / 'assets/scenes'
     output.mkdir(parents=True, exist_ok=True)
-    shades = ['#343a40', '#3d4349', '#2c3238']
-    tiles = ''.join(
-        f'<rect x="{col*40}" y="{row*34}" width="38" height="32" fill="{shades[(row+col)%3]}"/>'
-        for row in range(4) for col in range(24)
+    shades = ['#5a5d5e', '#626667', '#4e5253', '#686b6c']
+    stone = ''.join(
+        f'<g><rect x="{col*32}" y="{row*32}" width="31" height="31" fill="{shades[(row*3+col)%4]}"/>'
+        f'<path d="M{col*32+3} {row*32+5}h9v4h-5v6h-4zm{col*32+17} {row*32+20}h9v4h-9z" fill="#777a7a" opacity=".45"/></g>'
+        for row in range(10) for col in range(30)
     )
-    floor = ''.join(
-        f'<rect x="{col*40}" y="220" width="38" height="38" fill="{shades[(col+1)%3]}"/>'
-        for col in range(24)
-    )
-    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="960" height="258" viewBox="0 0 960 258" role="img" aria-labelledby="title desc" shape-rendering="crispEdges">
+    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="960" height="300" viewBox="0 0 960 300" role="img" aria-labelledby="title desc" shape-rendering="crispEdges">
   <title id="title">스티브의 작업 교대</title><desc id="desc">단순한 스티브가 세 채굴 지점으로 빠르게 이동해 곡괭이질하고 닭은 광산을 돌아다닙니다.</desc>
-  <rect width="960" height="258" fill="#10161d"/>
-  <g opacity=".72">{tiles}</g>
-  <path d="M0 118h960v102H0z" fill="#151c23"/>
-  <path d="M0 196h960v24H0z" fill="#202831"/>
-  {floor}
-  <g fill="#4a5158"><rect x="208" y="150" width="42" height="46"/><rect x="508" y="150" width="42" height="46"/><rect x="808" y="150" width="42" height="46"/></g>
-  <g fill="#6b737b"><rect x="215" y="157" width="10" height="10"/><rect x="233" y="174" width="9" height="9"/><rect x="516" y="171" width="11" height="11"/><rect x="532" y="155" width="9" height="9"/><rect x="817" y="160" width="10" height="10"/><rect x="833" y="179" width="8" height="8"/></g>
-  <g fill="#d8a62a"><rect x="218" y="160" width="6" height="6"/><rect x="535" y="158" width="6" height="6"/></g>
-  <g fill="#49c5c1"><rect x="520" y="175" width="7" height="7"/><rect x="820" y="163" width="7" height="7"/></g>
+  <rect width="960" height="300" fill="#303536"/>
+  <g>{stone}</g>
+  <path d="M0 105h64V72h64V88h96V55h96v28h96V66h128v25h96V58h96v31h96v-17h64v151H0z" fill="#10161b"/>
+  <path d="M0 223h960v77H0z" fill="#4f5354"/>
+  <path d="M0 223h960v8H0z" fill="#737778"/>
 
-  <g class="steve" transform="translate(118 102)">
-    <animateTransform attributeName="transform" type="translate" dur="12s" repeatCount="indefinite" calcMode="linear" keyTimes="0;.20;.235;.47;.505;.74;.775;1" values="118 102;118 102;418 102;418 102;718 102;718 102;118 102;118 102"/>
-    <rect width="48" height="42" fill="#79533b"/>
-    <rect x="7" y="17" width="12" height="7" fill="#d7c3ad"/><rect x="29" y="17" width="12" height="7" fill="#d7c3ad"/>
-    <path d="M5 15h17v11H5zm21 0h17v11H26zM22 19h4" fill="none" stroke="#cbd0d6" stroke-width="2"/>
-    <rect y="42" width="48" height="42" fill="#36a7aa"/>
-    <rect y="84" width="48" height="38" fill="#5142a5"/><rect x="21" y="99" width="6" height="23" fill="#151c23"/>
-    <g transform="translate(43 55)">
-      <g class="pickaxe" transform="rotate(-38)">
+  <g fill="#684728"><rect x="70" y="80" width="18" height="143"/><rect x="872" y="80" width="18" height="143"/><rect x="70" y="80" width="820" height="18"/></g>
+  <g fill="#8a6035"><rect x="76" y="80" width="6" height="143"/><rect x="878" y="80" width="6" height="143"/><rect x="70" y="85" width="820" height="6"/></g>
+  <g fill="#684728"><rect x="337" y="98" width="14" height="125"/><rect x="609" y="98" width="14" height="125"/></g>
+  <g fill="#8a6035"><rect x="341" y="98" width="5" height="125"/><rect x="613" y="98" width="5" height="125"/></g>
+
+  <g><rect x="278" y="101" width="7" height="28" fill="#684728"/><rect x="270" y="124" width="23" height="10" fill="#f4b942"/><rect x="275" y="127" width="13" height="12" fill="#ffdd67"/></g>
+  <g><rect x="675" y="101" width="7" height="28" fill="#684728"/><rect x="667" y="124" width="23" height="10" fill="#f4b942"/><rect x="672" y="127" width="13" height="12" fill="#ffdd67"/></g>
+
+  <g fill="#555a5b" stroke="#74797a" stroke-width="3"><rect x="225" y="176" width="47" height="47"/><rect x="495" y="176" width="47" height="47"/><rect x="765" y="176" width="47" height="47"/></g>
+  <g fill="#d7a82e"><rect x="232" y="183" width="10" height="10"/><rect x="255" y="201" width="9" height="9"/></g>
+  <g fill="#4bc7c3"><rect x="502" y="197" width="11" height="11"/><rect x="525" y="181" width="9" height="9"/></g>
+  <g fill="#56bd67"><rect x="772" y="185" width="10" height="10"/><rect x="794" y="204" width="9" height="9"/></g>
+  <g stroke="#9fa5a5" stroke-width="5"><path d="M0 254h960"/><path d="M0 276h960"/></g>
+  <path d="M20 248v34m55-34v34m55-34v34m55-34v34m55-34v34m55-34v34m55-34v34m55-34v34m55-34v34m55-34v34m55-34v34m55-34v34m55-34v34m55-34v34m55-34v34m55-34v34m55-34v34m55-34v34m55-34v34" stroke="#6d4729" stroke-width="9"/>
+
+  <g class="steve" transform="translate(155 128)">
+    <animateTransform attributeName="transform" type="translate" dur="12s" repeatCount="indefinite" calcMode="linear" keyTimes="0;.20;.235;.47;.505;.74;.775;1" values="155 128;155 128;425 128;425 128;695 128;695 128;155 128;155 128"/>
+    <g class="right-profile">
+      <animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;.74;.775;1" values="1;0;1;1"/>
+      <rect width="36" height="38" fill="#79533b"/><rect x="36" y="17" width="7" height="9" fill="#a97a58"/>
+      <rect x="27" y="14" width="7" height="6" fill="#d7c3ad"/><rect x="31" y="15" width="3" height="3" fill="#30251f"/>
+      <path d="M24 12h13v11H24" fill="none" stroke="#cbd0d6" stroke-width="2"/>
+      <rect x="5" y="38" width="31" height="36" fill="#36a7aa"/><rect x="5" y="74" width="31" height="34" fill="#5142a5"/><rect x="18" y="91" width="5" height="17" fill="#10161b"/>
+      <g transform="translate(34 57)"><g class="pickaxe" transform="rotate(-38)">
         <animateTransform attributeName="transform" type="rotate" dur=".9s" repeatCount="indefinite" values="-38;18;-38"/>
-        <path d="M2 4L34-34" stroke="#8d5d32" stroke-width="7"/>
-        <path d="M20-43h40v9H20zM51-34h9v10h-9z" fill="#4dc9cd"/>
+        <path d="M1 4L34-34" stroke="#8d5d32" stroke-width="7"/>
+        <path d="M10-46h48v8h-6v7h-7v-7H23v7h-7v-7h-6z" fill="#4dc9cd"/>
+      </g></g>
+    </g>
+    <g class="left-profile" transform="translate(43 0) scale(-1 1)" opacity="0">
+      <animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;.74;.775;1" values="0;1;0;0"/>
+      <rect width="36" height="38" fill="#79533b"/><rect x="36" y="17" width="7" height="9" fill="#a97a58"/>
+      <rect x="27" y="14" width="7" height="6" fill="#d7c3ad"/><rect x="31" y="15" width="3" height="3" fill="#30251f"/>
+      <path d="M24 12h13v11H24" fill="none" stroke="#cbd0d6" stroke-width="2"/>
+      <rect x="5" y="38" width="31" height="36" fill="#36a7aa"/><rect x="5" y="74" width="31" height="34" fill="#5142a5"/><rect x="18" y="91" width="5" height="17" fill="#10161b"/>
+      <g transform="translate(34 57)"><g class="pickaxe" transform="rotate(-38)">
+        <animateTransform attributeName="transform" type="rotate" dur=".9s" repeatCount="indefinite" values="-38;18;-38"/>
+        <path d="M1 4L34-34" stroke="#8d5d32" stroke-width="7"/>
+        <path d="M10-46h48v8h-6v7h-7v-7H23v7h-7v-7h-6z" fill="#4dc9cd"/>
       </g>
+    </g>
     </g>
   </g>
 
-  <g class="chicken" transform="translate(690 172)">
-    <animateTransform attributeName="transform" type="translate" dur="15s" repeatCount="indefinite" values="690 172;510 169;790 172;330 168;690 172"/>
+  <g class="chicken" transform="translate(690 191)">
+    <animateTransform attributeName="transform" type="translate" dur="15s" repeatCount="indefinite" values="690 191;560 188;825 191;350 188;690 191"/>
     <rect width="38" height="29" fill="#e9e4d7"/><rect x="21" y="-18" width="24" height="25" fill="#f4f0e5"/>
     <rect x="45" y="-9" width="9" height="7" fill="#e5ae28"/><rect x="28" y="-11" width="4" height="4" fill="#1b2025"/>
     <rect x="25" y="7" width="7" height="8" fill="#c84b3f"/><path d="M9 29v13m20-13v13" stroke="#d99c2b" stroke-width="5"/>

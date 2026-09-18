@@ -36,6 +36,8 @@
 <sub><picture><img src="assets/text/851d37331e5cfe87386b.svg" width="460" alt="최근 푸시한 공개 저장소 · 최대 3개 · 매시간 갱신 · 날짜는 UTC 기준 (프로필·포크·보관된 저장소 제외)"></picture></sub>
 <!-- RECENT_REPOS:END -->
 
+<img src="assets/scenes/quest-break.jpg" width="100%" alt="상자와 횃불이 놓인 마인크래프트풍 지하 창고" />
+
 <a name="inventory"></a>
 
 ## <img src="assets/blocks/chest.svg" width="28" alt="상자"> <picture><img src="assets/headings/inventory.svg" width="112" alt="Inventory"></picture>
