@@ -19,7 +19,10 @@
       null,
       null,
       null,
-      null,
+      {
+        "ore": "stone",
+        "user": "oi-RYH"
+      },
       null,
       null
     ],
@@ -34,8 +37,8 @@
   ],
   "miners": {
     "oi-RYH": {
-      "blocks": 1,
-      "score": 1
+      "blocks": 2,
+      "score": 2
     },
     "songkh1201": {
       "blocks": 1,
@@ -43,15 +46,17 @@
     }
   },
   "totals": {
-    "stone": 1,
+    "stone": 2,
     "redstone_ore": 1
   },
   "receipts": {
     "1": "🪨 @oi-RYH: 돌 획득! +1점",
-    "2": "🔴 @songkh1201: 레드스톤 획득! +6점"
+    "2": "🔴 @songkh1201: 레드스톤 획득! +6점",
+    "3": "🪨 @oi-RYH: 돌 획득! +1점"
   },
   "log": [
     "🪨 @oi-RYH: 돌 획득! +1점",
-    "🔴 @songkh1201: 레드스톤 획득! +6점"
+    "🔴 @songkh1201: 레드스톤 획득! +6점",
+    "🪨 @oi-RYH: 돌 획득! +1점"
   ]
 }
