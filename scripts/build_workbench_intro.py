@@ -27,9 +27,9 @@ def build(root=ROOT):
         '<title id="title">RYH’s Workbench</title>',
         '<desc id="desc">마인크래프트 서버 화면처럼 접속 상태가 움직이는 작업대 소개</desc>',
         '''<style>
-.cursor{animation:blink 1s steps(2,end) infinite}.splash{transform-origin:760px 146px;animation:pulse 1.8s steps(2,end) infinite}
+.cursor{animation:blink 1s steps(2,end) infinite}.splash{animation:pulse 1.8s steps(2,end) infinite}
 .line{opacity:0;animation:chat 12s steps(1,end) infinite}.b{animation-delay:3s}.c{animation-delay:6s}.d{animation-delay:9s}
-@keyframes chat{0%,24%{opacity:1}25%,100%{opacity:0}}@keyframes blink{50%{opacity:0}}@keyframes pulse{50%{transform:translateY(-2px) rotate(-1deg)}}
+@keyframes chat{0%,24%{opacity:1}25%,100%{opacity:0}}@keyframes blink{50%{opacity:0}}@keyframes pulse{50%{opacity:.68}}
 @media(prefers-reduced-motion:reduce){.line,.cursor,.splash{animation:none}.line{opacity:0}.a{opacity:1}}
 </style>''',
         '<rect width="960" height="280" fill="#0d1117"/>',
