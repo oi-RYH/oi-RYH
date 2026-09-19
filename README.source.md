@@ -2,15 +2,13 @@
   <img src="./assets/workbench-banner.png" alt="마인크래프트 작업대 위 노트북과 분재, 안경 쓴 오리, 책상 뒤에서 고개를 내민 닭" width="100%" />
 </p>
 
-# <img src="assets/headings/workbench.svg" width="244" alt="RYH’s Workbench">
+<p align="center">
+  <img src="assets/workbench-intro.svg" width="100%" alt="RYH의 작업대와 실시간으로 움직이는 마인크래프트 서버 접속 상태" />
+</p>
 
-곡괭이로는 디버깅이 안 돼서 맥북을 샀습니다.
-
-<img src="assets/workbench-status.svg" width="100%" alt="RYH 접속 → 곡괭이 장착 → 디버깅 실패 → 맥북 장착" />
-
-| [<img src="assets/blocks/crafting_table.svg" width="36" alt="제작대 — 제작 중인 프로젝트">](#crafting) | [<img src="assets/blocks/chest.svg" width="36" alt="상자 — 인벤토리 열기">](#inventory) | [<img src="assets/blocks/pickaxe.svg" width="36" alt="곡괭이 — 공용 광산에서 돌 캐기">](#community-mine) | [<img src="assets/blocks/book_and_quill.svg" width="36" alt="책과 깃펜 — 작업 일지">](#field-notes) |
-| :---: | :---: | :---: | :---: |
-| 제작 중 | 상자 열기 | 돌 캐기 | 작업 일지 |
+<p align="center">
+  <a href="#crafting"><img src="assets/workbench-nav/crafting.svg" width="24%" alt="제작대 — 제작 중인 프로젝트" /></a><a href="#inventory"><img src="assets/workbench-nav/inventory.svg" width="24%" alt="상자 — 인벤토리 열기" /></a><a href="#community-mine"><img src="assets/workbench-nav/mine.svg" width="24%" alt="곡괭이 — 공용 광산에서 돌 캐기" /></a><a href="#field-notes"><img src="assets/workbench-nav/notes.svg" width="24%" alt="책과 깃펜 — 작업 일지" /></a>
+</p>
 
 <a name="crafting"></a>
 

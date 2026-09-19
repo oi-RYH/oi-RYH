@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="224" height="118" viewBox="0 0 224 118" role="img" aria-labelledby="title" shape-rendering="crispEdges"><title id="title">제작 중</title><rect width="224" height="118" fill="#0d1117"/><rect x="4" y="4" width="216" height="110" fill="#11171d" stroke="#3b4650" stroke-width="2"/><path fill="#263038" d="M14 14h196v4H14zM14 100h196v4H14z"/><g fill="#74808b" transform="translate(18 30) scale(0.009765625 -0.009765625)"><path transform="translate(0 0)" d="M64 512H128V576H192V640H320V0H192V448H64Z"/></g><g transform="translate(90 20) scale(1.375)">
+<path fill="#38271e" d="M2 2h28v28H2z"/>
+<path fill="#b7834c" d="M4 4h24v9H4z"/>
+<path fill="#704a30" d="M6 5h20v2H6zm0 4h20v2H6zM10 4h2v9h-2zm10 0h2v9h-2z"/>
+<path fill="#d3a269" d="M4 4h24v1H4zM4 12h24v1H4z"/>
+<path fill="#936039" d="M4 15h24v13H4z"/>
+<path fill="#ba8954" d="M6 15h5v13H6zm15 0h5v13h-5z"/>
+<path fill="#65402a" d="M4 18h7v2H4zm17 5h7v2h-7zM12 15h8v13h-8z"/>
+<path fill="#cebba0" d="M13 17h6v2h-2v5h-2v-5h-2z"/>
+<path fill="#4c3020" d="M3 27h8v2H3zm18 0h8v2h-8z"/>
+</g><g fill="#c9d1d9" transform="translate(84 88) scale(0.015625 -0.015625)"><path transform="translate(0 0)" d="M64 640H576V576H384V128H448V64H512V0H576V-64H448V0H384V64H256V0H192V-64H64V0H128V64H192V128H256V576H64ZM512 320H640V704H768V-128H640V256H512ZM832 704H960V-128H832Z"/><path transform="translate(1024 0)" d="M64 704H576V640H384V448H448V384H512V320H576V256H448V320H384V384H256V320H192V256H64V320H128V384H192V448H256V640H64ZM704 704H832V512H1024V448H832V256H704ZM128 192H832V-64H768V-128H704V128H128Z"/><path transform="translate(2048 0)" d=""/><path transform="translate(2560 0)" d="M128 704H896V640H576V576H640V512H704V448H896V384H640V448H576V512H448V448H384V384H128V448H320V512H384V576H448V640H128ZM64 320H960V256H576V128H448V256H64ZM128 128H256V192H768V128H896V-64H768V-128H256V-64H128ZM256 64V0H320V-64H704V0H768V64H704V128H320V64Z"/></g><path fill="#405344" d="M4 4h16v3H7v13H4zm216 0v16h-3V7h-13V4z"/></svg>
