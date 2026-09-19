@@ -12,20 +12,20 @@
 
 <a name="crafting"></a>
 
-## <img src="assets/blocks/crafting_table.svg" width="28" alt="제작대"> <img src="assets/headings/crafting.svg" width="220" alt="Currently crafting">
+<h2 align="center"><img src="assets/blocks/crafting_table.svg" width="28" alt="제작대"> <img src="assets/headings/crafting.svg" width="220" alt="Currently crafting"></h2>
 
 <!-- RECENT_REPOS:START -->
 <!-- RECENT_REPOS:END -->
 
 <a name="inventory"></a>
 
-## <img src="assets/blocks/chest.svg" width="28" alt="상자"> <img src="assets/headings/inventory.svg" width="112" alt="Inventory">
+<h2 align="center"><img src="assets/blocks/chest.svg" width="28" alt="상자"> <img src="assets/headings/inventory.svg" width="112" alt="Inventory"></h2>
 
 <details open>
-<summary><img src="assets/blocks/chest.svg" width="20" alt="상자"> <strong>도구 상자 — 오늘도 일단 꺼내 봅니다</strong></summary>
+<summary align="center"><img src="assets/blocks/chest.svg" width="20" alt="상자"> <strong>도구 상자 — 오늘도 일단 꺼내 봅니다</strong></summary>
 
 
-<p>
+<p align="center">
   <img src="https://img.shields.io/badge/C++-31363F?style=flat-square&logo=cplusplus&logoColor=7DD3FC" alt="C++" />
   <img src="https://img.shields.io/badge/C%23-31363F?style=flat-square&logo=dotnet&logoColor=A78BFA" alt="C#" />
   <img src="https://img.shields.io/badge/Python-31363F?style=flat-square&logo=python&logoColor=FACC15" alt="Python" />
@@ -37,16 +37,16 @@
 </details>
 
 <details>
-<summary><img src="assets/blocks/bundle.svg" width="20" alt="꾸러미"> <strong>주머니 — 코드 말고 좋아하는 것들</strong></summary>
+<summary align="center"><img src="assets/blocks/bundle.svg" width="20" alt="꾸러미"> <strong>주머니 — 코드 말고 좋아하는 것들</strong></summary>
 
-마인크래프트!
+<p align="center">마인크래프트!</p>
 
 </details>
 
 <details>
-<summary><img src="assets/blocks/chicken.svg" width="20" alt="닭"> <strong>이 닭은 팀원인가요?</strong></summary>
+<summary align="center"><img src="assets/blocks/chicken.svg" width="20" alt="닭"> <strong>이 닭은 팀원인가요?</strong></summary>
 
-조만간 닭이 커밋하는 메시지가 올라올 예정입니다.
+<p align="center">조만간 닭이 커밋하는 메시지가 올라올 예정입니다.</p>
 
 </details>
 
@@ -85,18 +85,21 @@
 <!-- MINE_STATS:END -->
 
 <details>
-<summary>채굴 방법과 드롭 테이블</summary>
+<summary align="center">채굴 방법과 드롭 테이블</summary>
 
-운영 시작 후에는 돌 선택 → GitHub 이슈 제출 → 자동 처리 → README 새로고침 순서로 참여합니다.
-누구나 같은 광산을 공유하며, 18칸을 다 캐면 다음 층이 열립니다.
+<p align="center">운영 시작 후에는 돌 선택 → GitHub 이슈 제출 → 자동 처리 → README 새로고침 순서로 참여합니다.<br>
+누구나 같은 광산을 공유하며, 18칸을 다 캐면 다음 층이 열립니다.</p>
 
-| 발견 | 점수 |
-| :--- | ---: |
-| 돌 / 석탄 / 철 | 1 / 2 / 4 |
-| 레드스톤 / 청금석 / 금 | 6 / 8 / 12 |
-| 다이아몬드 / 에메랄드 | 50 / 80 |
+<table align="center">
+<thead><tr><th align="center">발견</th><th align="center">점수</th></tr></thead>
+<tbody>
+<tr><td align="center">돌 / 석탄 / 철</td><td align="center">1 / 2 / 4</td></tr>
+<tr><td align="center">레드스톤 / 청금석 / 금</td><td align="center">6 / 8 / 12</td></tr>
+<tr><td align="center">다이아몬드 / 에메랄드</td><td align="center">50 / 80</td></tr>
+</tbody>
+</table>
 
-광물은 채굴 시 무작위로 결정됩니다. 이미 캔 칸과 지난 층의 링크는 점수를 주지 않습니다.
+<p align="center">광물은 채굴 시 무작위로 결정됩니다. 이미 캔 칸과 지난 층의 링크는 점수를 주지 않습니다.</p>
 
 </details>
 
@@ -104,17 +107,19 @@
 
 <a name="field-notes"></a>
 
-## <img src="assets/blocks/book_and_quill.svg" width="28" alt="책과 깃펜"> <img src="assets/headings/field-notes.svg" width="112" alt="작업 일지">
+<h2 align="center"><img src="assets/blocks/book_and_quill.svg" width="28" alt="책과 깃펜"> <img src="assets/headings/field-notes.svg" width="112" alt="작업 일지"></h2>
 
-| [<img src="assets/blocks/book_and_quill.svg" width="42" alt="책과 깃펜"><br>블로그](https://oi-ryh.github.io) | [<img src="assets/blocks/chest.svg" width="42" alt="상자"><br>전체 저장소](https://github.com/oi-RYH?tab=repositories) |
-| :---: | :---: |
+<table align="center"><tr>
+<td align="center"><a href="https://oi-ryh.github.io"><img src="assets/blocks/book_and_quill.svg" width="42" alt="책과 깃펜"><br>블로그</a></td>
+<td align="center"><a href="https://github.com/oi-RYH?tab=repositories"><img src="assets/blocks/chest.svg" width="42" alt="상자"><br>전체 저장소</a></td>
+</tr></table>
 
-<p><img src="assets/blocks/chest.svg" width="20" alt="상자"> <strong>플레이어 상태창</strong></p>
+<p align="center"><img src="assets/blocks/chest.svg" width="20" alt="상자"> <strong>플레이어 상태창</strong></p>
 <picture>
   <img src="https://raw.githubusercontent.com/oi-RYH/oi-RYH/output/player-inventory.svg" width="100%" alt="공개 저장소, 별, 팔로워, 최근 1년 기여와 상위 언어를 보여주는 마인크래프트 플레이어 상태창" />
 </picture>
 
-<p><img src="assets/blocks/pickaxe.svg" width="20" alt="곡괭이"> <strong>활동 월드</strong></p>
+<p align="center"><img src="assets/blocks/pickaxe.svg" width="20" alt="곡괭이"> <strong>활동 월드</strong></p>
 <a href="https://github.com/oi-RYH?tab=contributions">
   <img src="https://raw.githubusercontent.com/oi-RYH/oi-RYH/output/minecraft-activity.svg" width="100%" alt="지난 1년의 GitHub 기여를 광석 블록과 닭 광산 수레로 표현한 활동 월드" />
 </a>

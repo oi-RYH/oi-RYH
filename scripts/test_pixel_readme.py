@@ -37,6 +37,14 @@ class PixelReadmeTests(unittest.TestCase):
         for path in files: ET.parse(self.root/path)
         self.assertEqual(second, build(mine.render(source, state, live=True), self.root))
 
+    def test_static_readme_sections_are_centered(self):
+        source = (ROOT / 'README.source.md').read_text()
+        self.assertNotRegex(source, r'(?m)^## ')
+        for heading in ('crafting.svg', 'inventory.svg', 'community-mine.svg', 'field-notes.svg'):
+            self.assertRegex(source, rf'<h2 align="center">[^\n]+{re.escape(heading)}')
+        self.assertNotIn('<p>', source)
+        self.assertNotIn('<summary>', source)
+
     def test_xml_escaping_and_link_preservation(self):
         text = '<details><summary>A &amp; B</summary>\n[Blog ↗](https://example.com)\n</details>'
         result = build(text, self.root)

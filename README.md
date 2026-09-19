@@ -12,7 +12,7 @@
 
 <a name="crafting"></a>
 
-## <img src="assets/blocks/crafting_table.svg" width="28" alt="제작대"> <picture><img src="assets/headings/crafting.svg" width="220" alt="Currently crafting"></picture>
+<h2 align="center"><img src="assets/blocks/crafting_table.svg" width="28" alt="제작대"> <picture><img src="assets/headings/crafting.svg" width="220" alt="Currently crafting"></picture></h2>
 
 <!-- RECENT_REPOS:START -->
 <p align="center"><a href="https://github.com/oi-RYH/Dawn"><img src="assets/scenes/quest-board-python-body12-1.png" width="40%" alt="Dawn 저장소 퀘스트 종이"></a><a href="https://github.com/oi-RYH/capstone_design"><img src="assets/scenes/quest-board-python-body12-2.png" width="20%" alt="capstone_design 저장소 퀘스트 종이"></a><a href="https://github.com/oi-RYH/BrassField_plugin"><img src="assets/scenes/quest-board-python-body12-3.png" width="40%" alt="BrassField_plugin 저장소 퀘스트 종이"></a></p>
@@ -20,13 +20,13 @@
 
 <a name="inventory"></a>
 
-## <img src="assets/blocks/chest.svg" width="28" alt="상자"> <picture><img src="assets/headings/inventory.svg" width="112" alt="Inventory"></picture>
+<h2 align="center"><img src="assets/blocks/chest.svg" width="28" alt="상자"> <picture><img src="assets/headings/inventory.svg" width="112" alt="Inventory"></picture></h2>
 
 <details open>
-<summary><img src="assets/blocks/chest.svg" width="20" alt="상자"> <strong><picture><img src="assets/text/ca4c80be43ece388d161.svg" width="292" alt="도구 상자 — 오늘도 일단 꺼내 봅니다"></picture></strong></summary>
+<summary align="center"><img src="assets/blocks/chest.svg" width="20" alt="상자"> <strong><picture><img src="assets/text/ca4c80be43ece388d161.svg" width="292" alt="도구 상자 — 오늘도 일단 꺼내 봅니다"></picture></strong></summary>
 
 
-<p>
+<p align="center">
   <img src="https://img.shields.io/badge/C++-31363F?style=flat-square&logo=cplusplus&logoColor=7DD3FC" alt="C++" />
   <img src="https://img.shields.io/badge/C%23-31363F?style=flat-square&logo=dotnet&logoColor=A78BFA" alt="C#" />
   <img src="https://img.shields.io/badge/Python-31363F?style=flat-square&logo=python&logoColor=FACC15" alt="Python" />
@@ -38,16 +38,16 @@
 </details>
 
 <details>
-<summary><img src="assets/blocks/bundle.svg" width="20" alt="꾸러미"> <strong><picture><img src="assets/text/2591dd804f09c6cbbbd0.svg" width="268" alt="주머니 — 코드 말고 좋아하는 것들"></picture></strong></summary>
+<summary align="center"><img src="assets/blocks/bundle.svg" width="20" alt="꾸러미"> <strong><picture><img src="assets/text/2591dd804f09c6cbbbd0.svg" width="268" alt="주머니 — 코드 말고 좋아하는 것들"></picture></strong></summary>
 
-<picture><img src="assets/text/1a2ec7e632583c07bc66.svg" width="108" alt="마인크래프트!"></picture>
+<p align="center"><picture><img src="assets/text/1a2ec7e632583c07bc66.svg" width="108" alt="마인크래프트!"></picture></p>
 
 </details>
 
 <details>
-<summary><img src="assets/blocks/chicken.svg" width="20" alt="닭"> <strong><picture><img src="assets/text/d2c629bf52bb1577fa71.svg" width="156" alt="이 닭은 팀원인가요?"></picture></strong></summary>
+<summary align="center"><img src="assets/blocks/chicken.svg" width="20" alt="닭"> <strong><picture><img src="assets/text/d2c629bf52bb1577fa71.svg" width="156" alt="이 닭은 팀원인가요?"></picture></strong></summary>
 
-<picture><img src="assets/text/5047c181f18351b95015.svg" width="388" alt="조만간 닭이 커밋하는 메시지가 올라올 예정입니다."></picture>
+<p align="center"><picture><img src="assets/text/5047c181f18351b95015.svg" width="388" alt="조만간 닭이 커밋하는 메시지가 올라올 예정입니다."></picture></p>
 
 </details>
 
@@ -97,18 +97,21 @@
 <!-- MINE_STATS:END -->
 
 <details>
-<summary><picture><img src="assets/text/746c53dcf540aeb175cd.svg" width="188" alt="채굴 방법과 드롭 테이블"></picture></summary>
+<summary align="center"><picture><img src="assets/text/746c53dcf540aeb175cd.svg" width="188" alt="채굴 방법과 드롭 테이블"></picture></summary>
 
-<picture><img src="assets/text/fc05ac58b90ecb52c2fe.svg" width="460" alt="운영 시작 후에는 돌 선택 → GitHub 이슈 제출 → 자동 처리 → README 새로고침 순서로 참여합니다."></picture>
-<picture><img src="assets/text/d19ab043d6b16b1cc77f.svg" width="428" alt="누구나 같은 광산을 공유하며, 18칸을 다 캐면 다음 층이 열립니다."></picture>
+<p align="center"><picture><img src="assets/text/fc05ac58b90ecb52c2fe.svg" width="460" alt="운영 시작 후에는 돌 선택 → GitHub 이슈 제출 → 자동 처리 → README 새로고침 순서로 참여합니다."></picture><br>
+<picture><img src="assets/text/d19ab043d6b16b1cc77f.svg" width="428" alt="누구나 같은 광산을 공유하며, 18칸을 다 캐면 다음 층이 열립니다."></picture></p>
 
-| <picture><img src="assets/text/6ab3306907be248e7810.svg" width="36" alt="발견"></picture> | <picture><img src="assets/text/4bca7550164ea7a427d3.svg" width="36" alt="점수"></picture> |
-| :--- | ---: |
-| <picture><img src="assets/text/228e442dc74160e1b53e.svg" width="116" alt="돌 / 석탄 / 철"></picture> | <picture><img src="assets/text/a41430fb2fe4dabba9e2.svg" width="76" alt="1 / 2 / 4"></picture> |
-| <picture><img src="assets/text/c4fd297a8bf629c62086.svg" width="180" alt="레드스톤 / 청금석 / 금"></picture> | <picture><img src="assets/text/2cf61ed65b155d08c08d.svg" width="84" alt="6 / 8 / 12"></picture> |
-| <picture><img src="assets/text/4a57bd6d015bf25df9ff.svg" width="172" alt="다이아몬드 / 에메랄드"></picture> | <picture><img src="assets/text/c943b456d452e25ef95c.svg" width="60" alt="50 / 80"></picture> |
+<table align="center">
+<thead><tr><th align="center"><picture><img src="assets/text/6ab3306907be248e7810.svg" width="36" alt="발견"></picture></th><th align="center"><picture><img src="assets/text/4bca7550164ea7a427d3.svg" width="36" alt="점수"></picture></th></tr></thead>
+<tbody>
+<tr><td align="center"><picture><img src="assets/text/228e442dc74160e1b53e.svg" width="116" alt="돌 / 석탄 / 철"></picture></td><td align="center"><picture><img src="assets/text/a41430fb2fe4dabba9e2.svg" width="76" alt="1 / 2 / 4"></picture></td></tr>
+<tr><td align="center"><picture><img src="assets/text/c4fd297a8bf629c62086.svg" width="180" alt="레드스톤 / 청금석 / 금"></picture></td><td align="center"><picture><img src="assets/text/2cf61ed65b155d08c08d.svg" width="84" alt="6 / 8 / 12"></picture></td></tr>
+<tr><td align="center"><picture><img src="assets/text/4a57bd6d015bf25df9ff.svg" width="172" alt="다이아몬드 / 에메랄드"></picture></td><td align="center"><picture><img src="assets/text/c943b456d452e25ef95c.svg" width="60" alt="50 / 80"></picture></td></tr>
+</tbody>
+</table>
 
-<picture><img src="assets/text/a939bc8cbbc024a5b6c5.svg" width="468" alt="광물은 채굴 시 무작위로 결정됩니다. 이미 캔 칸과 지난 층의 링크는 점수를 주지 않습니다."></picture>
+<p align="center"><picture><img src="assets/text/a939bc8cbbc024a5b6c5.svg" width="468" alt="광물은 채굴 시 무작위로 결정됩니다. 이미 캔 칸과 지난 층의 링크는 점수를 주지 않습니다."></picture></p>
 
 </details>
 
@@ -116,17 +119,19 @@
 
 <a name="field-notes"></a>
 
-## <img src="assets/blocks/book_and_quill.svg" width="28" alt="책과 깃펜"> <picture><img src="assets/headings/field-notes.svg" width="112" alt="작업 일지"></picture>
+<h2 align="center"><img src="assets/blocks/book_and_quill.svg" width="28" alt="책과 깃펜"> <picture><img src="assets/headings/field-notes.svg" width="112" alt="작업 일지"></picture></h2>
 
-| [<img src="assets/blocks/book_and_quill.svg" width="42" alt="책과 깃펜"><br><img src="assets/text/3d15675ba2aab1976f21.svg" width="52" alt="블로그">](https://oi-ryh.github.io) | [<img src="assets/blocks/chest.svg" width="42" alt="상자"><br><img src="assets/text/3560cb85b4f3713fbbfc.svg" width="92" alt="전체 저장소">](https://github.com/oi-RYH?tab=repositories) |
-| :---: | :---: |
+<table align="center"><tr>
+<td align="center"><a href="https://oi-ryh.github.io"><img src="assets/blocks/book_and_quill.svg" width="42" alt="책과 깃펜"><br><img src="assets/text/3d15675ba2aab1976f21.svg" width="52" alt="블로그"></a></td>
+<td align="center"><a href="https://github.com/oi-RYH?tab=repositories"><img src="assets/blocks/chest.svg" width="42" alt="상자"><br><img src="assets/text/3560cb85b4f3713fbbfc.svg" width="92" alt="전체 저장소"></a></td>
+</tr></table>
 
-<p><img src="assets/blocks/chest.svg" width="20" alt="상자"> <strong><picture><img src="assets/text/7b8be114652abbbe6023.svg" width="124" alt="플레이어 상태창"></picture></strong></p>
+<p align="center"><img src="assets/blocks/chest.svg" width="20" alt="상자"> <strong><picture><img src="assets/text/7b8be114652abbbe6023.svg" width="124" alt="플레이어 상태창"></picture></strong></p>
 <picture>
   <img src="https://raw.githubusercontent.com/oi-RYH/oi-RYH/output/player-inventory.svg" width="100%" alt="공개 저장소, 별, 팔로워, 최근 1년 기여와 상위 언어를 보여주는 마인크래프트 플레이어 상태창" />
 </picture>
 
-<p><img src="assets/blocks/pickaxe.svg" width="20" alt="곡괭이"> <strong><picture><img src="assets/text/8fcad01c5a715b1a45ed.svg" width="76" alt="활동 월드"></picture></strong></p>
+<p align="center"><img src="assets/blocks/pickaxe.svg" width="20" alt="곡괭이"> <strong><picture><img src="assets/text/8fcad01c5a715b1a45ed.svg" width="76" alt="활동 월드"></picture></strong></p>
 <a href="https://github.com/oi-RYH?tab=contributions">
   <img src="https://raw.githubusercontent.com/oi-RYH/oi-RYH/output/minecraft-activity.svg" width="100%" alt="지난 1년의 GitHub 기여를 광석 블록과 닭 광산 수레로 표현한 활동 월드" />
 </a>
