@@ -51,7 +51,7 @@
 
 </details>
 
-<img src="assets/scenes/quest-break.jpg" width="100%" alt="상자와 횃불이 놓인 마인크래프트풍 지하 창고" />
+<img src="assets/scenes/quest-break.jpg" width="100%" alt="전통 한옥 구조와 조선시대 함, 광물 홀로그램이 어우러진 마인크래프트 지하 광산" />
 
 <a name="community-mine"></a>
 
