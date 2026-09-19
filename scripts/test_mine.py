@@ -2,6 +2,7 @@ import copy
 from pathlib import Path
 import random
 import unittest
+import xml.etree.ElementTree as ET
 import mine
 
 class MineTests(unittest.TestCase):
@@ -58,7 +59,10 @@ class MineTests(unittest.TestCase):
         live = mine.render(text, state, live=True)
         self.assertEqual(live.count('/issues/new?'), mine.WIDTH*mine.HEIGHT)
         self.assertIn('mine%7C1%7C0%7C0', live)
-        self.assertGreaterEqual(live.count('<table align="center">'), 1)
+        self.assertEqual(live.count('assets/mine-grid/cell-'), mine.WIDTH*mine.HEIGHT)
+        self.assertIn('stroke="#8de6ec"', (mine.MINE_SLOT_DIR / 'cell-1-1.svg').read_text())
+        for path in mine.MINE_SLOT_DIR.glob('cell-*.svg'):
+            ET.parse(path)
         self.assertIn('<p align="center">', live)
         with self.assertRaises(ValueError):
             mine.render('missing markers', state)

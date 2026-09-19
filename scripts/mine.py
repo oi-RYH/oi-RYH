@@ -1,6 +1,8 @@
 """Community mine: validated inputs, persistent receipts, no shell interpolation."""
 import argparse
+import base64
 from datetime import datetime, timezone
+from html import escape
 import json
 import os
 from pathlib import Path
@@ -22,6 +24,58 @@ ORES = {
     'diamond_ore': ('다이아몬드', '💎', 50, 2),
     'emerald_ore': ('에메랄드', '🟢', 80, 1),
 }
+
+MINE_SLOT_DIR = ROOT / 'assets' / 'mine-grid'
+
+
+def _pixel_group(font, text, center_x, baseline, size=16, fill='#d8e2e8'):
+    """Convert one label to font outlines so GitHub never substitutes the font."""
+    width, paths, scale = font.paths(text, size=size)
+    return (f'<g fill="{fill}" transform="translate({center_x - width / 2:.2f} {baseline}) '
+            f'scale({scale:.6f} {-scale:.6f})">{paths}</g>')
+
+
+def _slot_svg(x, y, cell):
+    """Write one self-contained lacquer-and-nacre mine slot."""
+    from pixel_readme import PixelText
+
+    ore = cell['ore'] if cell else 'stone'
+    source = ROOT / 'assets' / 'blocks' / ('mined' if cell else '') / f'{ore}.svg'
+    block_uri = 'data:image/svg+xml;base64,' + base64.b64encode(source.read_bytes()).decode('ascii')
+    font = PixelText(ROOT)
+    label = '' if cell is None else '채굴 완료'
+    reward = '' if cell is None else f'{ORES[ore][0]} 획득'
+    coord = _pixel_group(font, str(x + 1), 80, 22, size=16, fill='#e7eef2')
+    labels = '' if cell is None else (
+        _pixel_group(font, label, 80, 137, size=14)
+        + _pixel_group(font, reward, 80, 160, size=14, fill='#b9eba6'))
+    # The rectilinear corners borrow the proportions of Joseon key-fret inlay.
+    corner = ('M6 31V6h25 M11 27V11h16v8h-8v-4h4 '
+              'M154 31V6h-25 M149 27V11h-16v8h8v-4h-4 '
+              'M6 145v25h25 M11 149v16h16v-8h-8v4h4 '
+              'M154 145v25h-25 M149 149v16h-16v-8h8v4h-4')
+    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="160" height="176" viewBox="0 0 160 176" role="img">
+<title>{escape(str(x + 1) + '열 ' + str(y + 1) + '행' + (': 돌' if cell is None else ': 채굴 완료, ' + ORES[ore][0] + ' 획득'))}</title>
+<defs>
+  <linearGradient id="lacquer" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111820"/><stop offset=".52" stop-color="#05090d"/><stop offset="1" stop-color="#10151b"/></linearGradient>
+  <linearGradient id="nacre" x1="0%" y1="0%" x2="100%" y2="100%"><stop stop-color="#91edf0"/><stop offset="28%" stop-color="#f3d5ea"/><stop offset="55%" stop-color="#e8cf86"/><stop offset="78%" stop-color="#91c9f5"/><stop offset="100%" stop-color="#c7f4db"/></linearGradient>
+</defs>
+<rect x="1.5" y="1.5" width="157" height="173" rx="2" fill="url(#lacquer)" stroke="#18242c" stroke-width="3"/>
+<path d="M5 5h150v2H7v164H5zm150 0v166H5v-2h148V5z" fill="#bceef0"/>
+<rect x="10" y="10" width="140" height="156" fill="none" stroke="#c5a764" stroke-opacity=".78"/>
+<path d="{corner}" fill="none" stroke="#8de6ec" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"/>
+<g fill="#72d4da"><path d="M5 5h27v4H9v23H5zM11 11h16v4H15v12h-4z"/><path d="M155 5h-27v4h23v23h4zM149 11h-16v4h12v12h4z"/><path d="M5 171h27v-4H9v-23H5zM11 165h16v-4H15v-12h-4z"/><path d="M155 171h-27v-4h23v-23h4zM149 165h-16v-4h12v-12h4z"/></g>
+<g fill="#efc7e5" stroke="#dfbd72" stroke-width=".7"><path d="M8 4l4 4-4 4-4-4z"/><path d="M152 4l4 4-4 4-4-4z"/><path d="M8 164l4 4-4 4-4-4z"/><path d="M152 164l4 4-4 4-4-4z"/></g>
+<g fill="#eed7a0"><path d="M56 6l6 4 6-4 6 4 6-4 6 4 6-4 6 4 6-4v3l-6 4-6-4-6 4-6-4-6 4-6-4-6 4-6-4z"/><path d="M56 170l6-4 6 4 6-4 6 4 6-4 6 4 6-4 6 4v-3l-6-4-6 4-6-4-6 4-6-4-6 4-6-4-6 4z"/></g>
+{coord}
+<image x="50" y="48" width="60" height="60" preserveAspectRatio="xMidYMid meet" href="{block_uri}"/>
+{labels}
+</svg>
+'''
+    MINE_SLOT_DIR.mkdir(parents=True, exist_ok=True)
+    path = MINE_SLOT_DIR / f'cell-{y + 1}-{x + 1}.svg'
+    path.write_text(svg)
+    return path.relative_to(ROOT).as_posix()
 
 def new_grid():
     # Draw ore on mining, so the public state file cannot reveal hidden ores.
@@ -74,25 +128,22 @@ def render(text, state, live=False, repo='oi-RYH/oi-RYH'):
     notice_text = ('돌을 클릭하고 열린 이슈를 제출하면 채굴됩니다. GitHub 계정당 UTC 기준 하루 1회 채굴할 수 있습니다.' if live else
                    '**미리보기 모드** · 광산 자동화는 기본 브랜치에 반영한 뒤 활성화됩니다. 지금은 이슈가 생성되지 않습니다.')
     notice = f'<p align="center">{notice_text}</p>'
-    rows = ['<table align="center">', '<thead><tr>'
-            + ''.join(f'<th align="center">{x + 1}</th>' for x in range(WIDTH))
-            + '</tr></thead>', '<tbody>']
+    rows = ['<p align="center">']
     for y, row in enumerate(state['grid']):
         cells = []
         for x, cell in enumerate(row):
             ore = cell['ore'] if cell else 'stone'
-            img = f'<img src="assets/blocks/{ore}.svg" width="44" alt="{x+1}열 {y+1}행: {ORES[ore][0]}">'
+            slot = _slot_svg(x, y, cell)
+            alt = (f'{x+1}열 {y+1}행: {ORES[ore][0]}' if cell is None
+                   else f'{x+1}열 {y+1}행: 채굴 완료, {ORES[ore][0]} 획득')
+            img = f'<img src="{slot}" width="16%" alt="{alt}">'
             if cell is None:
                 query = urlencode(dict(title=f'mine|{state["layer"]}|{x}|{y}', body='제목을 그대로 두고 이슈를 제출하면 이 블록을 채굴합니다.'))
                 link = f'https://github.com/{repo}/issues/new?{query}' if live else '#mine-help'
                 img = f'<a href="{link}">{img}</a>'
-            else:
-                img = (f'<img src="assets/blocks/mined/{ore}.svg" width="44" '
-                       f'alt="{x+1}열 {y+1}행: 채굴 완료, {ORES[ore][0]} 획득">'
-                       f'<br><sub>채굴 완료<br>{ORES[ore][0]} 획득</sub>')
-            cells.append(f'<td align="center">{img}</td>')
-        rows.append('<tr>' + ''.join(cells) + '</tr>')
-    rows += ['</tbody>', '</table>']
+            cells.append(img)
+        rows.append(''.join(cells) + ('<br>' if y < HEIGHT - 1 else ''))
+    rows.append('</p>')
     count = sum(cell is not None for row in state['grid'] for cell in row)
     stats = [f'<p align="center"><strong>지하 {state["layer"]}층</strong> · 이번 층 {count}/{WIDTH*HEIGHT}블록 · 누적 {sum(state["totals"].values())}블록</p>']
     if state['miners']:
@@ -167,7 +218,7 @@ def main():
     path.write_text(json.dumps(state, ensure_ascii=False, indent=2) + '\n')
     build(rendered, ROOT)
     if args.queue:
-        git('add', 'README.md', 'data/mine.json', 'assets/text', 'data/recent-repos.json',
+        git('add', 'README.md', 'data/mine.json', 'assets/text', 'assets/mine-grid', 'data/recent-repos.json',
             'assets/scenes/quest-board-python-body12.png', 'assets/scenes/quest-board-python-body12-1.png',
             'assets/scenes/quest-board-python-body12-2.png', 'assets/scenes/quest-board-python-body12-3.png')
         if git('diff', '--cached', '--name-only'):
