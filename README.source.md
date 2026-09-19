@@ -19,8 +19,6 @@
 <!-- RECENT_REPOS:START -->
 <!-- RECENT_REPOS:END -->
 
-<img src="assets/scenes/quest-break.jpg" width="100%" alt="상자와 횃불이 놓인 마인크래프트풍 지하 창고" />
-
 <a name="inventory"></a>
 
 ## <img src="assets/blocks/chest.svg" width="28" alt="상자"> <img src="assets/headings/inventory.svg" width="112" alt="Inventory">
@@ -53,6 +51,8 @@
 조만간 닭이 커밋하는 메시지가 올라올 예정입니다.
 
 </details>
+
+<img src="assets/scenes/quest-break.jpg" width="100%" alt="상자와 횃불이 놓인 마인크래프트풍 지하 창고" />
 
 <a name="community-mine"></a>
 

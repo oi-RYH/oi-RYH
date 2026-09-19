@@ -18,11 +18,7 @@
 
 <!-- RECENT_REPOS:START -->
 <p align="center"><a href="https://github.com/oi-RYH/Dawn"><img src="assets/scenes/quest-board-python-body12-1.png" width="40%" alt="Dawn 저장소 퀘스트 종이"></a><a href="https://github.com/oi-RYH/capstone_design"><img src="assets/scenes/quest-board-python-body12-2.png" width="20%" alt="capstone_design 저장소 퀘스트 종이"></a><a href="https://github.com/oi-RYH/BrassField_plugin"><img src="assets/scenes/quest-board-python-body12-3.png" width="40%" alt="BrassField_plugin 저장소 퀘스트 종이"></a></p>
-
-<sub><picture><img src="assets/text/851d37331e5cfe87386b.svg" width="460" alt="최근 푸시한 공개 저장소 · 최대 3개 · 매시간 갱신 · 날짜는 UTC 기준 (프로필·포크·보관된 저장소 제외)"></picture></sub>
 <!-- RECENT_REPOS:END -->
-
-<img src="assets/scenes/quest-break.jpg" width="100%" alt="상자와 횃불이 놓인 마인크래프트풍 지하 창고" />
 
 <a name="inventory"></a>
 
@@ -56,6 +52,8 @@
 <picture><img src="assets/text/5047c181f18351b95015.svg" width="388" alt="조만간 닭이 커밋하는 메시지가 올라올 예정입니다."></picture>
 
 </details>
+
+<img src="assets/scenes/quest-break.jpg" width="100%" alt="상자와 횃불이 놓인 마인크래프트풍 지하 창고" />
 
 <a name="community-mine"></a>
 
