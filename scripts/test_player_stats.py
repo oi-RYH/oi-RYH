@@ -25,6 +25,8 @@ class PlayerStatsTests(unittest.TestCase):
         self.assertIn('href="data:image/png;base64,', svg)
         self.assertEqual(svg.count('href="http'), 0)
         self.assertEqual(svg.count('class="slot"'), 10)
+        self.assertEqual(svg.count('class="nacre-corner"'), 10)
+        self.assertEqual(svg.count('class="nacre-gem"'), 40)
         self.assertIn('prefers-reduced-motion', svg)
         self.assertIn('aria-label="안경을 쓰고 곡괭이와 맥북을 든 스티브"', svg)
 

@@ -91,9 +91,24 @@ def fetch_stats(login, token):
 
 
 def slot(x, y, width, height):
-    return (f'<rect class="slot" x="{x}" y="{y}" width="{width}" height="{height}"/>'
+    left, top, right, bottom = x, y, x + width, y + height
+    corners = (
+        f'M{left+3} {top+13}V{top+3}H{left+13} M{left+3} {top+8}H{left+8}V{top+3} '
+        f'M{right-13} {top+3}H{right-3}V{top+13} M{right-8} {top+3}V{top+8}H{right-3} '
+        f'M{left+3} {bottom-13}V{bottom-3}H{left+13} M{left+3} {bottom-8}H{left+8}V{bottom-3} '
+        f'M{right-13} {bottom-3}H{right-3}V{bottom-13} M{right-8} {bottom-3}V{bottom-8}H{right-3}'
+    )
+    gems = ''.join(
+        f'<path class="nacre-gem" d="M{cx} {cy-3}l3 3-3 3-3-3z"/>'
+        for cx, cy in ((left+8, top+8), (right-8, top+8),
+                       (left+8, bottom-8), (right-8, bottom-8))
+    )
+    return (f'<g class="inventory-slot">'
+            f'<rect class="slot" x="{x}" y="{y}" width="{width}" height="{height}"/>'
+            f'<rect class="slot-inset" x="{x+4}" y="{y+4}" width="{width-8}" height="{height-8}"/>'
             f'<path class="slot-shadow" d="M{x} {y+height}V{y}H{x+width}"/>'
-            f'<path class="slot-light" d="M{x} {y+height}H{x+width}V{y}"/>')
+            f'<path class="slot-light" d="M{x} {y+height}H{x+width}V{y}"/>'
+            f'<path class="nacre-corner" d="{corners}"/>{gems}</g>')
 
 
 def stat_icon(kind, x, y):
@@ -188,7 +203,11 @@ def render(stats):
 </defs>
 <style>
   .panel{{fill:#050708;stroke:#111820;stroke-width:2}} .panel-light{{fill:none;stroke:#d9f8f3;stroke-opacity:.5;stroke-width:2}} .panel-shadow{{fill:none;stroke:#111820;stroke-width:2}}
-  .slot{{fill:#070c10;fill-opacity:.94;stroke:url(#nacre-edge);stroke-width:2}} .slot-shadow{{fill:none;stroke:#26363e;stroke-width:2}} .slot-light{{fill:none;stroke:#d9f8f3;stroke-opacity:.62;stroke-width:1}}
+  .slot{{fill:#070c10;fill-opacity:.94;stroke:#e8fff9;stroke-width:2}}
+  .slot-inset{{fill:none;stroke:#69d9df;stroke-opacity:.8;stroke-width:1}}
+  .slot-shadow{{fill:none;stroke:#26363e;stroke-width:2}} .slot-light{{fill:none;stroke:#d9f8f3;stroke-opacity:.62;stroke-width:1}}
+  .nacre-corner{{fill:none;stroke:#efc9e8;stroke-width:2;stroke-linecap:square;stroke-linejoin:miter}}
+  .nacre-gem{{fill:#9fe9f2;stroke:#d9a95e;stroke-width:.7}}
   .label-plate{{fill:#050708;fill-opacity:.86;stroke:url(#nacre-edge);stroke-width:1}}
   .ink{{fill:#eef5f4}} .bright{{fill:#b6e89b}} .muted{{fill:#b7c5ca}} .slot-muted{{fill:#d5dcdf}}
   .pixel-icon{{image-rendering:pixelated;image-rendering:crisp-edges}} .glint{{animation:glint 2.8s steps(2,end) infinite}} .laptop{{animation:laptop 3s steps(2,end) infinite}}
