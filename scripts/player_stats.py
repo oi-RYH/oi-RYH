@@ -25,6 +25,7 @@ LANGUAGE_COLORS = {
 ICON_DIR = ROOT / 'assets' / 'icons'
 LANGUAGE_ICON_DIR = ROOT / 'assets' / 'languages'
 PICKAXE_IMAGE = ICON_DIR / 'diamond-pickaxe.png'
+NAJEON_BACKGROUND = ROOT / 'assets' / 'player-inventory' / 'najeon-sansuhwa-background.png'
 LANGUAGE_ICONS = {
     'C++': 'cplusplus.png', 'C#': 'csharp.png', 'Python': 'python.png',
     'TypeScript': 'typescript.png', 'JavaScript': 'javascript.png',
@@ -38,6 +39,13 @@ LANGUAGE_ICONS = {
 def image_data_uri(path, media_type):
     data = base64.b64encode(path.read_bytes()).decode('ascii')
     return f'data:{media_type};base64,{data}'
+
+
+def najeon_background():
+    """Return the ornament-only lacquer background; live data is drawn above it."""
+    href = image_data_uri(NAJEON_BACKGROUND, 'image/png')
+    return (f'<image data-layer="najeon-background" x="0" y="0" '
+            f'width="{WIDTH}" height="{HEIGHT}" preserveAspectRatio="none" href="{href}"/>')
 
 
 def api(path, token):
@@ -171,16 +179,27 @@ def render(stats):
         f"{stats.get('followers', 0)} followers, {stats.get('year_contributions', 0)} contributions in the last year.")
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="{HEIGHT}" viewBox="0 0 {WIDTH} {HEIGHT}" role="img" aria-labelledby="title desc" shape-rendering="crispEdges">
 <title id="title">{title}</title><desc id="desc">{description}</desc>
+<defs>
+  <linearGradient id="nacre-edge" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#f5f2dc"/><stop offset=".2" stop-color="#77e5e5"/>
+    <stop offset=".45" stop-color="#b7a2ff"/><stop offset=".68" stop-color="#f0b7dc"/>
+    <stop offset="1" stop-color="#dffcf2"/>
+  </linearGradient>
+</defs>
 <style>
-  .panel{{fill:#c6c6c6;stroke:#1f1f1f;stroke-width:5}} .panel-light{{fill:none;stroke:#ffffff;stroke-width:4}} .panel-shadow{{fill:none;stroke:#555555;stroke-width:4}}
-  .slot{{fill:#252a2e}} .slot-shadow{{fill:none;stroke:#555b60;stroke-width:4}} .slot-light{{fill:none;stroke:#e5e5e5;stroke-width:3}}
-  .ink{{fill:#242424}} .bright{{fill:#b6e89b}} .muted{{fill:#687078}} .slot-muted{{fill:#b8c0c5}}
+  .panel{{fill:#050708;stroke:#111820;stroke-width:2}} .panel-light{{fill:none;stroke:#d9f8f3;stroke-opacity:.5;stroke-width:2}} .panel-shadow{{fill:none;stroke:#111820;stroke-width:2}}
+  .slot{{fill:#070c10;fill-opacity:.94;stroke:url(#nacre-edge);stroke-width:2}} .slot-shadow{{fill:none;stroke:#26363e;stroke-width:2}} .slot-light{{fill:none;stroke:#d9f8f3;stroke-opacity:.62;stroke-width:1}}
+  .label-plate{{fill:#050708;fill-opacity:.86;stroke:url(#nacre-edge);stroke-width:1}}
+  .ink{{fill:#eef5f4}} .bright{{fill:#b6e89b}} .muted{{fill:#b7c5ca}} .slot-muted{{fill:#d5dcdf}}
   .pixel-icon{{image-rendering:pixelated;image-rendering:crisp-edges}} .glint{{animation:glint 2.8s steps(2,end) infinite}} .laptop{{animation:laptop 3s steps(2,end) infinite}}
   @keyframes glint{{50%{{opacity:.15}}}} @keyframes laptop{{50%{{filter:brightness(1.18)}}}}
   @media(prefers-reduced-motion:reduce){{.glint,.laptop{{animation:none}}}}
 </style>
 <rect class="panel" x="2" y="2" width="956" height="326"/>
+{najeon_background()}
 <path class="panel-light" d="M8 322V8H952"/><path class="panel-shadow" d="M8 322H952V8"/>
+<rect class="label-plate" x="30" y="14" width="250" height="30"/>
+<rect class="label-plate" x="548" y="14" width="382" height="26"/>
 {outlined(font, 'PLAYER INVENTORY', 38, 37, 22, 'ink')}
 {outlined(font, f'CURRENT QUEST · {current_display}', 560, 33, 12, 'muted')}
 {avatar()}

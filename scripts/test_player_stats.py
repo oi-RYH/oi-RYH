@@ -21,6 +21,8 @@ class PlayerStatsTests(unittest.TestCase):
         self.assertIn('14 public repositories, 7 stars, 9 followers, 456 contributions', svg)
         self.assertNotIn('<text', svg)
         self.assertIn('href="data:image/jpeg;base64,', svg)
+        self.assertIn('data-layer="najeon-background"', svg)
+        self.assertIn('href="data:image/png;base64,', svg)
         self.assertEqual(svg.count('href="http'), 0)
         self.assertEqual(svg.count('class="slot"'), 10)
         self.assertIn('prefers-reduced-motion', svg)
