@@ -71,9 +71,12 @@ def replace(text, name, content):
     return re.sub(pattern, lambda _: f'<!-- {name}:START -->\n{content}\n<!-- {name}:END -->', text, flags=re.S)
 
 def render(text, state, live=False, repo='oi-RYH/oi-RYH'):
-    notice = ('돌을 클릭하고 열린 이슈를 제출하면 채굴됩니다. GitHub 계정당 UTC 기준 하루 1회 채굴할 수 있습니다.' if live else
-              '**미리보기 모드** · 광산 자동화는 기본 브랜치에 반영한 뒤 활성화됩니다. 지금은 이슈가 생성되지 않습니다.')
-    rows = ['| ' + ' | '.join(str(x + 1) for x in range(WIDTH)) + ' |', '|' + ':---:|' * WIDTH]
+    notice_text = ('돌을 클릭하고 열린 이슈를 제출하면 채굴됩니다. GitHub 계정당 UTC 기준 하루 1회 채굴할 수 있습니다.' if live else
+                   '**미리보기 모드** · 광산 자동화는 기본 브랜치에 반영한 뒤 활성화됩니다. 지금은 이슈가 생성되지 않습니다.')
+    notice = f'<p align="center">{notice_text}</p>'
+    rows = ['<table align="center">', '<thead><tr>'
+            + ''.join(f'<th align="center">{x + 1}</th>' for x in range(WIDTH))
+            + '</tr></thead>', '<tbody>']
     for y, row in enumerate(state['grid']):
         cells = []
         for x, cell in enumerate(row):
@@ -82,26 +85,31 @@ def render(text, state, live=False, repo='oi-RYH/oi-RYH'):
             if cell is None:
                 query = urlencode(dict(title=f'mine|{state["layer"]}|{x}|{y}', body='제목을 그대로 두고 이슈를 제출하면 이 블록을 채굴합니다.'))
                 link = f'https://github.com/{repo}/issues/new?{query}' if live else '#mine-help'
-                img = f'[{img}]({link})'
+                img = f'<a href="{link}">{img}</a>'
             else:
                 img = (f'<img src="assets/blocks/mined/{ore}.svg" width="44" '
                        f'alt="{x+1}열 {y+1}행: 채굴 완료, {ORES[ore][0]} 획득">'
                        f'<br><sub>채굴 완료<br>{ORES[ore][0]} 획득</sub>')
-            cells.append(img)
-        rows.append('| ' + ' | '.join(cells) + ' |')
+            cells.append(f'<td align="center">{img}</td>')
+        rows.append('<tr>' + ''.join(cells) + '</tr>')
+    rows += ['</tbody>', '</table>']
     count = sum(cell is not None for row in state['grid'] for cell in row)
-    stats = [f'**지하 {state["layer"]}층** · 이번 층 {count}/{WIDTH*HEIGHT}블록 · 누적 {sum(state["totals"].values())}블록']
+    stats = [f'<p align="center"><strong>지하 {state["layer"]}층</strong> · 이번 층 {count}/{WIDTH*HEIGHT}블록 · 누적 {sum(state["totals"].values())}블록</p>']
     if state['miners']:
-        stats += ['', '| 광부 | 블록 | 점수 |', '| :--- | ---: | ---: |']
+        stats += ['', '<table align="center">',
+                  '<thead><tr><th align="center">광부</th><th align="center">블록</th><th align="center">점수</th></tr></thead>',
+                  '<tbody>']
         for user, rec in sorted(state['miners'].items(), key=lambda item: (-item[1]['score'], item[0]))[:5]:
-            stats.append(f'| [@{user}](https://github.com/{user}) | {rec["blocks"]} | {rec["score"]} |')
-        stats += ['', '**최근 발견**', '']
+            stats.append(f'<tr><td align="center"><a href="https://github.com/{user}">@{user}</a></td>'
+                         f'<td align="center">{rec["blocks"]}</td><td align="center">{rec["score"]}</td></tr>')
+        stats += ['</tbody>', '</table>', '', '<p align="center"><strong>최근 발견</strong><br>']
         for entry in reversed(state['log']):
             for ore, (name, emoji, _, _) in ORES.items():
                 entry = entry.replace(emoji, f'<img src="assets/blocks/{ore}.svg" width="20" alt="{name}">')
-            stats.append('- ' + entry)
+            stats.append(entry + '<br>')
+        stats.append('</p>')
     else:
-        stats += ['', '아직 첫 광부가 없습니다. 오리는 곡괭이를 들 수 없거든요.']
+        stats += ['', '<p align="center">아직 첫 광부가 없습니다. 오리는 곡괭이를 들 수 없거든요.</p>']
     for name, content in [('MINE_MODE', notice), ('MINE_GRID', '\n'.join(rows)), ('MINE_STATS', '\n'.join(stats))]:
         text = replace(text, name, content)
     return text

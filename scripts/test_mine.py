@@ -58,6 +58,8 @@ class MineTests(unittest.TestCase):
         live = mine.render(text, state, live=True)
         self.assertEqual(live.count('/issues/new?'), mine.WIDTH*mine.HEIGHT)
         self.assertIn('mine%7C1%7C0%7C0', live)
+        self.assertGreaterEqual(live.count('<table align="center">'), 1)
+        self.assertIn('<p align="center">', live)
         with self.assertRaises(ValueError):
             mine.render('missing markers', state)
 

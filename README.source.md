@@ -54,9 +54,9 @@
 
 <a name="community-mine"></a>
 
-## <img src="assets/blocks/pickaxe.svg" width="28" alt="곡괭이"> <img src="assets/headings/community-mine.svg" width="112" alt="공용 광산">
+<h2 align="center"><img src="assets/blocks/pickaxe.svg" width="28" alt="곡괭이"> <img src="assets/headings/community-mine.svg" width="112" alt="공용 광산"></h2>
 
-여기까지 왔으면 돌 하나는 캐고 가세요. 맥북 수리비에 보태겠습니다.
+<p align="center">여기까지 왔으면 돌 하나는 캐고 가세요. 맥북 수리비에 보태겠습니다.</p>
 
 <a name="mine-help"></a>
 

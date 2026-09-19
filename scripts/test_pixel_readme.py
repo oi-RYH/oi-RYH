@@ -26,7 +26,7 @@ class PixelReadmeTests(unittest.TestCase):
         state['totals']['stone'] = 1
         first = build(mine.render(source, state, live=True), self.root)
         self.assertEqual(first.count('/issues/new?'), 17)
-        self.assertIn('](https://github.com/player)', first)
+        self.assertIn('href="https://github.com/player"', first)
         self.assertIn('alt="채굴 완료"', first)
         self.assertEqual(first.count('<details'), source.count('<details'))
         state['miners']['player']['score'] = 50
