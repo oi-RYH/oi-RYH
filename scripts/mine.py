@@ -36,7 +36,7 @@ def _pixel_group(font, text, center_x, baseline, size=16, fill='#d8e2e8'):
 
 
 def _slot_svg(x, y, cell):
-    """Write one self-contained lacquer-and-nacre mine slot."""
+    """Write one self-contained gold-leaf neungwha mine slot."""
     from pixel_readme import PixelText
 
     ore = cell['ore'] if cell else 'stone'
@@ -45,28 +45,36 @@ def _slot_svg(x, y, cell):
     font = PixelText(ROOT)
     label = '' if cell is None else '채굴 완료'
     reward = '' if cell is None else f'{ORES[ore][0]} 획득'
-    coord = _pixel_group(font, str(x + 1), 80, 22, size=16, fill='#e7eef2')
+    coord = _pixel_group(font, str(x + 1), 80, 23, size=16, fill='#f0ca70') if y == 0 else ''
     labels = '' if cell is None else (
-        _pixel_group(font, label, 80, 137, size=14)
-        + _pixel_group(font, reward, 80, 160, size=14, fill='#b9eba6'))
-    # The rectilinear corners borrow the proportions of Joseon key-fret inlay.
-    corner = ('M6 31V6h25 M11 27V11h16v8h-8v-4h4 '
-              'M154 31V6h-25 M149 27V11h-16v8h8v-4h-4 '
-              'M6 145v25h25 M11 149v16h16v-8h-8v4h4 '
-              'M154 145v25h-25 M149 149v16h-16v-8h8v4h-4')
-    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="160" height="176" viewBox="0 0 160 176" role="img">
+        _pixel_group(font, label, 80, 137, size=14, fill='#f0e3bc')
+        + _pixel_group(font, reward, 80, 160, size=14, fill='#edc86a'))
+    # Adjacent cards form one continuous double gold frame at the perimeter.
+    outer = ''
+    if x == 0:
+        outer += '<rect x="2" width="1" height="176" fill="#f0cf76"/><rect x="6" width="1" height="176" fill="#f0cf76"/>'
+    if x == WIDTH - 1:
+        outer += '<rect x="157" width="1" height="176" fill="#f0cf76"/><rect x="153" width="1" height="176" fill="#f0cf76"/>'
+    if y == 0:
+        outer += '<rect y="2" width="160" height="1" fill="#f0cf76"/><rect y="6" width="160" height="1" fill="#f0cf76"/>'
+    if y == HEIGHT - 1:
+        outer += '<rect y="173" width="160" height="1" fill="#f0cf76"/><rect y="169" width="160" height="1" fill="#f0cf76"/>'
+    glint_x = 18 + ((x * 31 + y * 17) % 124)
+    glint = (f'<circle cx="{glint_x}" cy="5" r="2.5" fill="#58c8ff" opacity=".25"><animate attributeName="opacity" values=".2;1;.2" dur="4.8s" repeatCount="indefinite"/></circle>'
+             if (x + y * WIDTH) % 4 == 0 else '')
+    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="160" height="176" viewBox="0 0 160 176" role="img" data-theme="gold-leaf-neungwha">
 <title>{escape(str(x + 1) + '열 ' + str(y + 1) + '행' + (': 돌' if cell is None else ': 채굴 완료, ' + ORES[ore][0] + ' 획득'))}</title>
-<defs>
-  <linearGradient id="lacquer" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111820"/><stop offset=".52" stop-color="#05090d"/><stop offset="1" stop-color="#10151b"/></linearGradient>
-  <linearGradient id="nacre" x1="0%" y1="0%" x2="100%" y2="100%"><stop stop-color="#91edf0"/><stop offset="28%" stop-color="#f3d5ea"/><stop offset="55%" stop-color="#e8cf86"/><stop offset="78%" stop-color="#91c9f5"/><stop offset="100%" stop-color="#c7f4db"/></linearGradient>
-</defs>
-<rect x="1.5" y="1.5" width="157" height="173" rx="2" fill="url(#lacquer)" stroke="#18242c" stroke-width="3"/>
-<path d="M5 5h150v2H7v164H5zm150 0v166H5v-2h148V5z" fill="#bceef0"/>
-<rect x="10" y="10" width="140" height="156" fill="none" stroke="#c5a764" stroke-opacity=".78"/>
-<path d="{corner}" fill="none" stroke="#8de6ec" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"/>
-<g fill="#72d4da"><path d="M5 5h27v4H9v23H5zM11 11h16v4H15v12h-4z"/><path d="M155 5h-27v4h23v23h4zM149 11h-16v4h12v12h4z"/><path d="M5 171h27v-4H9v-23H5zM11 165h16v-4H15v-12h-4z"/><path d="M155 171h-27v-4h23v-23h4zM149 165h-16v-4h12v-12h4z"/></g>
-<g fill="#efc7e5" stroke="#dfbd72" stroke-width=".7"><path d="M8 4l4 4-4 4-4-4z"/><path d="M152 4l4 4-4 4-4-4z"/><path d="M8 164l4 4-4 4-4-4z"/><path d="M152 164l4 4-4 4-4-4z"/></g>
-<g fill="#eed7a0"><path d="M56 6l6 4 6-4 6 4 6-4 6 4 6-4 6 4 6-4v3l-6 4-6-4-6 4-6-4-6 4-6-4-6 4-6-4z"/><path d="M56 170l6-4 6 4 6-4 6 4 6-4 6 4 6-4 6 4v-3l-6-4-6 4-6-4-6 4-6-4-6 4-6-4-6 4z"/></g>
+<rect x="0" y="0" width="160" height="176" fill="#071426"/>
+<g fill="none" stroke="#41658e" stroke-width="1.2" opacity=".34">
+  <path d="M80 43c-8 9-13 19-13 31 6-3 10-7 13-13 3 6 7 10 13 13 0-12-5-22-13-31z"/>
+  <path d="M67 62c-10 2-18 7-23 16 8 0 15-2 21-8-1 8 1 15 7 21 4-10 3-20-5-29zm26 0c10 2 18 7 23 16-8 0-15-2-21-8 1 8-1 15-7 21-4-10-3-20 5-29z"/>
+</g>
+<g fill="#d8ae50"><rect x="1" y="1" width="158" height="2"/><rect x="1" y="173" width="158" height="2"/><rect x="1" y="1" width="2" height="174"/><rect x="157" y="1" width="2" height="174"/></g>
+<path d="M7 25V7h18M11 21V11h10v5h-5M153 25V7h-18M149 21V11h-10v5h5M7 151v18h18M11 155v10h10v-5h-5M153 151v18h-18M149 155v10h-10v-5h5" fill="none" stroke="#e2bb61" stroke-width="2"/>
+<path d="M68 7l4 4 4-4 4 4 4-4 4 4 4-4v3l-4 4-4-4-4 4-4-4-4 4-4-4zM68 169l4-4 4 4 4-4 4 4 4-4 4 4v-3l-4-4-4 4-4-4-4 4-4-4-4 4z" fill="#d7ae55"/>
+<rect x="0" y="33" width="160" height="2" fill="#d2a84d"/>
+<g fill="#d9b45f"><path d="M14 30l3 3-3 3-3-3z"/><path d="M146 30l3 3-3 3-3-3z"/><circle cx="19" cy="164" r="1.5"/><circle cx="141" cy="164" r="1.5"/></g>
+{outer}{glint}
 {coord}
 <image x="50" y="48" width="60" height="60" preserveAspectRatio="xMidYMid meet" href="{block_uri}"/>
 {labels}

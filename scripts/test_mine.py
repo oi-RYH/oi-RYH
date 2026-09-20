@@ -60,7 +60,7 @@ class MineTests(unittest.TestCase):
         self.assertEqual(live.count('/issues/new?'), mine.WIDTH*mine.HEIGHT)
         self.assertIn('mine%7C1%7C0%7C0', live)
         self.assertEqual(live.count('assets/mine-grid/cell-'), mine.WIDTH*mine.HEIGHT)
-        self.assertIn('stroke="#8de6ec"', (mine.MINE_SLOT_DIR / 'cell-1-1.svg').read_text())
+        self.assertIn('data-theme="gold-leaf-neungwha"', (mine.MINE_SLOT_DIR / 'cell-1-1.svg').read_text())
         for path in mine.MINE_SLOT_DIR.glob('cell-*.svg'):
             ET.parse(path)
         self.assertIn('<p align="center">', live)
