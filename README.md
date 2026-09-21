@@ -15,7 +15,7 @@
 <h2 align="center"><img src="assets/blocks/crafting_table.svg" width="28" alt="제작대"> <picture><img src="assets/headings/crafting.svg" width="220" alt="Currently crafting"></picture></h2>
 
 <!-- RECENT_REPOS:START -->
-<p align="center"><a href="https://github.com/oi-RYH/Dawn"><img src="assets/scenes/quest-board-python-body12-1.png" width="40%" alt="Dawn 저장소 퀘스트 종이"></a><a href="https://github.com/oi-RYH/capstone_design"><img src="assets/scenes/quest-board-python-body12-2.png" width="20%" alt="capstone_design 저장소 퀘스트 종이"></a><a href="https://github.com/oi-RYH/BrassField_plugin"><img src="assets/scenes/quest-board-python-body12-3.png" width="40%" alt="BrassField_plugin 저장소 퀘스트 종이"></a></p>
+<p align="center"><a href="https://github.com/oi-RYH/capstone_design"><img src="assets/scenes/quest-board-python-body12-1.png" width="40%" alt="capstone_design 저장소 퀘스트 종이"></a><a href="https://github.com/oi-RYH/Dawn"><img src="assets/scenes/quest-board-python-body12-2.png" width="20%" alt="Dawn 저장소 퀘스트 종이"></a><a href="https://github.com/oi-RYH/BrassField_plugin"><img src="assets/scenes/quest-board-python-body12-3.png" width="40%" alt="BrassField_plugin 저장소 퀘스트 종이"></a></p>
 <!-- RECENT_REPOS:END -->
 
 <a name="inventory"></a>
