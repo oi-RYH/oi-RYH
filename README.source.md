@@ -12,10 +12,7 @@
 
 <a name="crafting"></a>
 
-<h2 align="center"><img src="assets/blocks/crafting_table.svg" width="28" alt="제작대"> <img src="assets/headings/selected-builds.svg" width="184" alt="Selected builds"></h2>
-
-<p align="center"><strong>사용자의 움직임과 현실의 장치를 소프트웨어로 연결합니다.</strong><br>
-macOS 경험, 임베디드 시스템, 컴퓨터 비전과 게임 서버 도구를 만들고 있습니다.</p>
+<h2 align="center"><img src="assets/blocks/crafting_table.svg" width="28" alt="제작대"> <img src="assets/headings/featured-projects.svg" width="208" alt="Featured Projects"></h2>
 
 <p align="center">
   <a href="https://github.com/oi-RYH?tab=repositories">전체 저장소</a> ·
@@ -44,33 +41,27 @@ macOS 경험, 임베디드 시스템, 컴퓨터 비전과 게임 서버 도구�
 <p align="center"><a href="https://github.com/oi-RYH/capstone_design">Repository</a></p>
 </td>
 <td align="center" valign="top" width="33%">
-<img src="assets/blocks/crafting_table.svg" width="84" alt="제작대">
-<h3>BrassField plugin</h3>
-<p align="center"><strong>아이템 강화 과정을 GUI와 애니메이션으로 구현한 Minecraft 플러그인</strong></p>
-<p align="center">강화 성공·실패, 레벨 메타데이터, 인벤토리 GUI와 아이템 전달 흐름을 구현합니다.</p>
-<p align="center"><code>Java 25</code> <code>Paper 1.21</code> <code>Gradle</code></p>
-<p align="center"><strong>현재:</strong> 기능 프로토타입</p>
-<p align="center"><a href="https://github.com/oi-RYH/BrassField_plugin">Repository</a></p>
+<img src="assets/blocks/sapling.svg" width="84" alt="새싹">
+<h3>Saydays</h3>
+<p align="center"><strong>자연어로 일정과 Todo를 만들고 여러 기기에서 이어 쓰는 캘린더</strong></p>
+<p align="center">Web·iOS·Android 앱과 동기화 서버를 함께 개발하며, 소셜 캘린더와 프로젝트 모드를 확장하고 있습니다.</p>
+<p align="center"><code>Swift</code> <code>Kotlin</code> <code>React</code> <code>Cloudflare</code></p>
+<p align="center"><strong>현재:</strong> 멀티플랫폼 개발 중</p>
+<p align="center"><a href="https://github.com/oi-RYH/11.03_colloquial-calendar">Repository</a> · <a href="https://saydays.com">Web app</a></p>
 </td>
 </tr>
 </table>
+
+<h3 align="center"><img src="assets/headings/recently-updated.svg" width="164" alt="Recently Updated"></h3>
+
+<!-- RECENT_REPOS:START -->
+<!-- RECENT_REPOS:END -->
 
 <a name="inventory"></a>
 
 <h2 align="center"><img src="assets/blocks/chest.svg" width="28" alt="상자"> <img src="assets/headings/technical-loadout.svg" width="210" alt="Technical loadout"></h2>
 
 <p align="center">도구의 개수보다, 어떤 문제에 사용했는지를 함께 기록합니다.</p>
-
-<table align="center">
-<thead>
-<tr><th align="center">분야</th><th align="center">도구</th><th align="center">적용 경험</th></tr>
-</thead>
-<tbody>
-<tr><td align="center"><strong>Product & UI</strong></td><td align="center">Swift · TypeScript · JavaScript · Three.js</td><td align="center"><a href="https://github.com/oi-RYH/Dawn">Dawn</a>의 macOS 제품 경험과 인터랙티브 데모</td></tr>
-<tr><td align="center"><strong>Vision & Embedded</strong></td><td align="center">Python · OpenCV · C++</td><td align="center"><a href="https://github.com/oi-RYH/capstone_design">캐리캐리체인지</a>의 촬영·감지·장치 제어 설계</td></tr>
-<tr><td align="center"><strong>Game & Server</strong></td><td align="center">Java · Paper API · Gradle</td><td align="center"><a href="https://github.com/oi-RYH/BrassField_plugin">BrassField</a>의 강화 로직과 인벤토리 GUI</td></tr>
-</tbody>
-</table>
 
 <details open>
 <summary align="center"><img src="assets/blocks/chest.svg" width="20" alt="상자"> <strong>전체 도구 상자</strong></summary>
