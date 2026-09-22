@@ -8,6 +8,8 @@ ROOT = Path(__file__).resolve().parents[1]
 HEADINGS = {
     'workbench': ('RYH’s Workbench', 32),
     'crafting': ('Currently crafting', 24),
+    'selected-builds': ('Selected builds', 24),
+    'technical-loadout': ('Technical loadout', 24),
     'inventory': ('Inventory', 24),
     'community-mine': ('공용 광산', 24),
     'field-notes': ('작업 일지', 24),

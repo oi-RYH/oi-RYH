@@ -7,22 +7,73 @@
 </p>
 
 <p align="center">
-  <a href="#crafting"><img src="assets/workbench-nav/crafting.svg" width="24%" alt="제작대 — 제작 중인 프로젝트" /></a><a href="#inventory"><img src="assets/workbench-nav/inventory.svg" width="24%" alt="상자 — 인벤토리 열기" /></a><a href="#community-mine"><img src="assets/workbench-nav/mine.svg" width="24%" alt="곡괭이 — 공용 광산에서 돌 캐기" /></a><a href="#field-notes"><img src="assets/workbench-nav/notes.svg" width="24%" alt="책과 깃펜 — 작업 일지" /></a>
+  <a href="#crafting"><img src="assets/workbench-nav/crafting.svg" width="24%" alt="제작대 — 대표 작업" /></a><a href="#inventory"><img src="assets/workbench-nav/inventory.svg" width="24%" alt="상자 — 기술 경험" /></a><a href="#community-mine"><img src="assets/workbench-nav/mine.svg" width="24%" alt="곡괭이 — 공용 광산" /></a><a href="#field-notes"><img src="assets/workbench-nav/notes.svg" width="24%" alt="책과 깃펜 — 작업 일지" /></a>
 </p>
 
 <a name="crafting"></a>
 
-<h2 align="center"><img src="assets/blocks/crafting_table.svg" width="28" alt="제작대"> <img src="assets/headings/crafting.svg" width="220" alt="Currently crafting"></h2>
+<h2 align="center"><img src="assets/blocks/crafting_table.svg" width="28" alt="제작대"> <img src="assets/headings/selected-builds.svg" width="184" alt="Selected builds"></h2>
 
-<!-- RECENT_REPOS:START -->
-<!-- RECENT_REPOS:END -->
+<p align="center"><strong>사용자의 움직임과 현실의 장치를 소프트웨어로 연결합니다.</strong><br>
+macOS 경험, 임베디드 시스템, 컴퓨터 비전과 게임 서버 도구를 만들고 있습니다.</p>
+
+<p align="center">
+  <a href="https://github.com/oi-RYH?tab=repositories">전체 저장소</a> ·
+  <a href="https://oi-ryh.github.io">기술 블로그</a> ·
+  <a href="#community-mine">공용 광산</a>
+</p>
+
+<table align="center">
+<tr>
+<td align="center" valign="top" width="33%">
+<img src="assets/portfolio/dawn.svg" width="84" alt="Dawn 아이콘">
+<h3>Dawn</h3>
+<p align="center"><strong>MacBook을 여닫는 순간을 더 매끄럽게 만드는 macOS 경험</strong></p>
+<p align="center">스크롤 기반 3D 힌지 데모와 DMG 배포 페이지를 만들고, 다운로드 이벤트를 측정합니다.</p>
+<p align="center"><code>JavaScript</code> <code>Three.js</code> <code>macOS</code></p>
+<p align="center"><strong>현재:</strong> v1.0.3 배포</p>
+<p align="center"><a href="https://github.com/oi-RYH/Dawn">Repository</a> · <a href="https://oi-ryh.github.io/Dawn/">Live demo</a></p>
+</td>
+<td align="center" valign="top" width="34%">
+<img src="assets/blocks/observer.svg" width="84" alt="관찰자 블록">
+<h3>캐리캐리체인지</h3>
+<p align="center"><strong>캐리어 세척과 외관 검사를 한 흐름으로 묶는 자동 관리 장치</strong></p>
+<p align="center">크기 감지, 몸체·바퀴 세척, 세척 전후 촬영과 파손 위치 확인을 설계합니다.</p>
+<p align="center"><code>Embedded</code> <code>Computer Vision</code> <code>OpenCV</code></p>
+<p align="center"><strong>역할:</strong> 팀장</p>
+<p align="center"><a href="https://github.com/oi-RYH/capstone_design">Repository</a></p>
+</td>
+<td align="center" valign="top" width="33%">
+<img src="assets/blocks/crafting_table.svg" width="84" alt="제작대">
+<h3>BrassField plugin</h3>
+<p align="center"><strong>아이템 강화 과정을 GUI와 애니메이션으로 구현한 Minecraft 플러그인</strong></p>
+<p align="center">강화 성공·실패, 레벨 메타데이터, 인벤토리 GUI와 아이템 전달 흐름을 구현합니다.</p>
+<p align="center"><code>Java 25</code> <code>Paper 1.21</code> <code>Gradle</code></p>
+<p align="center"><strong>현재:</strong> 기능 프로토타입</p>
+<p align="center"><a href="https://github.com/oi-RYH/BrassField_plugin">Repository</a></p>
+</td>
+</tr>
+</table>
 
 <a name="inventory"></a>
 
-<h2 align="center"><img src="assets/blocks/chest.svg" width="28" alt="상자"> <img src="assets/headings/inventory.svg" width="112" alt="Inventory"></h2>
+<h2 align="center"><img src="assets/blocks/chest.svg" width="28" alt="상자"> <img src="assets/headings/technical-loadout.svg" width="210" alt="Technical loadout"></h2>
+
+<p align="center">도구의 개수보다, 어떤 문제에 사용했는지를 함께 기록합니다.</p>
+
+<table align="center">
+<thead>
+<tr><th align="center">분야</th><th align="center">도구</th><th align="center">적용 경험</th></tr>
+</thead>
+<tbody>
+<tr><td align="center"><strong>Product & UI</strong></td><td align="center">Swift · TypeScript · JavaScript · Three.js</td><td align="center"><a href="https://github.com/oi-RYH/Dawn">Dawn</a>의 macOS 제품 경험과 인터랙티브 데모</td></tr>
+<tr><td align="center"><strong>Vision & Embedded</strong></td><td align="center">Python · OpenCV · C++</td><td align="center"><a href="https://github.com/oi-RYH/capstone_design">캐리캐리체인지</a>의 촬영·감지·장치 제어 설계</td></tr>
+<tr><td align="center"><strong>Game & Server</strong></td><td align="center">Java · Paper API · Gradle</td><td align="center"><a href="https://github.com/oi-RYH/BrassField_plugin">BrassField</a>의 강화 로직과 인벤토리 GUI</td></tr>
+</tbody>
+</table>
 
 <details open>
-<summary align="center"><img src="assets/blocks/chest.svg" width="20" alt="상자"> <strong>도구 상자 — 오늘도 일단 꺼내 봅니다</strong></summary>
+<summary align="center"><img src="assets/blocks/chest.svg" width="20" alt="상자"> <strong>전체 도구 상자</strong></summary>
 
 
 <p align="center">
