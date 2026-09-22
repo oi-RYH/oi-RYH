@@ -20,37 +20,7 @@
   <a href="#community-mine">공용 광산</a>
 </p>
 
-<table align="center">
-<tr>
-<td align="center" valign="top" width="33%">
-<img src="assets/portfolio/dawn.svg" width="84" alt="Dawn 아이콘">
-<h3>Dawn</h3>
-<p align="center"><strong>MacBook을 여닫는 순간을 더 매끄럽게 만드는 macOS 경험</strong></p>
-<p align="center">스크롤 기반 3D 힌지 데모와 DMG 배포 페이지를 만들고, 다운로드 이벤트를 측정합니다.</p>
-<p align="center"><code>JavaScript</code> <code>Three.js</code> <code>macOS</code></p>
-<p align="center"><strong>현재:</strong> v1.0.3 배포</p>
-<p align="center"><a href="https://github.com/oi-RYH/Dawn">Repository</a> · <a href="https://oi-ryh.github.io/Dawn/">Live demo</a></p>
-</td>
-<td align="center" valign="top" width="34%">
-<img src="assets/blocks/observer.svg" width="84" alt="관찰자 블록">
-<h3>캐리캐리체인지</h3>
-<p align="center"><strong>캐리어 세척과 외관 검사를 한 흐름으로 묶는 자동 관리 장치</strong></p>
-<p align="center">크기 감지, 몸체·바퀴 세척, 세척 전후 촬영과 파손 위치 확인을 설계합니다.</p>
-<p align="center"><code>Embedded</code> <code>Computer Vision</code> <code>OpenCV</code></p>
-<p align="center"><strong>역할:</strong> 팀장</p>
-<p align="center"><a href="https://github.com/oi-RYH/capstone_design">Repository</a></p>
-</td>
-<td align="center" valign="top" width="33%">
-<img src="assets/blocks/sapling.svg" width="84" alt="새싹">
-<h3>Saydays</h3>
-<p align="center"><strong>자연어로 일정과 Todo를 만들고 여러 기기에서 이어 쓰는 캘린더</strong></p>
-<p align="center">Web·iOS·Android 앱과 동기화 서버를 함께 개발하며, 소셜 캘린더와 프로젝트 모드를 확장하고 있습니다.</p>
-<p align="center"><code>Swift</code> <code>Kotlin</code> <code>React</code> <code>Cloudflare</code></p>
-<p align="center"><strong>현재:</strong> 멀티플랫폼 개발 중</p>
-<p align="center"><a href="https://github.com/oi-RYH/11.03_colloquial-calendar">Repository</a> · <a href="https://saydays.com">Web app</a></p>
-</td>
-</tr>
-</table>
+<p align="center"><a href="https://github.com/oi-RYH/Dawn"><img src="assets/featured-projects/masterwork-hall-1.png" width="33%" alt="Dawn — MacBook을 여닫는 순간을 더 매끄럽게 만드는 macOS 경험"></a><a href="https://github.com/oi-RYH/capstone_design"><img src="assets/featured-projects/masterwork-hall-2.png" width="34%" alt="캐리캐리체인지 — 캐리어 세척과 외관 검사를 한 흐름으로 묶은 자동 관리 장치"></a><a href="https://github.com/oi-RYH/11.03_colloquial-calendar"><img src="assets/featured-projects/masterwork-hall-3.png" width="33%" alt="Saydays — 자연어 일정과 Todo를 여러 기기에서 이어 쓰는 캘린더"></a></p>
 
 <h3 align="center"><img src="assets/headings/recently-updated.svg" width="164" alt="Recently Updated"></h3>
 

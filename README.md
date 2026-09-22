@@ -20,37 +20,7 @@
   <a href="#community-mine"><img src="assets/text/10bf72b0f2acb218230c.svg" width="76" alt="공용 광산"></a>
 </p>
 
-<table align="center">
-<tr>
-<td align="center" valign="top" width="33%">
-<img src="assets/portfolio/dawn.svg" width="84" alt="Dawn 아이콘">
-<h3><picture><img src="assets/text/5f275001baa1d0c3d8bf.svg" width="36" alt="Dawn"></picture></h3>
-<p align="center"><strong><picture><img src="assets/text/f6f10e6ccdd0a0456754.svg" width="196" alt="MacBook을 여닫는 순간을 더 매끄럽게 만드는 macOS 경험"></picture></strong></p>
-<p align="center"><picture><img src="assets/text/ec33d43ad742c7e46ffe.svg" width="196" alt="스크롤 기반 3D 힌지 데모와 DMG 배포 페이지를 만들고, 다운로드 이벤트를 측정합니다."></picture></p>
-<p align="center"><code><picture><img src="assets/text/400b58ca266f3efd77a6.svg" width="84" alt="JavaScript"></picture></code> <code><picture><img src="assets/text/ca7768b4894744cdd562.svg" width="68" alt="Three.js"></picture></code> <code><picture><img src="assets/text/71df4756e7c14c657fcd.svg" width="44" alt="macOS"></picture></code></p>
-<p align="center"><strong><picture><img src="assets/text/3a640a61d3337aa0feaa.svg" width="44" alt="현재:"></picture></strong> <picture><img src="assets/text/75b21888008a2414d10f.svg" width="92" alt="v1.0.3 배포"></picture></p>
-<p align="center"><a href="https://github.com/oi-RYH/Dawn"><img src="assets/text/78c7f572de78bf0f0c90.svg" width="84" alt="Repository"></a> <picture><img src="assets/text/1ffbe36d6bc26769c585.svg" width="12" alt="·"></picture> <a href="https://oi-ryh.github.io/Dawn/"><img src="assets/text/a9b81fd0960296a2edbd.svg" width="76" alt="Live demo"></a></p>
-</td>
-<td align="center" valign="top" width="34%">
-<img src="assets/blocks/observer.svg" width="84" alt="관찰자 블록">
-<h3><picture><img src="assets/text/f8a5fe0e682ed4e7dfaf.svg" width="116" alt="캐리캐리체인지"></picture></h3>
-<p align="center"><strong><picture><img src="assets/text/ed1865a11d1aab6b9112.svg" width="188" alt="캐리어 세척과 외관 검사를 한 흐름으로 묶는 자동 관리 장치"></picture></strong></p>
-<p align="center"><picture><img src="assets/text/0606958f71b543504fe7.svg" width="180" alt="크기 감지, 몸체·바퀴 세척, 세척 전후 촬영과 파손 위치 확인을 설계합니다."></picture></p>
-<p align="center"><code><picture><img src="assets/text/c265cb09befaba8c5394.svg" width="68" alt="Embedded"></picture></code> <code><picture><img src="assets/text/a797aacee846a58af629.svg" width="124" alt="Computer Vision"></picture></code> <code><picture><img src="assets/text/183b2d5a31c5b7d2129a.svg" width="52" alt="OpenCV"></picture></code></p>
-<p align="center"><strong><picture><img src="assets/text/ff2ea73f7fc5df1d806a.svg" width="44" alt="역할:"></picture></strong> <picture><img src="assets/text/bda6ff73fc855b8908d5.svg" width="36" alt="팀장"></picture></p>
-<p align="center"><a href="https://github.com/oi-RYH/capstone_design"><img src="assets/text/78c7f572de78bf0f0c90.svg" width="84" alt="Repository"></a></p>
-</td>
-<td align="center" valign="top" width="33%">
-<img src="assets/blocks/sapling.svg" width="84" alt="새싹">
-<h3><picture><img src="assets/text/5c6b500c2677b8262044.svg" width="60" alt="Saydays"></picture></h3>
-<p align="center"><strong><picture><img src="assets/text/075384e10480764f10a8.svg" width="180" alt="자연어로 일정과 Todo를 만들고 여러 기기에서 이어 쓰는 캘린더"></picture></strong></p>
-<p align="center"><picture><img src="assets/text/0670c2715ac4a1a51c15.svg" width="196" alt="Web·iOS·Android 앱과 동기화 서버를 함께 개발하며, 소셜 캘린더와 프로젝트 모드를 확장하고 있습니다."></picture></p>
-<p align="center"><code><picture><img src="assets/text/ac34bc63214c900783d4.svg" width="44" alt="Swift"></picture></code> <code><picture><img src="assets/text/bfd69ed3b84dbf00d681.svg" width="52" alt="Kotlin"></picture></code> <code><picture><img src="assets/text/5048d8ce1aa367854c91.svg" width="44" alt="React"></picture></code> <code><picture><img src="assets/text/945a5e4748792be7e5b4.svg" width="84" alt="Cloudflare"></picture></code></p>
-<p align="center"><strong><picture><img src="assets/text/3a640a61d3337aa0feaa.svg" width="44" alt="현재:"></picture></strong> <picture><img src="assets/text/04b4892572dc28c07fd7.svg" width="148" alt="멀티플랫폼 개발 중"></picture></p>
-<p align="center"><a href="https://github.com/oi-RYH/11.03_colloquial-calendar"><img src="assets/text/78c7f572de78bf0f0c90.svg" width="84" alt="Repository"></a> <picture><img src="assets/text/1ffbe36d6bc26769c585.svg" width="12" alt="·"></picture> <a href="https://saydays.com"><img src="assets/text/e2a68ef957aff91f46c3.svg" width="60" alt="Web app"></a></p>
-</td>
-</tr>
-</table>
+<p align="center"><a href="https://github.com/oi-RYH/Dawn"><img src="assets/featured-projects/masterwork-hall-1.png" width="33%" alt="Dawn — MacBook을 여닫는 순간을 더 매끄럽게 만드는 macOS 경험"></a><a href="https://github.com/oi-RYH/capstone_design"><img src="assets/featured-projects/masterwork-hall-2.png" width="34%" alt="캐리캐리체인지 — 캐리어 세척과 외관 검사를 한 흐름으로 묶은 자동 관리 장치"></a><a href="https://github.com/oi-RYH/11.03_colloquial-calendar"><img src="assets/featured-projects/masterwork-hall-3.png" width="33%" alt="Saydays — 자연어 일정과 Todo를 여러 기기에서 이어 쓰는 캘린더"></a></p>
 
 <h3 align="center"><picture><img src="assets/headings/recently-updated.svg" width="164" alt="Recently Updated"></picture></h3>
 
