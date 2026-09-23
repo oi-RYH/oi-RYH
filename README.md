@@ -20,7 +20,10 @@
   <a href="#community-mine"><img src="assets/text/10bf72b0f2acb218230c.svg" width="76" alt="공용 광산"></a>
 </p>
 
-<p align="center"><a href="https://github.com/oi-RYH/Dawn"><img src="assets/featured-projects/masterwork-hall-1.png" width="33%" alt="Dawn — MacBook을 여닫는 순간을 더 매끄럽게 만드는 macOS 경험"></a><a href="https://github.com/oi-RYH/capstone_design"><img src="assets/featured-projects/masterwork-hall-2.png" width="34%" alt="캐리캐리체인지 — 캐리어 세척과 외관 검사를 한 흐름으로 묶은 자동 관리 장치"></a><a href="https://github.com/oi-RYH/11.03_colloquial-calendar"><img src="assets/featured-projects/masterwork-hall-3.png" width="33%" alt="Saydays — 자연어 일정과 Todo를 여러 기기에서 이어 쓰는 캘린더"></a></p>
+<p align="center"><picture><img src="assets/featured-projects/enchanting-header.png" width="100%" alt="인챈트 테이블 — 펼쳐진 마법서와 청금석 슬롯"></picture><br>
+<a href="https://github.com/oi-RYH/Dawn"><img src="assets/featured-projects/enchanting-option-1.png" width="100%" alt="Dawn — MacBook 덮개 움직임과 화면 전환"></a><br>
+<a href="https://github.com/oi-RYH/capstone_design"><img src="assets/featured-projects/enchanting-option-2.png" width="100%" alt="캐리캐리체인지 — 캐리어 세척과 외관 검사"></a><br>
+<a href="https://github.com/oi-RYH/11.03_colloquial-calendar"><img src="assets/featured-projects/enchanting-option-3.png" width="100%" alt="Saydays — 자연어 일정과 멀티플랫폼 캘린더"></a></p>
 
 <h3 align="center"><picture><img src="assets/headings/recently-updated.svg" width="164" alt="Recently Updated"></picture></h3>
 
