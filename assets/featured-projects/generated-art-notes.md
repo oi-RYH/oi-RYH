@@ -4,7 +4,20 @@ Created with the built-in image generation tool using the user's Minecraft encha
 
 Crop boundaries: y = 0, 180, 414, 653, 1024. Canvas: 1536 × 1024.
 
-## Generation prompt
+## Latest edit prompt (built-in image generation)
+
+Use case: precise-object-edit.
+Edit target: attached existing Minecraft enchanting portfolio GUI. Make ONLY these changes, preserve 1536x1024 composition, all panel boundaries, background, book, three row sizes and content.
+1. Replace the diamond sword in the small square INPUT slot under the book at left (around x200 y410) with a clearly recognizable open silver MacBook laptop pixel sprite, dark screen, silver keyboard, small subtle purple enchanted glint. Fits within exactly the same slot. Keep the adjacent blue lapis ingredient slot unchanged.
+2. Replace the three large blue lapis icons at the FAR RIGHT of each option with Minecraft EXPERIENCE ORBS: chunky small round yellow-green luminous pixel balls, pale lime/yellow bright centers, green stepped pixel edges, no blue or gems. Retain green level numbers 5, 15, 30 in existing positions.
+3. Redraw ALL Korean text using authentic Minecraft Korean bitmap-style glyphs: NeoDunggeunmo / DungGeunMo inspired 16x16 Hangul bitmap type, square pixels, crisp stair-step strokes, monospaced block construction. Absolutely no smooth vector sans-serif Hangul. Existing title 캐리캐리체인지 and all three description lines need matching pixel Korean font. Exact Korean text:
+Row 1: "MacBook 덮개 움직임을 부드러운 화면 전환으로"
+Row 2 project title: "캐리캐리체인지"
+Row 2 description: "캐리어 세척과 외관 손상 검사를 하나의 장치로"
+Row 3: "자연어 일정과 Todo를 여러 기기에서 이어서"
+Keep all other text identical including Dawn, Saydays, technologies, Enchant, Featured Projects, glyph accents. Keep current type sizes and alignment, descriptions must fit and be readable. Keep the existing parchment beige rows and third lavender row. Preserve original warm blurred library and grey GUI. No new UI elements or inventory grid.
+
+## Original generation prompt
 
 Use case: ui-mockup. Create a finished landscape Minecraft Java enchanting GUI graphic for a GitHub portfolio README, using the attached image as visual reference, not as a literal screenshot to copy. Faithful vanilla Minecraft chunky pixel GUI aesthetic: light grey beveled window, tiny low resolution textures, warm parchment enchantment buttons, vivid green level numbers, blue lapis icon, open pixel book, diamond sword input slot. Behind the window is a dark out-of-focus Minecraft bookshelf room. NOT fantasy RPG cards, no ornate purple frames, no photoreal objects. No people.
 Composition: wide 3:2 canvas. Large front-facing grey GUI fills 90% width. Upper compact header contains the title "Enchant" at left, open book and diamond sword/lapis slots below, and "Featured Projects" at right. Under header are exactly THREE full-width horizontal selection buttons stacked vertically, separated by clear horizontal grey gutters. Buttons large and legible; no inventory grid as this is a project selector. Left miniature pixel project icon, name and readable Korean description centrally, short technologies line beneath, lapis and green level at right. Tiny enchanting glyph accents only above the names. Third row subtle vanilla lavender hover fill, first two parchment taupe.
