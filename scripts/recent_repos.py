@@ -55,20 +55,13 @@ def language_badge(language):
     return f'<img src="{escape(url, quote=True)}" alt="{escape(label, quote=True)}" />'
 
 def cards(repos, owner):
-    if not repos:
-        return '<p>최근 작업한 공개 저장소가 없습니다.</p>'
-    panels = []
-    widths = (40, 20, 40)
-    for index, repo in enumerate(repos):
-        name = escape(repo['name'])
-        url = f'https://github.com/{quote(owner, safe="")}/{quote(repo["name"], safe="")}'
-        panels.append(f'<a href="{url}"><img src="assets/scenes/quest-board-python-body12-{index + 1}.png" width="{widths[index]}%" alt="{name} 저장소 퀘스트 종이"></a>')
-    return '<p align="center">' + ''.join(panels) + '</p>'
+    from inventory_projects import cards as inventory_cards
+    return inventory_cards(repos, owner)
 
 def populate(source, root=ROOT):
     from mine import replace
-    from quest_board import write_quest_board
+    from inventory_projects import write_inventory
     owner = os.environ.get('GITHUB_REPOSITORY', 'oi-RYH/oi-RYH').split('/')[0]
     repos = json.loads((root / 'data/recent-repos.json').read_text())
-    write_quest_board(repos, root)
+    write_inventory(repos, root)
     return replace(source, 'RECENT_REPOS', cards(repos, owner))

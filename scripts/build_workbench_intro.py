@@ -59,9 +59,9 @@ def build(root=ROOT):
     nav_dir = root / 'assets/workbench-nav'
     nav_dir.mkdir(parents=True, exist_ok=True)
     cards = [
-        ('crafting', 'crafting_table', '제작 중'),
-        ('inventory', 'chest', '상자 열기'),
-        ('mine', 'pickaxe', '돌 캐기'),
+        ('crafting', 'crafting_table', '대표 작업'),
+        ('inventory', 'chest', '기술 경험'),
+        ('mine', 'pickaxe', '공용 광산'),
         ('notes', 'book_and_quill', '작업 일지'),
     ]
     for index, (filename, icon_name, label) in enumerate(cards, 1):

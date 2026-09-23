@@ -40,7 +40,7 @@ class PixelReadmeTests(unittest.TestCase):
     def test_static_readme_sections_are_centered(self):
         source = (ROOT / 'README.source.md').read_text()
         self.assertNotRegex(source, r'(?m)^## ')
-        for heading in ('crafting.svg', 'inventory.svg', 'community-mine.svg', 'field-notes.svg'):
+        for heading in ('featured-projects.svg', 'technical-loadout.svg', 'community-mine.svg', 'field-notes.svg'):
             self.assertRegex(source, rf'<h2 align="center">[^\n]+{re.escape(heading)}')
         self.assertNotIn('<p>', source)
         self.assertNotIn('<summary>', source)

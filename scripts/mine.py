@@ -227,8 +227,7 @@ def main():
     build(rendered, ROOT)
     if args.queue:
         git('add', 'README.md', 'data/mine.json', 'assets/text', 'assets/mine-grid', 'data/recent-repos.json',
-            'assets/scenes/quest-board-python-body12.png', 'assets/scenes/quest-board-python-body12-1.png',
-            'assets/scenes/quest-board-python-body12-2.png', 'assets/scenes/quest-board-python-body12-3.png')
+            'assets/featured-inventory')
         if git('diff', '--cached', '--name-only'):
             git('commit', '-m', 'chore: update community mine')
             # Do not announce success until the state is durably pushed.

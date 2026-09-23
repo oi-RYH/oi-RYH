@@ -7,23 +7,33 @@
 </p>
 
 <p align="center">
-  <a href="#crafting"><img src="assets/workbench-nav/crafting.svg" width="24%" alt="제작대 — 제작 중인 프로젝트" /></a><a href="#inventory"><img src="assets/workbench-nav/inventory.svg" width="24%" alt="상자 — 인벤토리 열기" /></a><a href="#community-mine"><img src="assets/workbench-nav/mine.svg" width="24%" alt="곡괭이 — 공용 광산에서 돌 캐기" /></a><a href="#field-notes"><img src="assets/workbench-nav/notes.svg" width="24%" alt="책과 깃펜 — 작업 일지" /></a>
+  <a href="#crafting"><img src="assets/workbench-nav/crafting.svg" width="24%" alt="제작대 — 대표 작업" /></a><a href="#inventory"><img src="assets/workbench-nav/inventory.svg" width="24%" alt="상자 — 기술 경험" /></a><a href="#community-mine"><img src="assets/workbench-nav/mine.svg" width="24%" alt="곡괭이 — 공용 광산" /></a><a href="#field-notes"><img src="assets/workbench-nav/notes.svg" width="24%" alt="책과 깃펜 — 작업 일지" /></a>
 </p>
 
 <a name="crafting"></a>
 
-<h2 align="center"><img src="assets/blocks/crafting_table.svg" width="28" alt="제작대"> <picture><img src="assets/headings/crafting.svg" width="220" alt="Currently crafting"></picture></h2>
+<h2 align="center"><img src="assets/blocks/crafting_table.svg" width="28" alt="제작대"> <picture><img src="assets/headings/featured-projects.svg" width="208" alt="Featured Projects"></picture></h2>
+
+<p align="center">
+  <a href="https://github.com/oi-RYH?tab=repositories"><img src="assets/text/3560cb85b4f3713fbbfc.svg" width="92" alt="전체 저장소"></a> <picture><img src="assets/text/452463119721a98aa93f.svg" width="12" alt="·"></picture>
+  <a href="https://oi-ryh.github.io"><img src="assets/text/f2d1e351419939bd234d.svg" width="92" alt="기술 블로그"></a> <picture><img src="assets/text/452463119721a98aa93f.svg" width="12" alt="·"></picture>
+  <a href="#community-mine"><img src="assets/text/10bf72b0f2acb218230c.svg" width="76" alt="공용 광산"></a>
+</p>
+
+<div align="center"><picture><img src="assets/featured-inventory/header.svg" width="100%" align="top" alt="인챈트 테이블 — 펼쳐진 마법서와 청금석 슬롯"></picture><a href="https://github.com/oi-RYH/Dawn"><img src="assets/featured-inventory/featured-1.svg" width="100%" align="top" alt="Dawn — MacBook 덮개 움직임과 화면 전환"></a><a href="https://github.com/oi-RYH/capstone_design"><img src="assets/featured-inventory/featured-2.svg" width="100%" align="top" alt="캐리캐리체인지 — 캐리어 세척과 외관 검사"></a><a href="https://github.com/oi-RYH/11.03_colloquial-calendar"><img src="assets/featured-inventory/featured-3.svg" width="100%" align="top" alt="Saydays — 자연어 일정과 멀티플랫폼 캘린더"></a></div>
 
 <!-- RECENT_REPOS:START -->
-<p align="center"><a href="https://github.com/oi-RYH/oi-RYH.github.io"><img src="assets/scenes/quest-board-python-body12-1.png" width="40%" alt="oi-RYH.github.io 저장소 퀘스트 종이"></a><a href="https://github.com/oi-RYH/capstone_design"><img src="assets/scenes/quest-board-python-body12-2.png" width="20%" alt="capstone_design 저장소 퀘스트 종이"></a><a href="https://github.com/oi-RYH/Dawn"><img src="assets/scenes/quest-board-python-body12-3.png" width="40%" alt="Dawn 저장소 퀘스트 종이"></a></p>
+<div align="center"><a href="https://github.com/oi-RYH/oi-RYH.github.io"><img src="assets/featured-inventory/recent-1.svg" width="36.328125%" align="top" alt="oi-RYH.github.io 최근 저장소 인벤토리 슬롯"></a><a href="https://github.com/oi-RYH/capstone_design"><img src="assets/featured-inventory/recent-2.svg" width="27.34375%" align="top" alt="capstone_design 최근 저장소 인벤토리 슬롯"></a><a href="https://github.com/oi-RYH/Dawn"><img src="assets/featured-inventory/recent-3.svg" width="36.328125%" align="top" alt="Dawn 최근 저장소 인벤토리 슬롯"></a></div>
 <!-- RECENT_REPOS:END -->
 
 <a name="inventory"></a>
 
-<h2 align="center"><img src="assets/blocks/chest.svg" width="28" alt="상자"> <picture><img src="assets/headings/inventory.svg" width="112" alt="Inventory"></picture></h2>
+<h2 align="center"><img src="assets/blocks/chest.svg" width="28" alt="상자"> <picture><img src="assets/headings/technical-loadout.svg" width="210" alt="Technical loadout"></picture></h2>
+
+<p align="center"><picture><img src="assets/text/e159eef085b9cb712ea9.svg" width="468" alt="도구의 개수보다, 어떤 문제에 사용했는지를 함께 기록합니다."></picture></p>
 
 <details open>
-<summary align="center"><img src="assets/blocks/chest.svg" width="20" alt="상자"> <strong><picture><img src="assets/text/ca4c80be43ece388d161.svg" width="292" alt="도구 상자 — 오늘도 일단 꺼내 봅니다"></picture></strong></summary>
+<summary align="center"><img src="assets/blocks/chest.svg" width="20" alt="상자"> <strong><picture><img src="assets/text/0485b03d5ff66f10f4e0.svg" width="116" alt="전체 도구 상자"></picture></strong></summary>
 
 
 <p align="center">
