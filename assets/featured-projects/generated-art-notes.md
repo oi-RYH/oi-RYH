@@ -1,5 +1,22 @@
 # Enchanting project selector
 
+## Current typography implementation
+
+The README now uses `typeset-header.png` and three `typeset-option-*.svg` images. The Korean title and three descriptions are real NeoDunggeunmo v1.601 glyph outlines from `assets/fonts/neodgm.ttf`, not image-generated approximations. This is the same Korean pixel font as the rest of the README, not Mojang's proprietary font. Font shapes are embedded as SVG paths, so the viewer does not need the font installed. The AI-generated background, MacBook and XP orbs are retained as embedded raster artwork.
+
+Edit the Korean strings in `scripts/typeset_enchanting_hangul.py` and run that script to regenerate. Description font size is 32px, title 48px, both integer multiples of its 16px bitmap grid. Rendered inspection image: `enchanting-typeset-preview.png`.
+
+The older generation notes below describe the previous, fully raster version.
+
+### Background cleanup prompt (built-in image generation)
+
+Precise local text removal edit for later deterministic typesetting. Use attached 1536x1024 Minecraft GUI as edit target. Erase ONLY these four text regions, filling seamlessly with the same underlying beige or lavender smooth parchment background:
+1. Row 1 description, entire line "MacBook 덮개 움직임을 부드러운 화면 전환으로", rectangle approximately x589..1260 y305..347.
+2. Row 2 Korean title "캐리캐리체인지", rectangle x590..938 y493..545.
+3. Row 2 description "캐리어 세척과 외관 손상 검사를 하나의 장치로", rectangle x590..1233 y550..585.
+4. Row 3 description "자연어 일정과 Todo를 여러 기기에서 이어서", rectangle x590..1206 y783..819.
+These regions must now be EMPTY clean parchment ready for real font overlays. DO NOT add or redraw text there. Preserve all other pixels/layout as closely as possible. Keep Dawn and Saydays English titles, all English technology lines, runes, MacBook input, lapis ingredient, green experience orb icons, 5/15/30 level numbers, bookshelves, book and GUI borders. Same 1536x1024 canvas and positions. Do not shift anything.
+
 Created with the built-in image generation tool using the user's Minecraft enchanting GUI reference. The generated PNG is the source artwork; horizontal crops preserve its pixels and allow each project to link separately in GitHub README. Text is part of this preview image and must be regenerated if project summaries change.
 
 Crop boundaries: y = 0, 180, 414, 653, 1024. Canvas: 1536 × 1024.
