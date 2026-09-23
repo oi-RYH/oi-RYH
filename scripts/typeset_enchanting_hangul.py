@@ -58,7 +58,7 @@ def build():
         ('enchanting-typeset', 0, 1024, 'enchanting-clean-background.png'),
         ('typeset-option-1', 180, 234, 'typeset-background-1.png'),
         ('typeset-option-2', 414, 239, 'typeset-background-2.png'),
-        ('typeset-option-3', 653, 371, 'typeset-background-3.png'),
+        ('workshop-option-3', 653, 371, 'typeset-background-3.png'),
     ):
         data = b64encode((ASSETS / background).read_bytes()).decode()
         svg = (f'<svg xmlns="http://www.w3.org/2000/svg" '

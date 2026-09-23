@@ -62,7 +62,7 @@ def cards(repos, owner):
     for index, repo in enumerate(repos):
         name = escape(repo['name'])
         url = f'https://github.com/{quote(owner, safe="")}/{quote(repo["name"], safe="")}'
-        panels.append(f'<a href="{url}"><img src="assets/scenes/quest-board-python-body12-{index + 1}.png" width="{widths[index]}%" align="top" alt="{name} 저장소 퀘스트 종이"></a>')
+        panels.append(f'<a href="{url}"><img src="assets/scenes/quest-board-workshop-{index + 1}.png" width="{widths[index]}%" align="top" alt="{name} 저장소 퀘스트 종이"></a>')
     return '<div align="center" aria-label="Recently Updated">' + ''.join(panels) + '</div>'
 
 def populate(source, root=ROOT):

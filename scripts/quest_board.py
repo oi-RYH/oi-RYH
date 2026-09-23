@@ -175,9 +175,9 @@ def write_quest_board(repos, root=ROOT):
     d.rectangle((0,9,W,12), fill='#17110b')
     output = root / 'assets/scenes'
     output.mkdir(parents=True, exist_ok=True)
-    img.save(output / 'quest-board-python-body12.png', optimize=True)
+    img.save(output / 'quest-board-workshop.png', optimize=True)
     for index, (left, right) in enumerate(((0, 384), (384, 576), (576, 960)), 1):
-        img.crop((left, 0, right, H)).save(output / f'quest-board-python-body12-{index}.png', optimize=True)
+        img.crop((left, 0, right, H)).save(output / f'quest-board-workshop-{index}.png', optimize=True)
 
 
 def main():
