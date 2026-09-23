@@ -20,10 +20,10 @@
   <a href="#community-mine">공용 광산</a>
 </p>
 
-<p align="center"><picture><img src="assets/featured-projects/enchanting-header.png" width="100%" alt="인챈트 테이블 — 펼쳐진 마법서와 청금석 슬롯"></picture><br>
-<a href="https://github.com/oi-RYH/Dawn"><img src="assets/featured-projects/enchanting-option-1.png" width="100%" alt="Dawn — MacBook 덮개 움직임과 화면 전환"></a><br>
-<a href="https://github.com/oi-RYH/capstone_design"><img src="assets/featured-projects/enchanting-option-2.png" width="100%" alt="캐리캐리체인지 — 캐리어 세척과 외관 검사"></a><br>
-<a href="https://github.com/oi-RYH/11.03_colloquial-calendar"><img src="assets/featured-projects/enchanting-option-3.png" width="100%" alt="Saydays — 자연어 일정과 멀티플랫폼 캘린더"></a></p>
+<p align="center"><picture><img src="assets/featured-projects/generated-header.png" width="100%" alt="인챈트 테이블 — 펼쳐진 마법서와 청금석 슬롯"></picture><br>
+<a href="https://github.com/oi-RYH/Dawn"><img src="assets/featured-projects/generated-option-1.png" width="100%" alt="Dawn — MacBook 덮개 움직임과 화면 전환"></a><br>
+<a href="https://github.com/oi-RYH/capstone_design"><img src="assets/featured-projects/generated-option-2.png" width="100%" alt="캐리캐리체인지 — 캐리어 세척과 외관 검사"></a><br>
+<a href="https://github.com/oi-RYH/11.03_colloquial-calendar"><img src="assets/featured-projects/generated-option-3.png" width="100%" alt="Saydays — 자연어 일정과 멀티플랫폼 캘린더"></a></p>
 
 <h3 align="center"><img src="assets/headings/recently-updated.svg" width="164" alt="Recently Updated"></h3>
 
