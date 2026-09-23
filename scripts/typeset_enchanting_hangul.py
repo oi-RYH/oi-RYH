@@ -1,7 +1,8 @@
 """Compose real NeoDunggeunmo glyph outlines over generated GUI artwork.
 
-The artwork is image-generated; this script only typesets the four Korean
-text runs. Outlines embed the exact font independently of viewer fonts.
+The artwork is image-generated; this script typesets the four Korean runs
+and adds a shallow oak shelf to meet the recent-project board below it.
+Outlines embed the exact font independently of viewer fonts.
 """
 from base64 import b64encode
 from html import escape
@@ -43,6 +44,15 @@ def build():
                       f'transform="translate({x} {y}) scale({scale} {-scale})">'
                       + ''.join(paths) + '</g>')
         print(f'{value}: {advance * scale:g}px, NeoDunggeunmo {size}px')
+    # A shallow shelf finishes the existing floor area and meets the quest
+    # board's dark oak edge without adding height or covering the GUI.
+    shelf = ('<defs><linearGradient id="workshop-fade" x1="0" y1="0" x2="0" y2="1">'
+             '<stop offset="0" stop-color="#24190f" stop-opacity="0"/>'
+             '<stop offset="1" stop-color="#24190f"/></linearGradient></defs>'
+             '<rect x="0" y="922" width="1536" height="78" fill="url(#workshop-fade)"/>'
+             '<rect x="0" y="1000" width="1536" height="24" fill="#24190f"/>'
+             '<rect x="0" y="1000" width="1536" height="4" fill="#89603a"/>'
+             '<rect x="0" y="1004" width="1536" height="5" fill="#533820"/>')
     # Each crop is embedded, so GitHub SVG images have no external dependencies.
     for name, top, height, background in (
         ('enchanting-typeset', 0, 1024, 'enchanting-clean-background.png'),
@@ -57,7 +67,7 @@ def build():
                '<title>Featured Projects — NeoDunggeunmo 한글 폰트</title>'
                f'<image x="0" y="{top}" width="1536" height="{height}" '
                f'xlink:href="data:image/png;base64,{data}"/>'
-               + ''.join(groups) + '</svg>\n')
+               + ''.join(groups) + shelf + '</svg>\n')
         (ASSETS / f'{name}.svg').write_text(svg)
 
 

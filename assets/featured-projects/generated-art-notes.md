@@ -2,6 +2,12 @@
 
 ## Current typography implementation
 
+The featured GUI and the dynamic recent-project board are now adjacent
+zero-margin divs in README. The GUI's final floor pixels fade into a shallow
+oak shelf; `quest_board.py` continues that color and renders the Recently
+Updated heading on a wooden nameplate. This preserves the original canvases,
+all repository links, and dynamic recent-repository data.
+
 The README now uses `typeset-header.png` and three `typeset-option-*.svg` images. The Korean title and three descriptions are real NeoDunggeunmo v1.601 glyph outlines from `assets/fonts/neodgm.ttf`, not image-generated approximations. This is the same Korean pixel font as the rest of the README, not Mojang's proprietary font. Font shapes are embedded as SVG paths, so the viewer does not need the font installed. The AI-generated background, MacBook and XP orbs are retained as embedded raster artwork.
 
 Edit the Korean strings in `scripts/typeset_enchanting_hangul.py` and run that script to regenerate. Description font size is 32px, title 48px, both integer multiples of its 16px bitmap grid. Rendered inspection image: `enchanting-typeset-preview.png`.

@@ -12,16 +12,16 @@ def write_quest_board(repos, root=ROOT):
     img = Image.new('RGB', (W, H), '#171923')
     d = ImageDraw.Draw(img)
 
-    # Stone hall backdrop: chunky blocks, mortar, and moss.
+    # Continue the dark oak workshop below the enchanting GUI.
     for y in range(0, H, 34):
         offset = -32 if (y // 34) % 2 else 0
         for x in range(offset, W, 64):
-            base = random.choice(['#34313a', '#3b3740', '#423b3c', '#302f37'])
-            d.rectangle((x+1, y+1, x+62, y+32), fill=base, outline='#20232b', width=2)
-            d.line((x+5, y+5, x+54, y+5), fill='#51474a', width=2)
+            base = random.choice(['#312216', '#38271a', '#402b1a', '#2e2016'])
+            d.rectangle((x+1, y+1, x+62, y+32), fill=base, outline='#20170f', width=2)
+            d.line((x+5, y+5, x+54, y+5), fill='#503721', width=2)
             for _ in range(4):
                 px, py = x+random.randint(7,56), y+random.randint(9,28)
-                d.rectangle((px, py, px+random.randint(2,5), py+random.randint(1,3)), fill='#292931')
+                d.rectangle((px, py, px+random.randint(8,18), py+1), fill='#261a10')
     for x, y in [(128,150),(110,184),(842,167),(864,206),(88,220),(884,236)]:
         d.rectangle((x,y,x+5,y+12), fill='#50613a'); d.rectangle((x+5,y+7,x+11,y+12), fill='#687944')
 
@@ -29,6 +29,7 @@ def write_quest_board(repos, root=ROOT):
     def banner(x):
         d.polygon([(x,0),(x+56,0),(x+56,126),(x+28,154),(x,126)], fill='#142a50')
         d.line((x+5,0,x+5,122,x+28,144,x+51,122,x+51,0), fill='#b27b31', width=4)
+    # Small muted banners retain the familiar quest board silhouette.
     banner(52); banner(852)
 
     # Shelving, crates and plants.
@@ -61,14 +62,18 @@ def write_quest_board(repos, root=ROOT):
         x=random.randint(170,802); y=random.randint(98,330); ln=random.randint(8,40)
         d.line((x,y,min(x+ln,806),y), fill=random.choice(['#4c2818','#6a371d','#2d1a12']), width=random.choice([1,2]))
 
-    # Top stepped cap and small pixel landscape painting.
+    # The section heading is a nameplate inside the board, not a separate gap.
     for box in [(310,34,650,64),(350,20,610,52),(405,7,555,38)]:
         d.rectangle(box, fill='#54301b', outline='#28160e', width=4)
-    d.rectangle((418,12,542,72), fill='#24170f', outline='#6d3b20', width=5)
-    d.rectangle((427,20,533,63), fill='#d79c55')
-    d.rectangle((427,49,533,63), fill='#40552f')
-    d.polygon([(432,54),(458,31),(475,49),(493,26),(528,55)], fill='#34414a')
-    d.rectangle((477,24,486,36), fill='#ffd276')
+    d.rectangle((348,24,612,70), fill='#1f160e', outline='#784b29', width=4)
+    d.line((354,29,606,29), fill='#ad7941', width=2)
+    for nx in (358,600):
+        d.rectangle((nx,43,nx+4,47), fill='#bb9154')
+    plate_font = ImageFont.truetype(str(root / 'assets/fonts/neodgm.ttf'), 24)
+    d.fontmode = '1'
+    label = 'Recently Updated'
+    label_width = d.textlength(label, font=plate_font)
+    d.text(((W-label_width)/2,36), label, font=plate_font, fill='#e8c483')
 
     # Metal braces.
     for x in (132, 794):
@@ -162,6 +167,12 @@ def write_quest_board(repos, root=ROOT):
     vig = Image.new('RGBA',(W,H),(0,0,0,0)); vd=ImageDraw.Draw(vig)
     for k,a in [(0,80),(10,55),(20,35)]: vd.rectangle((k,k,W-k-1,H-k-1),outline=(0,0,0,a),width=10)
     img=Image.alpha_composite(img.convert('RGBA'),vig).convert('RGB')
+    # Meet the exact color of the shelf at the bottom of the enchanting image.
+    # This lies inside the existing 400px canvas and adds no scroll height.
+    d = ImageDraw.Draw(img)
+    d.rectangle((0,0,W,5), fill='#24190f')
+    d.rectangle((0,6,W,8), fill='#644425')
+    d.rectangle((0,9,W,12), fill='#17110b')
     output = root / 'assets/scenes'
     output.mkdir(parents=True, exist_ok=True)
     img.save(output / 'quest-board-python-body12.png', optimize=True)
