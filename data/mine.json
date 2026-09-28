@@ -26,7 +26,10 @@
         "ore": "stone",
         "user": "yuuundj"
       },
-      null,
+      {
+        "ore": "redstone_ore",
+        "user": "oi-RYH"
+      },
       null,
       {
         "ore": "stone",
@@ -55,8 +58,8 @@
   ],
   "miners": {
     "oi-RYH": {
-      "blocks": 6,
-      "score": 12
+      "blocks": 7,
+      "score": 18
     },
     "songkh1201": {
       "blocks": 1,
@@ -73,7 +76,7 @@
   },
   "totals": {
     "stone": 6,
-    "redstone_ore": 2,
+    "redstone_ore": 3,
     "coal_ore": 1
   },
   "receipts": {
@@ -85,7 +88,8 @@
     "6": "🪨 @oi-RYH: 돌 획득! +1점",
     "7": "🪨 @ehduq0221: 돌 획득! +1점",
     "8": "🪨 @yuuundj: 돌 획득! +1점",
-    "9": "🪨 @oi-RYH: 돌 획득! +1점"
+    "9": "🪨 @oi-RYH: 돌 획득! +1점",
+    "10": "🔴 @oi-RYH: 레드스톤 획득! +6점"
   },
   "daily_claims": {
     "2026-09-18": [
@@ -102,13 +106,16 @@
     ],
     "2026-09-22": [
       "oi-RYH"
+    ],
+    "2026-09-28": [
+      "oi-RYH"
     ]
   },
   "log": [
-    "🔴 @oi-RYH: 레드스톤 획득! +6점",
     "🪨 @oi-RYH: 돌 획득! +1점",
     "🪨 @ehduq0221: 돌 획득! +1점",
     "🪨 @yuuundj: 돌 획득! +1점",
-    "🪨 @oi-RYH: 돌 획득! +1점"
+    "🪨 @oi-RYH: 돌 획득! +1점",
+    "🔴 @oi-RYH: 레드스톤 획득! +6점"
   ]
 }
