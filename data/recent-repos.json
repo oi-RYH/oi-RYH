@@ -1,5 +1,11 @@
 [
   {
+    "name": "Architecture",
+    "description": "",
+    "language": "Python",
+    "pushed_at": "2026-10-09T16:04:20Z"
+  },
+  {
     "name": "capstone_design",
     "description": "엄마나여행갔다왔어!!!",
     "language": "",
@@ -10,11 +16,5 @@
     "description": "",
     "language": "",
     "pushed_at": "2026-10-07T04:28:57Z"
-  },
-  {
-    "name": "oi-RYH.github.io",
-    "description": "",
-    "language": "HTML",
-    "pushed_at": "2026-10-07T03:50:56Z"
   }
 ]
